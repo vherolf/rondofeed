@@ -1,0 +1,549 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1120" width="1700" height="1120" font-family="Helvetica, Arial, sans-serif">
+<title>rondOfeed wiring layout</title>
+<rect width="1700" height="1120" fill="#ffffff"/>
+<text x="30.0" y="38.0" font-size="26" text-anchor="start" font-weight="700" fill="#1f2933">rondOfeed wiring layout</text>
+<text x="30.0" y="60.0" font-size="13" text-anchor="start" font-weight="400" fill="#52606d">Top view, rear wall at the top. Both drawings have the same orientation. Hole positions and board outlines come from the Adafruit PCB files.</text>
+<text x="40.0" y="100.0" font-size="18" text-anchor="start" font-weight="700" fill="#1f2933">1. Inside the machine</text>
+<text x="40.0" y="119.0" font-size="13" text-anchor="start" font-weight="400" fill="#52606d">To scale. Plate, disc and lid removed.</text>
+<rect x="42.0" y="152.0" width="660.0" height="660.0" rx="18" fill="#f7f9fb" stroke="#3e4c59" stroke-width="2.5"/>
+<rect x="51.9" y="161.9" width="640.2" height="640.2" rx="0" fill="#ffffff" stroke="#3e4c59" stroke-width="1"/>
+<rect x="98.1" y="163.6" width="297.0" height="259.1" rx="0" fill="#e6edf5" stroke="#3e4c59" stroke-width="2"/>
+<text x="362.1" y="389.6" font-size="12" text-anchor="middle" font-weight="600" fill="#52606d">Carrier</text>
+<circle cx="114.6" cy="402.8" r="5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="325.8" cy="402.8" r="5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="375.3" cy="191.6" r="5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="183.9" cy="185.0" r="5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<rect x="116.2" y="152.0" width="42.9" height="11.6" rx="0" fill="#b8c4d0" stroke="#3e4c59" stroke-width="2"/>
+<text x="137.7" y="144.0" font-size="12" text-anchor="middle" font-weight="600" fill="#52606d">USB cutout</text>
+<rect x="525.5" y="161.9" width="89.1" height="99.0" rx="0" fill="#fdeceb" stroke="#3e4c59" stroke-width="2"/>
+<text x="570.0" y="204.8" font-size="13" text-anchor="middle" font-weight="700" fill="#1f2933">IEC</text>
+<text x="570.0" y="224.6" font-size="11" text-anchor="middle" font-weight="400" fill="#52606d">switch + fuse</text>
+<rect x="576.6" y="419.3" width="99.0" height="326.7" rx="0" fill="#fdeceb" stroke="#3e4c59" stroke-width="2"/>
+<text x="626.1" y="564.5" font-size="13" text-anchor="middle" font-weight="700" fill="#1f2933">Mean Well</text>
+<text x="626.1" y="584.3" font-size="11" text-anchor="middle" font-weight="400" fill="#52606d">LRS-35/50-12</text>
+<rect x="556.8" y="373.1" width="133.7" height="89.1" rx="0" fill="#f3d9d6" fill-opacity="0.75" stroke="#3e4c59" stroke-width="2" stroke-dasharray="6 4"/>
+<text x="622.8" y="429.2" font-size="11" text-anchor="middle" font-weight="600" fill="#1f2933">terminal cover</text>
+<rect x="302.7" y="412.7" width="138.6" height="138.6" rx="0" fill="#e4e7eb" stroke="#3e4c59" stroke-width="2"/>
+<circle cx="372" cy="482" r="36.3" fill="#cbd2d9" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="372.0" cy="482.0" r="5" fill="#3e4c59" stroke="#3e4c59" stroke-width="1.5"/>
+<text x="372.0" y="531.5" font-size="13" text-anchor="middle" font-weight="700" fill="#1f2933">NEMA 17</text>
+<rect x="441.3" y="455.6" width="46.2" height="52.8" rx="0" fill="#d5dae0" stroke="#3e4c59" stroke-width="2"/>
+<rect x="332.4" y="686.6" width="79.2" height="198.0" rx="0" fill="#e4e7eb" stroke="#3e4c59" stroke-width="2"/>
+<text x="372.0" y="871.4" font-size="12" text-anchor="middle" font-weight="600" fill="#1f2933">chute</text>
+<circle cx="329.1" cy="762.5" r="5" fill="#f3effa" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="414.9" cy="762.5" r="5" fill="#f3effa" stroke="#3e4c59" stroke-width="1.5"/>
+<text x="315.9" y="785.6" font-size="12" text-anchor="end" font-weight="600" fill="#1f2933">IR receiver</text>
+<text x="428.1" y="785.6" font-size="12" text-anchor="start" font-weight="600" fill="#1f2933">IR emitter</text>
+<rect x="103.1" y="166.9" width="69.3" height="168.3" rx="0" fill="#eaf6ec" stroke="#3e4c59" stroke-width="2"/>
+<text x="137.7" y="277.4" font-size="13" text-anchor="middle" font-weight="700" fill="#1f2933">Pico</text>
+<text x="137.7" y="293.9" font-size="12" text-anchor="middle" font-weight="600" fill="#1f2933">2 W</text>
+<rect x="124.5" y="161.9" width="26.4" height="19.8" rx="0" fill="#b8c4d0" stroke="#3e4c59" stroke-width="2"/>
+<rect x="192.5" y="209.5" width="167.6" height="142.5" rx="0" fill="#f3ecd8" stroke="#3e4c59" stroke-width="2"/>
+<circle cx="276.3" cy="339.4" r="4" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="276.3" cy="222.0" r="4" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<rect x="255.3" y="240.9" width="79.6" height="88.0" rx="0" fill="#d5e3f5" fill-opacity="0.9" stroke="#3e4c59" stroke-width="2"/>
+<text x="295.1" y="277.4" font-size="12" text-anchor="middle" font-weight="700" fill="#1f2933">TMC2209</text>
+<rect x="234.4" y="211.4" width="25.1" height="37.9" rx="0" fill="#fde6c8" stroke="#3e4c59" stroke-width="1.5"/>
+<text x="144.3" y="447.0" font-size="12" text-anchor="start" font-weight="400" fill="#1f2933"></text>
+<polyline points="603.0,373.1 603.0,284.0 589.8,284.0 589.8,260.9" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="616.2,373.1 616.2,284.0 603.0,284.0 603.0,260.9" fill="none" stroke="#1f6fd1" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="629.4,373.1 629.4,277.4 616.2,277.4 616.2,260.9" fill="none" stroke="#3f9b3f" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="8 5"/>
+<polyline points="583.2,373.1 583.2,363.2 347.6,363.2 347.5,331.0" fill="none" stroke="#d62828" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="573.3,373.1 573.3,354.9 339.0,354.9 339.2,322.6" fill="none" stroke="#1b1f23" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="335.0,305.8 467.7,305.8 467.7,455.6" fill="none" stroke="#1e88e5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="335.0,297.5 473.3,297.5 473.3,455.6" fill="none" stroke="#e53935" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="335.0,289.1 478.9,289.1 478.9,455.6" fill="none" stroke="#43a047" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="335.0,280.7 484.5,280.7 484.5,455.6" fill="none" stroke="#fbc02d" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="497.4" y="270.8" font-size="12" text-anchor="start" font-weight="600" fill="#52606d">motor cable</text>
+<polyline points="230.2,263.9 182.2,263.9 182.2,346.7 91.5,346.7 91.5,204.9 108.3,204.9" fill="none" stroke="#2e7d32" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="230.2,272.3 180.3,272.3 180.3,351.0 87.2,351.0 87.2,196.5 108.3,196.5" fill="none" stroke="#c2185b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="230.2,297.5 178.3,297.5 178.3,355.3 82.9,355.3 82.9,221.7 108.3,221.7" fill="none" stroke="#6d4c41" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="230.2,322.6 176.3,322.6 176.3,359.6 78.6,359.6 78.6,213.3 108.3,213.3" fill="none" stroke="#0b8f8f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="73.4,759.2 73.4,238.4 108.3,238.4" fill="none" stroke="#5c6ac4" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="329.1,762.5 240.0,759.2 73.4,759.2" fill="none" stroke="#5c6ac4" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="213.4,222.0 190.5,232.9 167.1,204.9" fill="none" stroke="#7b2cbf" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="205.1,222.0 188.9,201.5 167.1,188.1" fill="none" stroke="#1b1f23" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="297.3,238.8 297.4,198.2 180.6,179.7 167.1,179.8" fill="none" stroke="#f08c00" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="329.1,769.1 226.8,769.1 226.8,416.0 215.2,416.0 213.4,339.4" fill="none" stroke="#7b2cbf" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="329.1,755.9 235.1,755.9 235.1,409.4 205.0,409.4 205.1,331.0" fill="none" stroke="#1b1f23" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="414.9,769.1 477.6,769.1 477.6,673.4 253.2,673.4 253.2,416.0 213.4,331.0" fill="none" stroke="#7b2cbf" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="414.9,755.9 467.7,755.9 467.7,663.5 263.1,663.5 263.1,420.9 205.0,420.9 205.1,322.6" fill="none" stroke="#1b1f23" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="108.3" cy="196.5" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="108.3" cy="204.9" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="108.3" cy="213.3" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="108.3" cy="221.7" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="108.3" cy="238.4" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="167.1" cy="204.9" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="167.1" cy="188.1" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="167.1" cy="179.8" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<text x="563.4" y="647.0" font-size="12" text-anchor="end" font-weight="600" fill="#b23b32">230 V stays on this side</text>
+<text x="770.0" y="100.0" font-size="18" text-anchor="start" font-weight="700" fill="#1f2933">2. Perma-Proto Quarter-Size</text>
+<text x="770.0" y="119.0" font-size="13" text-anchor="start" font-weight="400" fill="#52606d">Component side, 15 rows, 43.2 × 50.8 mm. Columns A–E and F–J are separate. Rails are not connected to each other.</text>
+<rect x="939.8" y="209.3" width="660.4" height="561.3" rx="8" fill="#f3ecd8" stroke="#3e4c59" stroke-width="2.5"/>
+<polyline points="1451.6,721.1 1319.5,721.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,721.1 1088.4,721.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="725.1" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">1</text>
+<polyline points="1451.6,688.1 1319.5,688.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,688.1 1088.4,688.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="692.1" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">2</text>
+<polyline points="1451.6,655.1 1319.5,655.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,655.1 1088.4,655.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="659.1" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">3</text>
+<polyline points="1451.6,622.1 1319.5,622.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,622.1 1088.4,622.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="626.1" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">4</text>
+<polyline points="1451.6,589.1 1319.5,589.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,589.1 1088.4,589.1" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="593.1" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">5</text>
+<polyline points="1451.6,556.0 1319.5,556.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,556.0 1088.4,556.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="560.0" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">6</text>
+<polyline points="1451.6,523.0 1319.5,523.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,523.0 1088.4,523.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="527.0" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">7</text>
+<polyline points="1451.6,490.0 1319.5,490.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,490.0 1088.4,490.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="494.0" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">8</text>
+<polyline points="1451.6,457.0 1319.5,457.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,457.0 1088.4,457.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="461.0" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">9</text>
+<polyline points="1451.6,424.0 1319.5,424.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,424.0 1088.4,424.0" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="428.0" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">10</text>
+<polyline points="1451.6,390.9 1319.5,390.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,390.9 1088.4,390.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="394.9" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">11</text>
+<polyline points="1451.6,357.9 1319.5,357.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,357.9 1088.4,357.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="361.9" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">12</text>
+<polyline points="1451.6,324.9 1319.5,324.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,324.9 1088.4,324.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="328.9" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">13</text>
+<polyline points="1451.6,291.9 1319.5,291.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,291.9 1088.4,291.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="295.9" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">14</text>
+<polyline points="1451.6,258.9 1319.5,258.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1220.5,258.9 1088.4,258.9" fill="none" stroke="#d8c9a3" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="961.9" y="262.9" font-size="11" text-anchor="middle" font-weight="600" fill="#7b6f55">15</text>
+<polyline points="1550.7,721.1 1550.7,258.9" fill="none" stroke="#f2b8b5" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1550.7" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1550.7" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1550.7" y="751.3" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933">+</text>
+<polyline points="1517.7,721.1 1517.7,258.9" fill="none" stroke="#b8c4d0" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1517.7" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1517.7" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1517.7" y="751.3" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933">−</text>
+<polyline points="1022.4,721.1 1022.4,258.9" fill="none" stroke="#f2b8b5" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1022.4" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1022.4" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1022.4" y="751.3" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933">+</text>
+<polyline points="989.3,721.1 989.3,258.9" fill="none" stroke="#b8c4d0" stroke-width="6" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="989.3" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="989.3" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="989.3" y="751.3" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933">−</text>
+<text x="1451.6" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">A</text>
+<circle cx="1451.6" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1451.6" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1418.6" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">B</text>
+<circle cx="1418.6" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1418.6" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1385.6" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">C</text>
+<circle cx="1385.6" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1385.6" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1352.5" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">D</text>
+<circle cx="1352.5" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1352.5" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1319.5" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">E</text>
+<circle cx="1319.5" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1319.5" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1220.5" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">F</text>
+<circle cx="1220.5" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1220.5" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1187.5" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">G</text>
+<circle cx="1187.5" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1187.5" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1154.4" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">H</text>
+<circle cx="1154.4" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1154.4" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1121.4" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">I</text>
+<circle cx="1121.4" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1121.4" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<text x="1088.4" y="751.3" font-size="12" text-anchor="middle" font-weight="600" fill="#7b6f55">J</text>
+<circle cx="1088.4" cy="721.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="688.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="655.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="622.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="589.1" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="556.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="523.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="490.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="457.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="424.0" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="390.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="357.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="324.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="291.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1088.4" cy="258.9" r="3" fill="#fff" stroke="#8a7a55" stroke-width="1"/>
+<circle cx="1270.0" cy="721.1" r="20" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="1270.0" cy="258.9" r="20" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<text x="1270.0" y="725.1" font-size="11" text-anchor="middle" font-weight="700" fill="#1f2933">M3</text>
+<text x="1270.0" y="262.9" font-size="11" text-anchor="middle" font-weight="700" fill="#1f2933">M3</text>
+<rect x="1187.5" y="333.2" width="313.7" height="346.7" rx="0" fill="#d5e3f5" fill-opacity="0.72" stroke="#3e4c59" stroke-width="2.5"/>
+<rect x="1411.3" y="400.8" width="81.9" height="211.5" rx="0" fill="#7fb08a" fill-opacity="0.85" stroke="#3e4c59" stroke-width="2"/>
+<text x="1305.4" y="491.0" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933" transform="rotate(90 1305.38 491)">Adafruit TMC2209</text>
+<text x="1283.4" y="491.0" font-size="12" text-anchor="start" font-weight="400" fill="#1f2933"></text>
+<circle cx="1278.3" cy="366.2" r="8" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="1278.3" cy="646.8" r="8" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="1468.1" cy="366.2" r="8" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<circle cx="1468.1" cy="646.8" r="8" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
+<rect x="1213.5" y="350.9" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="357.9" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="361.9" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">VDD</text>
+<rect x="1213.5" y="383.9" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="390.9" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="394.9" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">GND</text>
+<rect x="1213.5" y="417.0" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="424.0" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="428.0" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">DIR</text>
+<rect x="1213.5" y="450.0" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="457.0" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="461.0" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">STEP</text>
+<rect x="1213.5" y="483.0" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="490.0" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="494.0" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">MS1</text>
+<rect x="1213.5" y="516.0" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="523.0" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="527.0" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">MS2</text>
+<rect x="1213.5" y="549.0" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="556.0" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="560.0" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">DIAG</text>
+<rect x="1213.5" y="582.1" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="589.1" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="593.1" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">INDEX</text>
+<rect x="1213.5" y="615.1" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="622.1" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="626.1" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">UART</text>
+<rect x="1213.5" y="648.1" width="14.0" height="14.0" rx="0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
+<circle cx="1220.5" cy="655.1" r="3" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
+<text x="1233.5" y="659.1" font-size="12" text-anchor="start" font-weight="700" fill="#1f2933">EN</text>
+<circle cx="1451.6" cy="424.0" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1441.6" y="428.0" font-size="12" text-anchor="end" font-weight="700" fill="#1f2933">+</text>
+<circle cx="1451.6" cy="457.0" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1441.6" y="461.0" font-size="12" text-anchor="end" font-weight="700" fill="#1f2933">GND</text>
+<circle cx="1451.6" cy="490.0" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1441.6" y="494.0" font-size="12" text-anchor="end" font-weight="700" fill="#1f2933">2B</text>
+<circle cx="1451.6" cy="523.0" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1441.6" y="527.0" font-size="12" text-anchor="end" font-weight="700" fill="#1f2933">2A</text>
+<circle cx="1451.6" cy="556.0" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1441.6" y="560.0" font-size="12" text-anchor="end" font-weight="700" fill="#1f2933">1A</text>
+<circle cx="1451.6" cy="589.1" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1441.6" y="593.1" font-size="12" text-anchor="end" font-weight="700" fill="#1f2933">1B</text>
+<text x="1452.3" y="333.2" font-size="11" text-anchor="start" font-weight="400" fill="#1f2933"></text>
+<polyline points="1088.4,357.9 1022.4,357.9" fill="none" stroke="#7b2cbf" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="357.9" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1022.4" cy="357.9" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1088.4,490.0 1022.4,490.0" fill="none" stroke="#7b2cbf" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="490.0" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1022.4" cy="490.0" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1088.4,523.0 1022.4,523.0" fill="none" stroke="#7b2cbf" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="523.0" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1022.4" cy="523.0" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1088.4,390.9 989.3,390.9" fill="none" stroke="#1b1f23" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="390.9" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<circle cx="989.3" cy="390.9" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1121.4,655.1 1022.4,622.1" fill="none" stroke="#3e4c59" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1121.4" cy="655.1" r="4" fill="#0b8f8f" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1022.4" cy="622.1" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<rect x="1056.9" y="631.6" width="30.0" height="14.0" rx="0" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
+<text x="1071.9" y="626.6" font-size="12" text-anchor="middle" font-weight="700" fill="#1f2933">R1 10 kΩ</text>
+<polyline points="1088.4,424.0 925.0,424.0" fill="none" stroke="#2e7d32" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="424.0" r="4" fill="#2e7d32" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="428.0" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 5 (GP3)</text>
+<polyline points="1088.4,457.0 925.0,457.0" fill="none" stroke="#c2185b" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="457.0" r="4" fill="#c2185b" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="461.0" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 4 (GP2)</text>
+<polyline points="1088.4,556.0 925.0,556.0" fill="none" stroke="#6d4c41" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="556.0" r="4" fill="#6d4c41" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="560.0" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 7 (GP5)</text>
+<polyline points="1088.4,655.1 925.0,655.1" fill="none" stroke="#0b8f8f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="655.1" r="4" fill="#0b8f8f" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="659.1" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 6 (GP4)</text>
+<polyline points="1022.4,258.9 1022.4,179.3 925.0,179.3" fill="none" stroke="#7b2cbf" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1022.4" cy="258.9" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="183.3" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 36 (3V3)</text>
+<polyline points="989.3,258.9 989.3,195.3 925.0,195.3" fill="none" stroke="#1b1f23" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="989.3" cy="258.9" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="199.3" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 38 (GND)</text>
+<polyline points="1022.4,721.1 1022.4,721.1" fill="none" stroke="#7b2cbf" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1022.4,721.1 982.0,721.1 982.0,806.7 925.0,806.7" fill="none" stroke="#7b2cbf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1022.4" cy="721.1" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="810.7" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">IR receiver VCC</text>
+<polyline points="1022.4,688.1 1022.4,688.1" fill="none" stroke="#7b2cbf" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="1022.4,688.1 973.0,688.1 973.0,821.7 925.0,821.7" fill="none" stroke="#7b2cbf" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1022.4" cy="688.1" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="825.7" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">IR emitter VCC</text>
+<polyline points="989.3,688.1 989.3,688.1" fill="none" stroke="#1b1f23" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="989.3,688.1 964.0,688.1 964.0,836.7 925.0,836.7" fill="none" stroke="#1b1f23" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="989.3" cy="688.1" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="840.7" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">IR receiver GND</text>
+<polyline points="989.3,655.1 989.3,655.1" fill="none" stroke="#1b1f23" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<polyline points="989.3,655.1 955.0,655.1 955.0,851.7 925.0,851.7" fill="none" stroke="#1b1f23" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="989.3" cy="655.1" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="855.7" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">IR emitter GND</text>
+<polyline points="989.3,721.1 989.3,776.7 1517.7,776.7 1517.7,721.1" fill="none" stroke="#1b1f23" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="989.3" cy="721.1" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1517.7" cy="721.1" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<text x="1270.0" y="790.7" font-size="12" text-anchor="start" font-weight="400" fill="#1f2933"></text>
+<polyline points="1550.7,688.1 1586.7,688.1 1586.7,818.7 1630.0,818.7" fill="none" stroke="#d62828" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1550.7" cy="688.1" r="4" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1517.7,655.1 1567.7,655.1 1567.7,836.7 1630.0,836.7" fill="none" stroke="#1b1f23" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1517.7" cy="655.1" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<text x="1636.0" y="822.7" font-size="13" text-anchor="start" font-weight="700" fill="#1f2933">+V</text>
+<text x="1636.0" y="840.7" font-size="13" text-anchor="start" font-weight="700" fill="#1f2933">−V</text>
+<text x="1626.0" y="854.7" font-size="12" text-anchor="end" font-weight="400" fill="#52606d">from power supply</text>
+<polyline points="1501.4,424.0 1550.7,424.0" fill="none" stroke="#d62828" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1550.7" cy="424.0" r="4" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1501.4,457.0 1517.7,457.0" fill="none" stroke="#1b1f23" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1517.7" cy="457.0" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1501.4,589.1 1630.0,589.1" fill="none" stroke="#1e88e5" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1636.0" y="593.1" font-size="13" text-anchor="start" font-weight="700" fill="#1f2933">1B</text>
+<polyline points="1501.4,556.0 1630.0,556.0" fill="none" stroke="#e53935" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1636.0" y="560.0" font-size="13" text-anchor="start" font-weight="700" fill="#1f2933">1A</text>
+<polyline points="1501.4,523.0 1630.0,523.0" fill="none" stroke="#43a047" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1636.0" y="527.0" font-size="13" text-anchor="start" font-weight="700" fill="#1f2933">2A</text>
+<polyline points="1501.4,490.0 1630.0,490.0" fill="none" stroke="#fbc02d" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="1636.0" y="494.0" font-size="13" text-anchor="start" font-weight="700" fill="#1f2933">2B</text>
+<text x="1636.0" y="472.0" font-size="12" text-anchor="start" font-weight="600" fill="#52606d">to motor</text>
+<circle cx="1550.7" cy="258.9" r="4" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1517.7" cy="258.9" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1534.2" cy="258.9" r="65" fill="#2b3a4a" fill-opacity="0.82" stroke="#1f2933" stroke-width="2"/>
+<text x="1534.2" y="253.9" font-size="14" text-anchor="middle" font-weight="700" fill="#fff">C1</text>
+<text x="1534.2" y="269.9" font-size="11" text-anchor="middle" font-weight="600" fill="#fff">100–470 µF</text>
+<text x="1534.2" y="285.9" font-size="10" text-anchor="middle" font-weight="400" fill="#fff">+ to 12 V</text>
+<rect x="1105.0" y="217.1" width="98.8" height="149.5" rx="0" fill="#fde6c8" fill-opacity="0.92" stroke="#3e4c59" stroke-width="2"/>
+<text x="1154.4" y="277.9" font-size="12" text-anchor="middle" font-weight="700" fill="#1f2933">12 V to 5 V</text>
+<circle cx="1154.4" cy="324.9" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1163.4" y="328.9" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">OUT</text>
+<circle cx="1154.4" cy="291.9" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1163.4" y="295.9" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">GND</text>
+<circle cx="1154.4" cy="258.9" r="4.5" fill="#ffd54f" stroke="#1f2933" stroke-width="1.2"/>
+<text x="1163.4" y="262.9" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">IN</text>
+<polyline points="1550.7,324.9 1614.2,324.9 1614.2,195.3 1088.4,195.3 1088.4,258.9" fill="none" stroke="#d62828" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1550.7" cy="324.9" r="4" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1088.4" cy="258.9" r="4" fill="#d62828" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1088.4,291.9 989.3,291.9" fill="none" stroke="#1b1f23" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1088.4" cy="291.9" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<circle cx="989.3" cy="291.9" r="4" fill="#1b1f23" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1220.5,324.9 1319.5,324.9" fill="none" stroke="#3e4c59" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1220.5" cy="324.9" r="4" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<circle cx="1319.5" cy="324.9" r="4" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<rect x="1253.0" y="316.9" width="34.0" height="16.0" rx="2" fill="#3e4c59" stroke="#3e4c59" stroke-width="2"/>
+<rect x="1277.0" y="316.9" width="6.0" height="16.0" rx="0" fill="#fff" stroke="#3e4c59" stroke-width="0"/>
+<text x="1270.0" y="311.9" font-size="12" text-anchor="middle" font-weight="700" fill="#1f2933">D1</text>
+<polyline points="1352.5,324.9 1352.5,163.3 925.0,163.3" fill="none" stroke="#f08c00" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1352.5" cy="324.9" r="4" fill="#f08c00" stroke="#ffffff" stroke-width="1"/>
+<text x="919.0" y="167.3" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 39 (VSYS)</text>
+<text x="40.0" y="935.0" font-size="15" text-anchor="start" font-weight="700" fill="#1f2933">Wire colours</text>
+<polyline points="40.0,959.0 76.0,959.0" fill="none" stroke="#d62828" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="86.0" y="964.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">12 V</text>
+<polyline points="255.0,959.0 291.0,959.0" fill="none" stroke="#1b1f23" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="301.0" y="964.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">Ground</text>
+<polyline points="470.0,959.0 506.0,959.0" fill="none" stroke="#f08c00" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="516.0" y="964.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">5 V (after D1)</text>
+<polyline points="40.0,983.0 76.0,983.0" fill="none" stroke="#7b2cbf" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="86.0" y="988.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">3.3 V</text>
+<polyline points="255.0,983.0 291.0,983.0" fill="none" stroke="#0b8f8f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="301.0" y="988.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">EN</text>
+<polyline points="470.0,983.0 506.0,983.0" fill="none" stroke="#c2185b" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="516.0" y="988.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">STEP</text>
+<polyline points="40.0,1007.0 76.0,1007.0" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="86.0" y="1012.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">DIR</text>
+<polyline points="255.0,1007.0 291.0,1007.0" fill="none" stroke="#6d4c41" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="301.0" y="1012.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">DIAG</text>
+<polyline points="470.0,1007.0 506.0,1007.0" fill="none" stroke="#5c6ac4" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="516.0" y="1012.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">Break-beam signal</text>
+<polyline points="40.0,1031.0 76.0,1031.0" fill="none" stroke="#8b5a2b" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="86.0" y="1036.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">230 V live</text>
+<polyline points="255.0,1031.0 291.0,1031.0" fill="none" stroke="#1f6fd1" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="301.0" y="1036.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">230 V neutral</text>
+<polyline points="470.0,1031.0 506.0,1031.0" fill="none" stroke="#3f9b3f" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="516.0" y="1036.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">Protective earth</text>
+<text x="770.0" y="925.0" font-size="15" text-anchor="start" font-weight="700" fill="#1f2933">Build notes</text>
+<text x="770.0" y="949.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Proposal, not built or tested. Check it against your parts before soldering.</text>
+<text x="770.0" y="970.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Breakout: one 10-pin header in F3–F12. The terminal pins line up with holes A5–A10. Solder them if they reach, for support. Leave A5–E10 empty.</text>
+<text x="770.0" y="991.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Put a spacer under the terminal edge if those pins do not reach. The terminal screws press on an otherwise one-sided mount.</text>
+<text x="770.0" y="1012.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Fit the jumpers, R1 and D1 first. Column G is half under the breakout.</text>
+<text x="770.0" y="1033.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  INDEX and UART stay unconnected. Bend the C1 leads to fit the rail spacing.</text>
+<text x="770.0" y="1054.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Converter shown as a 3-pin in-line module, 11.5 × 7.5 mm (example: R-78E5.0-0.5). Check its pin order. It sits flipped: IN in row 15.</text>
+<text x="770.0" y="1075.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  The ground link runs along the front edge of the board, the 12 V feed round the rear corner, so both stay clear of the M3 screws.</text>
+<text x="770.0" y="1096.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  GP2 to GP6 are on the wall side of the Pico, so those wires go round its front end. Keep them away from the antenna at that end.</text>
+</svg>

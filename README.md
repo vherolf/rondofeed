@@ -80,7 +80,7 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | 10 kΩ resistor | 1 | Pull-up from `EN` to 3V3 |
 | Schottky diode 1N5819 | 1 | Between the converter and `VSYS`, see Wiring |
 | 12 V to 5 V converter | 1 | On the prototyping board, supplies `VSYS` on the Pico |
-| Adafruit Perma-Proto Quarter-Size (about 44 × 55 mm) | 1 | For the breakout and converter, 2 × M3×6 self-tapping screws into the carrier posts |
+| Adafruit Perma-Proto Quarter-Size (43.2 × 50.8 mm) | 1 | For the breakout and converter, 2 × M3×6 self-tapping screws into the carrier posts |
 | IR break-beam sensor, emitter and receiver | 1 | Ø5.2 mm hole |
 | IEC C14 inlet with switch and fuse | 1 | 27.5 × 47.5 mm cutout, 3 mm wall |
 | M3 threaded inserts, Ø4.0 mm hole | 12 | |
@@ -94,6 +94,12 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 ![rondOfeed wiring diagram](wiring.svg)
 
 This is a proposal and has not been built or tested yet. Pins are grouped for clarity, so check the labels on your boards. See [PLAN.md](PLAN.md) for the rules for a reliable build.
+
+### Layout in the machine
+
+![rondOfeed wiring layout: position of the parts in the housing and on the Perma-Proto board](wiring_layout.svg)
+
+This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board sits with its long side across the carrier, because its two mounting holes are on the short axis.
 
 ## Discs
 
@@ -114,7 +120,6 @@ These values do not come from the purchased parts. If yours differ, change them 
 - `IEC_CUT`: the cutout depends on the IEC inlet model
 - `IR_D`: diameter of the break-beam sensor
 - `INSERT_D`: manufacturer's hole size for the threaded insert
-- `PERF_HOLE_DY`: hole spacing of the Perma-Proto board (35.6 mm); the position centred on the long axis is an assumption
 - `HOLE_D`: match this to the food, see [Discs](#discs)
 
 Print a test piece before the full print: the disc centre (shaft and set screw) and the motor block.
