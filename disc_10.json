@@ -1,0 +1,1262 @@
+{
+ "commands": [
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 200,
+    "height": 10,
+    "base": [
+     0,
+     0,
+     116.5
+    ],
+    "name": "disc_260",
+    "body_name": "Disc_10"
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 5.2,
+    "height": 12,
+    "base": [
+     0,
+     0,
+     115.5
+    ],
+    "name": "bore_261",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 23,
+    "base": [
+     1,
+     0,
+     121.5
+    ],
+    "name": "setscrew_262",
+    "axis": "X",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 2.8000000000000007,
+    "width": 5.9,
+    "height": 9.5,
+    "corner": [
+     7,
+     -2.95,
+     118.0
+    ],
+    "name": "nutpocket_263",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 14.2,
+    "width": 8,
+    "height": 9.5,
+    "corner": [
+     9.8,
+     -4,
+     118.0
+    ],
+    "name": "access_264",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     7.798619874598719,
+     -86.6497635775858,
+     115.5
+    ],
+    "name": "foodhole_265",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     12.49898263590457,
+     -68.87507120190408,
+     115.5
+    ],
+    "name": "foodhole_266",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     23.14520556430074,
+     -83.86476888053923,
+     115.5
+    ],
+    "name": "foodhole_267",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     24.596237685693993,
+     -65.5364409447816,
+     115.5
+    ],
+    "name": "foodhole_268",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     37.74788530322758,
+     -78.38429150751045,
+     115.5
+    ],
+    "name": "foodhole_269",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     35.90294941841343,
+     -60.09141555213063,
+     115.5
+    ],
+    "name": "foodhole_270",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     51.137316949445164,
+     -70.38447851062043,
+     115.5
+    ],
+    "name": "foodhole_271",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     46.05571081577988,
+     -52.71500262025276,
+     115.5
+    ],
+    "name": "foodhole_272",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     62.88315315298308,
+     -60.12245046185721,
+     115.5
+    ],
+    "name": "foodhole_273",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     54.728203772762086,
+     -43.64428613011135,
+     115.5
+    ],
+    "name": "foodhole_274",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     72.60787307375334,
+     -47.92803738633291,
+     115.5
+    ],
+    "name": "foodhole_275",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     61.641687229971666,
+     -33.1708063731099,
+     115.5
+    ],
+    "name": "foodhole_276",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     79.99891621197621,
+     -34.19317775389135,
+     115.5
+    ],
+    "name": "foodhole_277",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     66.57395614066074,
+     -21.631189606246316,
+     115.5
+    ],
+    "name": "foodhole_278",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     84.81872835981865,
+     -19.359321254199337,
+     115.5
+    ],
+    "name": "foodhole_279",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     69.36648332375543,
+     -9.396328607235874,
+     115.5
+    ],
+    "name": "foodhole_280",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     86.91239678909437,
+     -3.9032402404947955,
+     115.5
+    ],
+    "name": "foodhole_281",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     69.92951465789203,
+     3.14053812453606,
+     115.5
+    ],
+    "name": "foodhole_282",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     86.21262927381032,
+     11.678294126136038,
+     115.5
+    ],
+    "name": "foodhole_283",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     68.24495385272765,
+     15.576465376942012,
+     115.5
+    ],
+    "name": "foodhole_284",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     82.74191691767835,
+     26.884478510620447,
+     115.5
+    ],
+    "name": "foodhole_285",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     64.36694407860153,
+     27.511752215774663,
+     115.5
+    ],
+    "name": "foodhole_286",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     76.61181127153621,
+     41.22657363515089,
+     115.5
+    ],
+    "name": "foodhole_287",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     58.42012776049118,
+     38.56278870164719,
+     115.5
+    ],
+    "name": "foodhole_288",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     68.01933897471858,
+     54.243612761709834,
+     115.5
+    ],
+    "name": "foodhole_289",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     50.5956404679174,
+     48.37438542908053,
+     115.5
+    ],
+    "name": "foodhole_290",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     57.240669156755,
+     65.51721754231416,
+     115.5
+    ],
+    "name": "foodhole_291",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     41.14496766047312,
+     56.63118960624632,
+     115.5
+    ],
+    "name": "foodhole_292",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     44.62223713431381,
+     74.68504504336236,
+     115.5
+    ],
+    "name": "foodhole_293",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     30.37186173822904,
+     63.06782075316935,
+     115.5
+    ],
+    "name": "foodhole_294",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     30.5696096950768,
+     81.45243374565715,
+     115.5
+    ],
+    "name": "foodhole_295",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     18.622579189667245,
+     67.47740024870973,
+     115.5
+    ],
+    "name": "foodhole_296",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     15.534449847481374,
+     85.60187420808079,
+     115.5
+    ],
+    "name": "foodhole_297",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     6.274751623240348,
+     69.71820057966673,
+     115.5
+    ],
+    "name": "foodhole_298",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     5.327213576290987e-15,
+     87.0,
+     115.5
+    ],
+    "name": "foodhole_299",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -6.2747516232403715,
+     69.71820057966673,
+     115.5
+    ],
+    "name": "foodhole_300",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -15.53444984748142,
+     85.60187420808077,
+     115.5
+    ],
+    "name": "foodhole_301",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -18.622579189667267,
+     67.47740024870973,
+     115.5
+    ],
+    "name": "foodhole_302",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -30.569609695076828,
+     81.45243374565713,
+     115.5
+    ],
+    "name": "foodhole_303",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -30.371861738229065,
+     63.06782075316934,
+     115.5
+    ],
+    "name": "foodhole_304",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -44.62223713431382,
+     74.68504504336236,
+     115.5
+    ],
+    "name": "foodhole_305",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -41.14496766047314,
+     56.63118960624631,
+     115.5
+    ],
+    "name": "foodhole_306",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -57.240669156755025,
+     65.51721754231413,
+     115.5
+    ],
+    "name": "foodhole_307",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -50.59564046791743,
+     48.37438542908051,
+     115.5
+    ],
+    "name": "foodhole_308",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -68.01933897471861,
+     54.24361276170979,
+     115.5
+    ],
+    "name": "foodhole_309",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -58.4201277604912,
+     38.56278870164715,
+     115.5
+    ],
+    "name": "foodhole_310",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -76.61181127153621,
+     41.22657363515089,
+     115.5
+    ],
+    "name": "foodhole_311",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -64.36694407860156,
+     27.51175221577463,
+     115.5
+    ],
+    "name": "foodhole_312",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -82.74191691767837,
+     26.8844785106204,
+     115.5
+    ],
+    "name": "foodhole_313",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -68.24495385272766,
+     15.576465376941986,
+     115.5
+    ],
+    "name": "foodhole_314",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -86.21262927381032,
+     11.678294126136038,
+     115.5
+    ],
+    "name": "foodhole_315",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -69.92951465789203,
+     3.140538124536022,
+     115.5
+    ],
+    "name": "foodhole_316",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -86.91239678909437,
+     -3.9032402404948647,
+     115.5
+    ],
+    "name": "foodhole_317",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -69.36648332375543,
+     -9.396328607235874,
+     115.5
+    ],
+    "name": "foodhole_318",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -84.81872835981865,
+     -19.35932125419938,
+     115.5
+    ],
+    "name": "foodhole_319",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -66.57395614066075,
+     -21.63118960624631,
+     115.5
+    ],
+    "name": "foodhole_320",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -79.9989162119762,
+     -34.193177753891376,
+     115.5
+    ],
+    "name": "foodhole_321",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -61.64168722997164,
+     -33.170806373109954,
+     115.5
+    ],
+    "name": "foodhole_322",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -72.60787307375332,
+     -47.92803738633294,
+     115.5
+    ],
+    "name": "foodhole_323",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -54.72820377276206,
+     -43.64428613011139,
+     115.5
+    ],
+    "name": "foodhole_324",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -62.88315315298305,
+     -60.12245046185724,
+     115.5
+    ],
+    "name": "foodhole_325",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -46.05571081577987,
+     -52.715002620252776,
+     115.5
+    ],
+    "name": "foodhole_326",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -51.13731694944517,
+     -70.38447851062043,
+     115.5
+    ],
+    "name": "foodhole_327",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -35.90294941841339,
+     -60.091415552130655,
+     115.5
+    ],
+    "name": "foodhole_328",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -37.7478853032275,
+     -78.3842915075105,
+     115.5
+    ],
+    "name": "foodhole_329",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -24.596237685694,
+     -65.5364409447816,
+     115.5
+    ],
+    "name": "foodhole_330",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -23.14520556430067,
+     -83.86476888053924,
+     115.5
+    ],
+    "name": "foodhole_331",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -12.498982635904577,
+     -68.87507120190408,
+     115.5
+    ],
+    "name": "foodhole_332",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 10,
+    "height": 12,
+    "base": [
+     -7.798619874598653,
+     -86.6497635775858,
+     115.5
+    ],
+    "name": "foodhole_333",
+    "operation": "cut",
+    "targets": [
+     "Disc_10"
+    ]
+   }
+  }
+ ]
+}
