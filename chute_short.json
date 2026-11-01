@@ -1,0 +1,153 @@
+{
+ "commands": [
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 29.0,
+    "height": 120,
+    "base": [
+     0,
+     -38.5,
+     145.56398524709118
+    ],
+    "name": "chute_356",
+    "axis": [
+     0,
+     -0.766044443118978,
+     -0.6427876096865393
+    ],
+    "body_name": "Chute_short"
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 68,
+    "width": 3.0,
+    "height": 31.900000000000006,
+    "corner": [
+     -34,
+     -100.0,
+     80
+    ],
+    "name": "ears_357",
+    "operation": "join",
+    "targets": [
+     "Chute_short"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 24,
+    "height": 125,
+    "base": [
+     0,
+     -38.5,
+     145.56398524709118
+    ],
+    "name": "chutein_358",
+    "axis": [
+     0,
+     -0.766044443118978,
+     -0.6427876096865393
+    ],
+    "operation": "cut",
+    "targets": [
+     "Chute_short"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 100,
+    "width": 280,
+    "height": 88.1,
+    "corner": [
+     -50,
+     -220,
+     111.9
+    ],
+    "name": "trimtop_359",
+    "operation": "cut",
+    "targets": [
+     "Chute_short"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 100,
+    "width": 157.0,
+    "height": 260,
+    "corner": [
+     -50,
+     -260,
+     -60
+    ],
+    "name": "trimend_360",
+    "operation": "cut",
+    "targets": [
+     "Chute_short"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 5,
+    "base": [
+     28,
+     -101.0,
+     90
+    ],
+    "name": "earhole_361",
+    "axis": "Y",
+    "operation": "cut",
+    "targets": [
+     "Chute_short"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 5,
+    "base": [
+     -28,
+     -101.0,
+     90
+    ],
+    "name": "earhole_362",
+    "axis": "Y",
+    "operation": "cut",
+    "targets": [
+     "Chute_short"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 5.2,
+    "height": 60,
+    "base": [
+     -30,
+     -85,
+     98.88096492536035
+    ],
+    "name": "irhole_363",
+    "axis": "X",
+    "operation": "cut",
+    "targets": [
+     "Chute_short"
+    ]
+   }
+  }
+ ]
+}

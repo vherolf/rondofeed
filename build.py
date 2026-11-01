@@ -334,15 +334,20 @@ for x, y in POST_HOLES:  # Dom in jeder Ecke ueber dem Schraubenkopf der Platte
 cyl(LID_HOLE_D, (0, CY, LID_Z - 1), LID_TOP_T + 2, "cut", "Lid", label="shafthole")
 
 # ---------- Rutsche ----------
-cyl(CHUTE_D + 2 * CHUTE_WALL, chute_start, chute_len, body="Chute", axis=list(AX), label="chute")
-box(-EAR_X - 6, -in_, EAR_Z - 10, EAR_X + 6, -in_ + 3, BASE_H - 0.1, op="join", target="Chute", label="ears")
-cyl(CHUTE_D, chute_start, chute_len + 5, "cut", "Chute", axis=list(AX), label="chutein")
-box(-50, -220, BASE_H - 0.1, 50, 60, 200, op="cut", target="Chute", label="trimtop")
-box(-50, -260, -60, 50, SPOUT_Y, 200, op="cut", target="Chute", label="trimend")
-for sx in (1, -1):
-    cyl(M3_CLEAR, (sx * EAR_X, -in_ - 1, EAR_Z), 5, "cut", "Chute", axis="Y", label="earhole")
-ir_z = chute_axis(IR_Y)[2] - (CHUTE_D / 2) / math.cos(math.radians(CHUTE_DEG)) + 8
-cyl(IR_D, (-30, IR_Y, ir_z), 60, "cut", "Chute", axis="X", label="irhole")
+def chute(body, spout_y):
+    """Rohr mit Befestigungsplatte und Loechern fuer die Lichtschranke, endet senkrecht bei y = spout_y."""
+    cyl(CHUTE_D + 2 * CHUTE_WALL, chute_start, chute_len, body=body, axis=list(AX), label="chute")
+    box(-EAR_X - 6, -in_, EAR_Z - 10, EAR_X + 6, -in_ + 3, BASE_H - 0.1, op="join", target=body, label="ears")
+    cyl(CHUTE_D, chute_start, chute_len + 5, "cut", body, axis=list(AX), label="chutein")
+    box(-50, -220, BASE_H - 0.1, 50, 60, 200, op="cut", target=body, label="trimtop")
+    box(-50, -260, -60, 50, spout_y, 200, op="cut", target=body, label="trimend")
+    for sx in (1, -1):
+        cyl(M3_CLEAR, (sx * EAR_X, -in_ - 1, EAR_Z), 5, "cut", body, axis="Y", label="earhole")
+    ir_z = chute_axis(IR_Y)[2] - (CHUTE_D / 2) / math.cos(math.radians(CHUTE_DEG)) + 8
+    cyl(IR_D, (-30, IR_Y, ir_z), 60, "cut", body, axis="X", label="irhole")
+
+
+chute("Chute", SPOUT_Y)
 
 # ---------- Klemmenabdeckung ----------
 # Haube ueber dem Klemmenende des Netzteils, oben geschlossen, zum Netzteil offen, Kabelausgang nach hinten.
@@ -400,3 +405,8 @@ for hole, n_ring in EXTRA_DISCS:
     cmds.clear()
     food_disc(f"Disc_{hole}", hole, n_ring, DISC_D, DISC_T, SHAFT_D)
     (HERE / f"disc_{hole}.json").write_text(json.dumps({"commands": cmds}, indent=1))
+
+# Kurze Rutsche: endet buendig an der Aussenwand des Gehaeuses und steht nicht heraus
+cmds.clear()
+chute("Chute_short", -h)
+(HERE / "chute_short.json").write_text(json.dumps({"commands": cmds}, indent=1))
