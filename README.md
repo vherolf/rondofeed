@@ -49,6 +49,8 @@ python3 build.py && solidcraft-cli run rondofeed.json --save rondofeed.sc
 
 The `DUMMY_*` bodies in SolidCraft are placeholders only (red) and are not printed.
 
+`step/rondofeed.step` is the same design as solid bodies for other CAD programs such as Autodesk Fusion. It has no parameters, so change dimensions in `build.py` and export again (`file.export` with format `step`). The STEP file contains the standard disc only.
+
 ## Printing (Prusa MK4, PETG, 0.4 mm nozzle)
 
 The STLs are in assembly orientation. Use "Place on face" in the slicer to orient them like this:
