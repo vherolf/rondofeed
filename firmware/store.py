@@ -10,14 +10,21 @@ class Store:
         self.path = path
         self.data = dict(self.DEFAULTS)
         self.data["portions"] = default_portions
-        try:
-            with open(path) as f:
-                loaded = json.load(f)
+        loaded = self._read(path)
+        if loaded is None:
+            loaded = self._read(path + ".tmp")   # nur wenn die Hauptdatei fehlt oder kaputt ist
+        if loaded:
             for key in self.DEFAULTS:
                 if key in loaded:
                     self.data[key] = loaded[key]
+
+    @staticmethod
+    def _read(path):
+        try:
+            with open(path) as f:
+                return json.load(f)
         except (OSError, ValueError):
-            pass
+            return None
 
     def __getitem__(self, key):
         return self.data[key]
@@ -27,11 +34,13 @@ class Store:
         self.save()
 
     def save(self):
+        """Schreibt in eine Hilfsdatei und ersetzt dann die alte in einem Schritt. Ein Abbruch dazwischen laesst
+        die alte Datei stehen, so gehen Position und Token nicht verloren."""
         tmp = self.path + ".tmp"
         with open(tmp, "w") as f:
             json.dump(self.data, f)
         try:
-            os.remove(self.path)
+            os.rename(tmp, self.path)   # ersetzt eine vorhandene Datei, auch im Flash des Pico
         except OSError:
-            pass
-        os.rename(tmp, self.path)
+            os.remove(self.path)
+            os.rename(tmp, self.path)
