@@ -3,15 +3,15 @@
 **An open, 3D-printable automatic feeder for dogs, birds and other pets.**
 
 <p align="center">
-  <img src="images/exploded.png" alt="Exploded view of the rondOfeed: lid, perforated disc, top plate and housing with chute" width="640">
+  <img src="images/exploded.png" alt="Exploded view of the hexagonal rondOfeed: round lid, perforated disc, top plate and housing with chute" width="640">
 </p>
 
-A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a time, which slides down a chute into a bowl. A Raspberry Pi Pico 2 W controls it, so Wi-Fi and Bluetooth feeding are possible.
+A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a time, which slides down a chute into a bowl. A Raspberry Pi Pico 2 W controls it, so Wi-Fi and Bluetooth feeding are possible. The housing is a hexagon, like a honeycomb cell.
 
 <table>
   <tr>
-    <td><img src="images/iso.png" alt="Assembled rondOfeed with lid and chute"></td>
-    <td><img src="images/inside.png" alt="Top view inside the housing with motor, power supply and electronics"></td>
+    <td><img src="images/iso.png" alt="Assembled hexagonal rondOfeed with round lid and chute"></td>
+    <td><img src="images/inside.png" alt="Top view inside the hexagonal housing with motor, power supply and electronics"></td>
   </tr>
   <tr>
     <td align="center">Assembled</td>
@@ -99,7 +99,7 @@ This is a proposal and has not been built or tested yet. Pins are grouped for cl
 
 ![rondOfeed wiring layout: position of the parts in the housing and on the Perma-Proto board](wiring_layout.svg)
 
-This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board sits with its long side across the carrier, because its two mounting holes are on the short axis.
+This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board's two mounting holes are on the short axis. In the hexagonal housing the board sits on the left of the motor and the Pico behind it at the rear wall, see the picture above. The schematic only shows the board and the wiring, not the exact position in the housing.
 
 ## Discs
 
@@ -129,9 +129,10 @@ Print a test piece before the full print: the disc centre (shaft and set screw) 
 1. Press in the threaded inserts.
 2. Screw the motor to the plate from below, with the screw heads recessed from above.
 3. Mount the power supply upright on the ribs of the rear right wall (the slanted one next to the IEC inlet): M3×8 from outside through the wall, heads recessed. Screws must not reach more than 3 mm into the power supply.
-4. Screw the Pico and prototyping board to the carrier, then screw the carrier to the floor. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover.
+4. Screw the Pico and prototyping board to the carrier (one angled plate, one part under each board), then screw the carrier to the floor. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover.
 5. Before fitting the plate, push the chute through the front wall from inside. 2 × M3 from outside, nuts inside. The plate has to come off for cleaning.
-6. Screw on the plate, set the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
+6. Screw on the plate with 3 screws in the corners of the hexagon, set the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
+7. Place the round lid on top and fix it with 3 screws into the tabs at the other three corners.
 
 ## Safety
 
