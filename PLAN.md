@@ -103,7 +103,7 @@ Only the power supply has ventilation slots (floor and front right wall), so the
 - Measure the food and set `HOLE_D`. Pieces under about 8 mm can fall through to the neighbouring hole.
 - Print a test piece: disc centre with shaft and set screw, plus the motor block.
 - Plan the wiring with the real parts, as there is little room next to the power supply and carrier.
-- Bowl: at most about 57 mm high with `Chute.stl`, about 70 mm with `Chute_short.stl`. With the short chute the bowl has to stand right against the wall.
+- Bowl: at most about 70 mm high with `Chute.stl`, but it has to stand right against the wall. With `Chute_long.stl` at most about 57 mm.
 
 ## After assembly
 

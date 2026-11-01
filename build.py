@@ -70,7 +70,7 @@ CHUTE_DEG = 40
 CHUTE_D = 24       # innen
 CHUTE_WALL = 2.5
 CHUTE_Y0 = -78.5   # Achse an der Plattenunterseite, Mitte zwischen beiden Auslaessen
-SPOUT_Y = -122
+SPOUT_Y_LONG = -122   # Ausfuehrung Chute_long, steht 19 mm aus dem Gehaeuse
 AX = (0, -math.cos(math.radians(CHUTE_DEG)), -math.sin(math.radians(CHUTE_DEG)))
 EAR_X = 28         # Platte innen an der Frontwand, Schrauben M3 von aussen, Mutter innen
 EAR_Z = 90
@@ -347,7 +347,7 @@ def chute(body, spout_y):
     cyl(IR_D, (-30, IR_Y, ir_z), 60, "cut", body, axis="X", label="irhole")
 
 
-chute("Chute", SPOUT_Y)
+chute("Chute", -h)   # Standard: endet buendig an der Aussenwand, steht nicht heraus
 
 # ---------- Klemmenabdeckung ----------
 # Haube ueber dem Klemmenende des Netzteils, oben geschlossen, zum Netzteil offen, Kabelausgang nach hinten.
@@ -406,7 +406,7 @@ for hole, n_ring in EXTRA_DISCS:
     food_disc(f"Disc_{hole}", hole, n_ring, DISC_D, DISC_T, SHAFT_D)
     (HERE / f"disc_{hole}.json").write_text(json.dumps({"commands": cmds}, indent=1))
 
-# Kurze Rutsche: endet buendig an der Aussenwand des Gehaeuses und steht nicht heraus
+# Lange Rutsche: steht aus dem Gehaeuse heraus, der Auslauf liegt tiefer
 cmds.clear()
-chute("Chute_short", -h)
-(HERE / "chute_short.json").write_text(json.dumps({"commands": cmds}, indent=1))
+chute("Chute_long", SPOUT_Y_LONG)
+(HERE / "chute_long.json").write_text(json.dumps({"commands": cmds}, indent=1))

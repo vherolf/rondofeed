@@ -49,7 +49,7 @@ python3 build.py && solidcraft-cli run rondofeed.json --save rondofeed.sc
 
 The `DUMMY_*` bodies in SolidCraft are placeholders only (red) and are not printed.
 
-`step/rondofeed.step` is the same design as solid bodies for other CAD programs such as Autodesk Fusion. It has no parameters, so change dimensions in `build.py` and export again (`file.export` with format `step`). The STEP file contains the standard disc and the standard chute only.
+`step/rondofeed.step` is the same design as solid bodies for other CAD programs such as Autodesk Fusion. It has no parameters, so change dimensions in `build.py` and export again (`file.export` with format `step`). The STEP file contains the standard disc and the short chute only.
 
 ## Printing (Prusa MK4, PETG, 0.4 mm nozzle)
 
@@ -63,12 +63,12 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `Disc_12.stl` (optional) | Ø200 × 10 | Bottom |
 | `Disc_10.stl` (optional) | Ø200 × 10 | Bottom |
 | `Lid.stl` | 236 × 206 × 16 | Top (flip), the pins point up |
-| `Chute.stl` | 68 × 66 × 55 | Flat top, with the screw plate standing on it |
-| `Chute_short.stl` (alternative) | 68 × 47 × 39 | Same as `Chute.stl` |
+| `Chute.stl` | 68 × 47 × 39 | Flat top, with the screw plate standing on it |
+| `Chute_long.stl` (optional) | 68 × 66 × 55 | Same as `Chute.stl` |
 | `TerminalCover.stl` | 99.5 × 26 × 40 | Back |
 | `Carrier.stl` | 83 × 131.5 × 7 | Bottom |
 
-`Chute_short.stl` is an alternative to `Chute.stl`: it ends flush with the outer wall of the housing, so nothing sticks out. It fits the same opening and the same screws, the light barrier holes are in the same place. The portions leave the housing about 15 mm higher, so the bowl can be higher too (about 70 mm instead of 57 mm), but it has to stand right against the wall. Use one of the two, not both.
+`Chute.stl` ends flush with the outer wall of the housing, so nothing sticks out. The portions leave the housing about 70 mm above the table, so the bowl can be up to about 70 mm high, but it has to stand right against the wall. `Chute_long.stl` is a longer version that sticks out 19 mm and puts the outlet lower, so a bowl of up to about 57 mm fits under it and it does not have to touch the wall. It fits the same opening and the same screws, and the light barrier holes are in the same place. Use one of the two, not both.
 
 The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The lid has the same hexagon as the housing and sits flush on it. It is held by magnets, so there are no screws on top, and 6 small pins on the underside fit into holes in the plate so the lid cannot slide.
 

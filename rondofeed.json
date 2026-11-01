@@ -3711,7 +3711,7 @@
    "command": "solid.box",
    "params": {
     "length": 100,
-    "width": 138,
+    "width": 157.0,
     "height": 260,
     "corner": [
      -50,

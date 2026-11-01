@@ -16,7 +16,7 @@
      -0.766044443118978,
      -0.6427876096865393
     ],
-    "body_name": "Chute_short"
+    "body_name": "Chute_long"
    }
   },
   {
@@ -33,7 +33,7 @@
     "name": "ears_357",
     "operation": "join",
     "targets": [
-     "Chute_short"
+     "Chute_long"
     ]
    }
   },
@@ -55,7 +55,7 @@
     ],
     "operation": "cut",
     "targets": [
-     "Chute_short"
+     "Chute_long"
     ]
    }
   },
@@ -73,7 +73,7 @@
     "name": "trimtop_359",
     "operation": "cut",
     "targets": [
-     "Chute_short"
+     "Chute_long"
     ]
    }
   },
@@ -81,7 +81,7 @@
    "command": "solid.box",
    "params": {
     "length": 100,
-    "width": 157.0,
+    "width": 138,
     "height": 260,
     "corner": [
      -50,
@@ -91,7 +91,7 @@
     "name": "trimend_360",
     "operation": "cut",
     "targets": [
-     "Chute_short"
+     "Chute_long"
     ]
    }
   },
@@ -109,7 +109,7 @@
     "axis": "Y",
     "operation": "cut",
     "targets": [
-     "Chute_short"
+     "Chute_long"
     ]
    }
   },
@@ -127,7 +127,7 @@
     "axis": "Y",
     "operation": "cut",
     "targets": [
-     "Chute_short"
+     "Chute_long"
     ]
    }
   },
@@ -145,7 +145,7 @@
     "axis": "X",
     "operation": "cut",
     "targets": [
-     "Chute_short"
+     "Chute_long"
     ]
    }
   }
