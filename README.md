@@ -63,7 +63,6 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `Disc_12.stl` (optional) | Ø200 × 10 | Bottom |
 | `Disc_10.stl` (optional) | Ø200 × 10 | Bottom |
 | `Lid.stl` | 235 × 206 × 13.5 | Top (flip) |
-| `Cap.stl` | Ø36 × 10 | Top (flip) |
 | `Chute.stl` | 68 × 66 × 55 | Flat top, with the screw plate standing on it |
 | `TerminalCover.stl` | 58 × 48 × 92 | Back |
 | `Carrier.stl` | 83 × 131.5 × 7 | Bottom |

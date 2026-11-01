@@ -53,7 +53,7 @@ HEAD_DEPTH = 3.5
 LID_R = 103
 LID_TOP_T = 2.5
 LID_Z = DZ + DISC_T + 0.5
-CAP_HOLE_D = 30
+LID_HOLE_D = 12    # Loch fuer das Wellenende, Welle Ø5 ragt etwa 0,5 mm ueber den Deckel
 LID_TAB_R = 109.5  # Mitte der Laschenschraube, Abstand von der Mitte in Richtung einer Ecke
 LID_TAB_D = 16
 TAB_DEGS = (0, 60, 180)       # Ecken mit Laschenschraube der Abdeckung, nur Dom unter der Platte
@@ -327,15 +327,9 @@ cyl(2 * LID_R, (0, CY, TOP), LID_Z + LID_TOP_T - TOP, body="Lid", label="lid")
 for x, y in TAB_HOLES:  # Laschen in den Ecken ohne Schraubdom, Abdeckung bleibt rund Ø206
     cyl(LID_TAB_D, (x, y, TOP), 3, "join", "Lid", label="lidtab")
 cyl(2 * LID_R - 4, (0, CY, TOP - 1), LID_Z - TOP + 1, "cut", "Lid", label="lidhollow")
-cyl(CAP_HOLE_D, (0, CY, LID_Z - 1), LID_TOP_T + 2, "cut", "Lid", label="caphole")
+cyl(LID_HOLE_D, (0, CY, LID_Z - 1), LID_TOP_T + 2, "cut", "Lid", label="shafthole")
 for x, y in TAB_HOLES:
     cyl(M3_CLEAR, (x, y, TOP - 1), 5, "cut", "Lid", label="lidtabhole")
-
-# Kappe ueber dem Wellenende
-cap_top = LID_Z + LID_TOP_T + 8
-cyl(CAP_HOLE_D + 6, (0, CY, LID_Z + LID_TOP_T), cap_top - LID_Z - LID_TOP_T, body="Cap", label="cap")
-cyl(CAP_HOLE_D - 0.3, (0, CY, LID_Z + 0.5), LID_TOP_T, "join", "Cap", label="capplug")
-cyl(24, (0, CY, LID_Z), cap_top - LID_Z - 1.6, "cut", "Cap", label="caphollow")
 
 # ---------- Rutsche ----------
 cyl(CHUTE_D + 2 * CHUTE_WALL, chute_start, chute_len, body="Chute", axis=list(AX), label="chute")
@@ -389,7 +383,7 @@ box(qx - PERF_W / 2, qy - PERF_L / 2, ct + 4, qx + PERF_W / 2, qy + PERF_L / 2, 
 box(ix - 13.5, in_ - 30, iz - 24, ix + 13.5, in_, iz + 24, body="DUMMY_IEC", label="diec")
 
 for bodies, color in (
-    (["Disc"], "#d9a441"), (["Lid", "Cap"], "#5aa9c9"), (["Chute"], "#e0e0e0"),
+    (["Disc"], "#d9a441"), (["Lid"], "#5aa9c9"), (["Chute"], "#e0e0e0"),
     (["DUMMY_Motor", "DUMMY_PSU", "DUMMY_Pico", "DUMMY_Perfboard", "DUMMY_IEC"], "#c0504d"),
 ):
     add("appearance.assign", bodies=bodies, color=color)

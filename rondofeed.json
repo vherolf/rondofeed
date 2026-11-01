@@ -3250,14 +3250,14 @@
   {
    "command": "solid.cylinder",
    "params": {
-    "diameter": 30,
+    "diameter": 12,
     "height": 4.5,
     "base": [
      0,
      0,
      126.0
     ],
-    "name": "caphole_153",
+    "name": "shafthole_153",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3318,54 +3318,6 @@
   {
    "command": "solid.cylinder",
    "params": {
-    "diameter": 36,
-    "height": 8.0,
-    "base": [
-     0,
-     0,
-     129.5
-    ],
-    "name": "cap_157",
-    "body_name": "Cap"
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 29.7,
-    "height": 2.5,
-    "base": [
-     0,
-     0,
-     127.5
-    ],
-    "name": "capplug_158",
-    "operation": "join",
-    "targets": [
-     "Cap"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 24,
-    "height": 8.9,
-    "base": [
-     0,
-     0,
-     127.0
-    ],
-    "name": "caphollow_159",
-    "operation": "cut",
-    "targets": [
-     "Cap"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
     "diameter": 29.0,
     "height": 120,
     "base": [
@@ -3373,7 +3325,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chute_160",
+    "name": "chute_157",
     "axis": [
      0,
      -0.766044443118978,
@@ -3393,7 +3345,7 @@
      -100.0,
      80
     ],
-    "name": "ears_161",
+    "name": "ears_158",
     "operation": "join",
     "targets": [
      "Chute"
@@ -3410,7 +3362,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chutein_162",
+    "name": "chutein_159",
     "axis": [
      0,
      -0.766044443118978,
@@ -3433,7 +3385,7 @@
      -220,
      111.9
     ],
-    "name": "trimtop_163",
+    "name": "trimtop_160",
     "operation": "cut",
     "targets": [
      "Chute"
@@ -3451,7 +3403,7 @@
      -260,
      -60
     ],
-    "name": "trimend_164",
+    "name": "trimend_161",
     "operation": "cut",
     "targets": [
      "Chute"
@@ -3468,7 +3420,7 @@
      -101.0,
      90
     ],
-    "name": "earhole_165",
+    "name": "earhole_162",
     "axis": "Y",
     "operation": "cut",
     "targets": [
@@ -3486,7 +3438,7 @@
      -101.0,
      90
     ],
-    "name": "earhole_166",
+    "name": "earhole_163",
     "axis": "Y",
     "operation": "cut",
     "targets": [
@@ -3504,7 +3456,7 @@
      -85,
      98.88096492536035
     ],
-    "name": "irhole_167",
+    "name": "irhole_164",
     "axis": "X",
     "operation": "cut",
     "targets": [
@@ -3517,7 +3469,7 @@
    "params": {
     "plane": "XY",
     "offset": 3,
-    "name": "tc_sk_168"
+    "name": "tc_sk_165"
    }
   },
   {
@@ -3551,9 +3503,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "tc_sk_168",
+    "sketch": "tc_sk_165",
     "distance": 92,
-    "name": "tc_169",
+    "name": "tc_166",
     "operation": "new",
     "body_name": "TerminalCover"
    }
@@ -3563,7 +3515,7 @@
    "params": {
     "plane": "XY",
     "offset": 2,
-    "name": "tcin_sk_170"
+    "name": "tcin_sk_167"
    }
   },
   {
@@ -3597,9 +3549,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "tcin_sk_170",
+    "sketch": "tcin_sk_167",
     "distance": 91,
-    "name": "tcin_171",
+    "name": "tcin_168",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3611,7 +3563,7 @@
    "params": {
     "plane": "XY",
     "offset": 2,
-    "name": "tccable_sk_172"
+    "name": "tccable_sk_169"
    }
   },
   {
@@ -3645,9 +3597,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "tccable_sk_172",
+    "sketch": "tccable_sk_169",
     "distance": 23,
-    "name": "tccable_173",
+    "name": "tccable_170",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3659,7 +3611,7 @@
    "params": {
     "plane": "XY",
     "offset": 8,
-    "name": "tcear_sk_174"
+    "name": "tcear_sk_171"
    }
   },
   {
@@ -3693,9 +3645,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "tcear_sk_174",
+    "sketch": "tcear_sk_171",
     "distance": 3,
-    "name": "tcear_175",
+    "name": "tcear_172",
     "operation": "join",
     "targets": [
      "TerminalCover"
@@ -3712,7 +3664,7 @@
      57.906387955737245,
      7
     ],
-    "name": "tchole_176",
+    "name": "tchole_173",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3729,7 +3681,7 @@
      70.89676901250382,
      7
     ],
-    "name": "tchole_177",
+    "name": "tchole_174",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3747,7 +3699,7 @@
      -32,
      10
     ],
-    "name": "carr_178",
+    "name": "carr_175",
     "body_name": "Carrier"
    }
   },
@@ -3756,7 +3708,7 @@
    "params": {
     "plane": "XY",
     "offset": 10,
-    "name": "carrb_sk_179"
+    "name": "carrb_sk_176"
    }
   },
   {
@@ -3806,9 +3758,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "carrb_sk_179",
+    "sketch": "carrb_sk_176",
     "distance": 3,
-    "name": "carrb_180",
+    "name": "carrb_177",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -3825,7 +3777,7 @@
      -26,
      9
     ],
-    "name": "carrhole_181",
+    "name": "carrhole_178",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3842,7 +3794,7 @@
      -27,
      9
     ],
-    "name": "carrhole_182",
+    "name": "carrhole_179",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3859,7 +3811,7 @@
      46,
      9
     ],
-    "name": "carrhole_183",
+    "name": "carrhole_180",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3876,7 +3828,7 @@
      50,
      9
     ],
-    "name": "carrhole_184",
+    "name": "carrhole_181",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3893,7 +3845,7 @@
      96.5,
      12.5
     ],
-    "name": "picopost_185",
+    "name": "picopost_182",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -3910,7 +3862,7 @@
      96.5,
      12.2
     ],
-    "name": "picopilot_186",
+    "name": "picopilot_183",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3927,7 +3879,7 @@
      49.5,
      12.5
     ],
-    "name": "picopost_187",
+    "name": "picopost_184",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -3944,7 +3896,7 @@
      49.5,
      12.2
     ],
-    "name": "picopilot_188",
+    "name": "picopilot_185",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3961,7 +3913,7 @@
      96.5,
      12.5
     ],
-    "name": "picopost_189",
+    "name": "picopost_186",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -3978,7 +3930,7 @@
      96.5,
      12.2
     ],
-    "name": "picopilot_190",
+    "name": "picopilot_187",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3995,7 +3947,7 @@
      49.5,
      12.5
     ],
-    "name": "picopost_191",
+    "name": "picopost_188",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4012,7 +3964,7 @@
      49.5,
      12.2
     ],
-    "name": "picopilot_192",
+    "name": "picopilot_189",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4029,7 +3981,7 @@
      -9.8,
      12.5
     ],
-    "name": "perfpost_193",
+    "name": "perfpost_190",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4046,7 +3998,7 @@
      -9.8,
      13
     ],
-    "name": "perfpilot_194",
+    "name": "perfpilot_191",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4063,7 +4015,7 @@
      25.8,
      12.5
     ],
-    "name": "perfpost_195",
+    "name": "perfpost_192",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4080,7 +4032,7 @@
      25.8,
      13
     ],
-    "name": "perfpilot_196",
+    "name": "perfpilot_193",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4098,7 +4050,7 @@
      -21.15,
      58
     ],
-    "name": "dm_197",
+    "name": "dm_194",
     "body_name": "DUMMY_Motor"
    }
   },
@@ -4112,7 +4064,7 @@
      0,
      106
     ],
-    "name": "dmpilot_198",
+    "name": "dmpilot_195",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4129,7 +4081,7 @@
      0,
      106
     ],
-    "name": "dmshaft_199",
+    "name": "dmshaft_196",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4147,7 +4099,7 @@
      -8,
      60
     ],
-    "name": "dmplug_200",
+    "name": "dmplug_197",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4159,7 +4111,7 @@
    "params": {
     "plane": "XY",
     "offset": 8,
-    "name": "dp_sk_201"
+    "name": "dp_sk_198"
    }
   },
   {
@@ -4193,9 +4145,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "dp_sk_201",
+    "sketch": "dp_sk_198",
     "distance": 82,
-    "name": "dp_202",
+    "name": "dp_199",
     "operation": "new",
     "body_name": "DUMMY_PSU"
    }
@@ -4211,7 +4163,7 @@
      47.5,
      15.4
     ],
-    "name": "dpico_203",
+    "name": "dpico_200",
     "body_name": "DUMMY_Pico"
    }
   },
@@ -4226,7 +4178,7 @@
      -14.0,
      17
     ],
-    "name": "dperf_204",
+    "name": "dperf_201",
     "body_name": "DUMMY_Perfboard"
    }
   },
@@ -4241,7 +4193,7 @@
      70.0,
      26
     ],
-    "name": "diec_205",
+    "name": "diec_202",
     "body_name": "DUMMY_IEC"
    }
   },
@@ -4258,8 +4210,7 @@
    "command": "appearance.assign",
    "params": {
     "bodies": [
-     "Lid",
-     "Cap"
+     "Lid"
     ],
     "color": "#5aa9c9"
    }
