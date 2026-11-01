@@ -62,6 +62,9 @@ The firmware stays as it is for now. Only a Pico W is available, so nothing with
 - Copy the firmware to the board with one script instead of by hand (including the `aioble` library and the `WATCHDOG_MS` setting).
 - Test BLE with a phone or tablet, not only from a PC. Check the pairing, the 20 byte packets with a small MTU and what the app has to do (login, collect lines until `\n`).
 - Decide on BLE security. The token travels unencrypted. Bonding with encryption would protect against someone listening in, but without a display or button there is no pairing passkey. A pairing button on a free pin would help.
+- Before the device goes into use, make it safe against a stray Ctrl-C on USB. MicroPython stops the program when the byte `0x03` arrives on the serial port, from any program that writes to it, and a feed in the middle stays unfinished (the position is `uncertain` after that). Two measures, both off during development:
+  - Switch Ctrl-C off with `micropython.kbd_intr(-1)`, so `0x03` is an ordinary character that the parser ignores. Put it behind a flag in `config.py`. With it on, `mpremote` can no longer stop the program, so to update the board it has to be reset or the file removed.
+  - Turn the watchdog on (`WATCHDOG_MS = 8000` in the repository, it is off on the board for now). It cannot be stopped once started, so the board restarts by itself about 8 seconds after the program has stopped.
 - Make `STOP` work in the middle of a move. It only ends after the current portion now.
 - Let the firmware keep trying: when no portion comes, move on to the next position until one comes, with an upper limit. `RETRY_EXTRA` is the hook for it.
 - A reference for the disc position, for example a magnet and a Hall sensor on the disc, so a power loss does not need a manual `ZERO`.
