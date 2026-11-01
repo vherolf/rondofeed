@@ -32,9 +32,15 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 - Prototyping board: Adafruit Perma-Proto Quarter-Size (43.2 × 50.8 mm), layout in [wiring_layout.svg](wiring_layout.svg). Its 2 mounting holes are 35.6 mm apart on the short axis, so it sits with the long side across the carrier (along X). The `DUMMY_Perfboard` body in the model is drawn 55 × 44 mm, a little larger than the board.
 - The converter model is not chosen yet. The layout assumes a 3-pin in-line module of 11.5 × 7.5 mm.
 
-## Firmware (Pico 2 W)
+## Firmware (Pico W and Pico 2 W)
 
-Not written yet.
+MicroPython, in [firmware/](firmware/README.md). Commands over USB serial and BLE, no Wi-Fi for now. The protocol is in [firmware/PROTOCOL.md](firmware/PROTOCOL.md). The core is tested on a PC, the hardware part has not run on a board yet.
+
+Decisions:
+
+- The touchscreen app runs on Linux and uses plain USB serial. BLE is for phones, tablets and computers.
+- Every feed is confirmed by the light barrier. If no portion comes, the firmware reports it. Later it may keep trying (`RETRY_EXTRA`).
+- Limits per request, per hour and between requests apply to every source.
 
 ### Power the motor only when feeding
 

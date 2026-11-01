@@ -91,6 +91,10 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | M3 set screw and nut | 1 | Locks the disc on the D-flat |
 | Rubber feet | 4 | The floor vents need airflow |
 
+## Firmware
+
+MicroPython for the Pico W or Pico 2 W, in [firmware/](firmware/README.md). Commands over USB serial and BLE. It has been tested on a PC only, not on a board yet.
+
 ## Wiring
 
 ![rondOfeed wiring diagram](wiring.svg)
