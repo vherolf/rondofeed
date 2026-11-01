@@ -11,13 +11,14 @@ from pathlib import Path
 HERE = Path(__file__).parent
 
 # Gehaeuse
-W = 200            # Aussenmass X und Y, Scheibe mittig, Abdeckung Ø206 steht seitlich 3 mm ueber
+W = 206            # Sechskant, Schluesselweite aussen in Y (flache Wand vorn und hinten), Ecken zeigen nach +-X
 WALL = 3
 FLOOR = 3
 BASE_H = 112       # Oberkante Unterteil
 PLATE_T = 4
 TOP = BASE_H + PLATE_T
 CORNER_R = 6
+COS30 = math.cos(math.radians(30))
 
 # Schrauben
 M3_CLEAR = 3.4
@@ -53,7 +54,10 @@ LID_R = 103
 LID_TOP_T = 2.5
 LID_Z = DZ + DISC_T + 0.5
 CAP_HOLE_D = 30
-LID_TAB = 80       # Laschenschraube diagonal bei (x, y)
+LID_TAB_R = 109.5  # Mitte der Laschenschraube, Abstand von der Mitte in Richtung einer Ecke
+LID_TAB_D = 16
+TAB_DEGS = (0, 60, 180)       # Ecken mit Laschenschraube der Abdeckung, nur Dom unter der Platte
+POST_DEGS = (120, 240, 300)   # Ecken mit Schraubdom Unterteil bis Platte
 
 # Rutsche: rundes Rohr, Achse faellt nach vorn. Liegt beim Druck mit der Plattenseite auf dem Bett.
 CHUTE_DEG = 40
@@ -71,7 +75,7 @@ IR_Y = -85
 # Netzteil LRS-35/50 (Case 239A), hochkant an der rechten Wand, Klemmen zeigen nach hinten
 PSU = (99, 82, 30) # Laenge in Y, Hoehe in Z, Dicke in X
 PSU_GAP = 5        # Luft zur Wand, Tiefe der Halterippen
-PSU_Y1 = 19        # Klemmenende
+PSU_S1 = 101       # Klemmenende, Abstand von der rechten Ecke entlang der Wand
 PSU_Z0 = 8
 PSU_HOLE_L = (20.5, 75.5)  # ab Klemmenende
 PSU_HOLE_H = 41    # Datenblatt 40,5 ab einer Kante; Bohrung gleicht +-1 aus
@@ -83,23 +87,24 @@ VENT_W = 4
 VENT_L = 30
 
 # Elektroniktraeger
-CARR = (-83, 18, 7, 96.5)  # an der Rueckwand, USB des Pico direkt hinter dem Wandausschnitt
-CARR_HOLES = [(-78, 24), (-14, 24), (1, 88), (-57, 90)]  # alle ausserhalb von Pico und Loetplatine
+CARR_A = (-86, -32, -22, 42)  # x0, y0, x1, y1, unter der Loetplatine
+CARR_B = [(-55, 41), (-14, 41), (-14, 99.5), (-45, 99.5), (-45, 70), (-55, 70)]  # unter dem Pico
+CARR_HOLES = [(-80, -26), (-26, -26), (-18, 62), (-50, 50)]  # alle ausserhalb von Pico und Loetplatine
 CARR_Z = 10
 CARR_T = 3
-PICO_C = (-71, 70)
+PICO_C = (-34, 73)
 PICO_DX = 47       # aus pico_case.sc, entlang Y verbaut
 PICO_DY = 11.4
 PICO_STANDOFF = 2.4
-PERF_C = (-29, 61)
+PERF_C = (-52, 8)
 PERF_L = 55        # Adafruit Perma-Proto Quarter-Size, laengs in Y
 PERF_W = 44
 PERF_HOLE_DY = 35.6  # 2 Loecher M3, Lage mittig auf der Laengsachse angenommen, am Board pruefen
 
 # Rueckwand
-IEC_C = (60, 50)   # x, z
+IEC_C = (0, 50)    # x, z
 IEC_CUT = (27.5, 47.5)
-USB_C = (-71, 18)
+USB_C = (-34, 18)
 USB_CUT = (13, 10)
 
 cmds = []
@@ -138,13 +143,52 @@ def cyl(d, base, h, op=None, target=None, body=None, axis=None, label="cyl"):
     return p["name"]
 
 
-def wall_slot(plane, offset, c, z):
-    """Schneidet einen um 45 Grad gedrehten Schlitz durch eine Wand. Skizzenachsen: (y, z)."""
+def prism(pts, z0, z1, op=None, target=None, body=None, label="prism"):
+    """Gerades Prisma ueber dem Polygon pts (x, y) von z0 bis z1."""
+    sk = name(label + "_sk")
+    add("sketch.create", plane="XY", offset=z0, name=sk)
+    add("sketch.line", points=[[round(x, 4), round(y, 4)] for x, y in pts], closed=True)
+    add("sketch.finish")
+    p = dict(sketch=sk, distance=z1 - z0, name=name(label))
+    if op:
+        p.update(operation=op, targets=[target])
+    elif body:
+        p.update(operation="new")
+    if body:
+        p["body_name"] = body
+    add("solid.extrude", **p)
+
+
+def hexagon(apothem):
+    r = apothem / COS30
+    return [(r * math.cos(math.radians(a)), r * math.sin(math.radians(a))) for a in range(0, 360, 60)]
+
+
+def polar(deg, r):
+    return (r * math.cos(math.radians(deg)), r * math.sin(math.radians(deg)))
+
+
+# Rechte hintere Wand (Normale bei 30 Grad), Rahmen (s, v): s entlang der Wand von der rechten Ecke nach hinten,
+# v von der Innenseite der Wand nach innen. Netzteil und Klemmenabdeckung haengen an dieser Wand.
+WALL_NORMAL = (math.cos(math.radians(30)), math.sin(math.radians(30)), 0)
+
+
+def sv(s_, v_):
+    return (R_IN - 0.5 * s_ - COS30 * v_, COS30 * s_ - 0.5 * v_)
+
+
+def srect(s0, s1, v0, v1):
+    return [sv(s0, v0), sv(s1, v0), sv(s1, v1), sv(s0, v1)]
+
+
+def wall_slot(c, z):
+    """Schneidet einen um 45 Grad gedrehten Schlitz durch die Netzteilwand. Skizzenachsen: (s, z)."""
     d = math.sqrt(0.5)
     u, v = VENT_L / 2, VENT_W / 2
     pts = [(c + a * d - b_ * d, z + a * d + b_ * d) for a, b_ in ((-u, -v), (u, -v), (u, v), (-u, v))]
     sk = name("slot")
-    add("sketch.create", plane=plane, offset=offset, name=sk)
+    ox, oy = sv(0, -WALL / 2)
+    add("sketch.create", plane={"origin": [ox, oy, 0], "x_dir": [-0.5, COS30, 0], "y_dir": [0, 0, 1]}, name=sk)
     add("sketch.line", points=[list(p) for p in pts], closed=True)
     add("sketch.finish")
     add("solid.extrude", sketch=sk, distance=WALL + 2, direction="symmetric", name=name("slot_ex"),
@@ -172,47 +216,45 @@ for n, v, c in [
     add("parameters.add", name=n, expression=str(v), unit="mm", comment=c)
 
 # ---------- Unterteil ----------
-h = W / 2
-box(-h, -h, 0, h, h, BASE_H, body="Base", label="base")
-add("solid.fillet", edges=[[sx * h, sy * h, 50] for sx in (1, -1) for sy in (1, -1)], radius=CORNER_R)
+h = W / 2          # Schluesselweite / 2 aussen
 in_ = h - WALL
-box(-in_, -in_, FLOOR, in_, in_, BASE_H + 1, op="cut", target="Base", label="hollow")
+R_OUT = h / COS30
+R_IN = in_ / COS30
+prism(hexagon(h), 0, BASE_H, body="Base", label="base")
+add("solid.fillet", edges=[[*polar(a_, R_OUT), 50] for a_ in range(0, 360, 60)], radius=CORNER_R)
+prism(hexagon(in_), FLOOR, BASE_H + 1, op="cut", target="Base", label="hollow")
 
-POST_C = h - 8
-POST_HOLES = [(sx * POST_C, sy * POST_C) for sx in (1, -1) for sy in (1, -1)]
+POST_D = 6.93      # Mitte der Dome 6 mm von beiden Innenwaenden
 POST_R = 8
-for x, y in POST_HOLES:  # Innenkante rund, damit man sich beim Einbau nicht verletzt
-    sx, sy = (1 if x > 0 else -1), (1 if y > 0 else -1)
-    wall = in_ + 0.5
+POST_HOLES = [polar(a_, R_IN - POST_D) for a_ in POST_DEGS]
+TAB_HOLES = [polar(a_, LID_TAB_R) for a_ in TAB_DEGS]
+for x, y in POST_HOLES:  # Dom wird in der Ecke in die Wand gezogen, Innenkante rund
     cyl(2 * POST_R, (x, y, FLOOR - 0.5), BASE_H - FLOOR + 0.5, "join", "Base", label="post")
-    for xa_, ya_ in ((POST_C, POST_C - POST_R), (POST_C - POST_R, POST_C)):
-        xs, ys = sorted((sx * xa_, sx * wall)), sorted((sy * ya_, sy * wall))
-        box(xs[0], ys[0], FLOOR - 0.5, xs[1], ys[1], BASE_H, op="join", target="Base", label="post")
     cyl(INSERT_D, (x, y, BASE_H - INSERT_DEPTH), INSERT_DEPTH + 1, "cut", "Base", label="ins")
 
-# Netzteil: Rippen wachsen vom Boden hoch, druckbar ohne Stuetzmaterial
-psu_x1 = in_ - PSU_GAP
+# Netzteil an der rechten hinteren Wand: Rippen wachsen vom Boden hoch, druckbar ohne Stuetzmaterial
 psu_z = PSU_Z0 + PSU_HOLE_H
 for hl in PSU_HOLE_L:
-    y = PSU_Y1 - hl
-    box(psu_x1, y - 6, FLOOR - 0.5, in_ + 0.5, y + 6, psu_z + 12, op="join", target="Base", label="psurib")
-    cyl(PSU_HOLE_D, (psu_x1 - 1, y, psu_z), PSU_GAP + WALL + 2, "cut", "Base", axis="X", label="psuhole")
-    cyl(6.5, (h - 2, y, psu_z), 3, "cut", "Base", axis="X", label="psucb")
+    sh = PSU_S1 - hl
+    prism(srect(sh - 6, sh + 6, -0.5, PSU_GAP), FLOOR - 0.5, psu_z + 12, "join", "Base", label="psurib")
+    hx, hy = sv(sh, PSU_GAP + 1)
+    cyl(PSU_HOLE_D, (hx, hy, psu_z), PSU_GAP + WALL + 2, "cut", "Base", axis=list(WALL_NORMAL), label="psuhole")
+    hx, hy = sv(sh, -1)
+    cyl(6.5, (hx, hy, psu_z), 3, "cut", "Base", axis=list(WALL_NORMAL), label="psucb")
 
-for c in (-38, -29, -20):  # Seitenwand unten, zwischen den Rippen
-    wall_slot("YZ", in_ + WALL / 2, c, 33)
-for c in range(-68, -4, 9):  # Seitenwand oben, ueber den Rippen
-    wall_slot("YZ", in_ + WALL / 2, c, 75)
-for x in (67, 75, 83):  # Boden unter dem Netzteil
-    box(x - 2, -75, -1, x + 2, 2, FLOOR + 1, op="cut", target="Base", label="vent")
-box(92.5, -48, -1, 96.5, -10, FLOOR + 1, op="cut", target="Base", label="vent")  # Spalt zwischen Netzteil und Wand
+for c in (44, 53, 62):  # Seitenwand unten, zwischen den Rippen
+    wall_slot(c, 33)
+for c in range(14, 78, 9):  # Seitenwand oben, ueber den Rippen
+    wall_slot(c, 75)
+for v_ in (14, 22, 30):  # Boden unter dem Netzteil
+    prism(srect(7, 84, v_ - 2, v_ + 2), -1, FLOOR + 1, "cut", "Base", label="vent")
+prism(srect(34, 72, 0.5, 4.5), -1, FLOOR + 1, "cut", "Base", label="vent")  # Spalt zwischen Netzteil und Wand
 
 # Dome fuer Elektroniktraeger und Klemmenabdeckung
-carr_x0, carr_y0, carr_x1, carr_y1 = CARR
 for x, y in CARR_HOLES:
     cyl(9, (x, y, FLOOR - 0.5), CARR_Z - FLOOR + 0.5, "join", "Base", label="carrpost")
     cyl(INSERT_D, (x, y, CARR_Z - 5.5), 6.5, "cut", "Base", label="carrins")
-COVER_EARS = [(50, 12), (50, 27)]
+COVER_EARS = [sv(94, 47), sv(109, 47)]
 for x, y in COVER_EARS:
     cyl(9, (x, y, FLOOR - 0.5), COVER_Z - FLOOR + 0.5, "join", "Base", label="covpost")
     cyl(INSERT_D, (x, y, FLOOR + 0.5), COVER_Z - FLOOR, "cut", "Base", label="covins")
@@ -236,8 +278,8 @@ for sx in (1, -1):
     cyl(M3_CLEAR, (sx * EAR_X, -h - 1, EAR_Z), WALL + 2, "cut", "Base", axis="Y", label="earhole")
 
 # ---------- Deckplatte ----------
-box(-h, -h, BASE_H, h, h, TOP, body="Plate", label="plate")
-add("solid.fillet", edges=[[sx * h, sy * h, BASE_H + 2] for sx in (1, -1) for sy in (1, -1)], radius=CORNER_R)
+prism(hexagon(h), BASE_H, TOP, body="Plate", label="plate")
+add("solid.fillet", edges=[[*polar(a_, R_OUT), BASE_H + 2] for a_ in range(0, 360, 60)], radius=CORNER_R)
 b = NEMA_BLOCK / 2
 box(-b, CY - b, MOTOR_FACE, b, CY + b, BASE_H + 0.5, op="join", target="Plate", label="nemablock")
 cyl(PILOT_D, (0, CY, MOTOR_FACE - 1), PILOT_DEPTH + 1, "cut", "Plate", label="pilot")
@@ -251,13 +293,12 @@ for r in (R_INNER, R_OUTER):
     cyl(HOLE_D, (0, CY - r, BASE_H - 1), PLATE_T + 2, "cut", "Plate", label="port")
 
 # Versteifung quer vom Motorblock zu den Seitenwaenden
-for x0, x1 in ((b - 1, in_ - 0.5), (-in_ + 0.5, -b + 1)):
+for x0, x1 in ((b - 1, R_IN - 2), (-R_IN + 2, -b + 1)):
     box(x0, CY - 1.5, MOTOR_FACE, x1, CY + 1.5, BASE_H + 0.5, op="join", target="Plate", label="stiff")
 
 for x, y in POST_HOLES:
     cyl(M3_CLEAR, (x, y, BASE_H - 1), PLATE_T + 2, "cut", "Plate", label="platehole")
-for sx in (1, -1):
-    x, y = sx * LID_TAB, CY + sx * LID_TAB
+for x, y in TAB_HOLES:
     cyl(9, (x, y, BASE_H - 6), 6.5, "join", "Plate", label="lidboss")
     cyl(INSERT_D, (x, y, BASE_H - 7), INSERT_DEPTH + 2, "cut", "Plate", label="lidins")
     cyl(M3_CLEAR, (x, y, BASE_H), PLATE_T + 1, "cut", "Plate", label="lidhole")
@@ -283,12 +324,12 @@ food_disc("Disc", "hole_d", N_RING)
 
 # ---------- Abdeckung ----------
 cyl(2 * LID_R, (0, CY, TOP), LID_Z + LID_TOP_T - TOP, body="Lid", label="lid")
-for sx in (1, -1):  # Laschen in den freien Ecken, Abdeckung bleibt 206 breit
-    cyl(26, (sx * (LID_TAB - 4), CY + sx * (LID_TAB - 4), TOP), 3, "join", "Lid", label="lidtab")
+for x, y in TAB_HOLES:  # Laschen in den Ecken ohne Schraubdom, Abdeckung bleibt rund Ø206
+    cyl(LID_TAB_D, (x, y, TOP), 3, "join", "Lid", label="lidtab")
 cyl(2 * LID_R - 4, (0, CY, TOP - 1), LID_Z - TOP + 1, "cut", "Lid", label="lidhollow")
 cyl(CAP_HOLE_D, (0, CY, LID_Z - 1), LID_TOP_T + 2, "cut", "Lid", label="caphole")
-for sx in (1, -1):
-    cyl(M3_CLEAR, (sx * LID_TAB, CY + sx * LID_TAB, TOP - 1), 5, "cut", "Lid", label="lidtabhole")
+for x, y in TAB_HOLES:
+    cyl(M3_CLEAR, (x, y, TOP - 1), 5, "cut", "Lid", label="lidtabhole")
 
 # Kappe ueber dem Wellenende
 cap_top = LID_Z + LID_TOP_T + 8
@@ -308,17 +349,19 @@ ir_z = chute_axis(IR_Y)[2] - (CHUTE_D / 2) / math.cos(math.radians(CHUTE_DEG)) +
 cyl(IR_D, (-30, IR_Y, ir_z), 60, "cut", "Chute", axis="X", label="irhole")
 
 # ---------- Klemmenabdeckung ----------
-# Oben geschlossen, nach vorn zum Netzteil offen. Gedruckt mit der Rueckseite auf dem Bett.
-xa, xb, ya, yb, zb = 56, in_ - 0.5, 6, 33, PSU_Z0 + PSU[1] + 5
-box(xa, ya, FLOOR, xb, yb, zb, body="TerminalCover", label="tc")
-box(xa + 2, ya - 1, FLOOR - 1, xb - 2, yb - 2, zb - 2, op="cut", target="TerminalCover", label="tcin")
-box(xa + 6, yb - 3, FLOOR - 1, xb - 6, yb + 1, 25, op="cut", target="TerminalCover", label="tccable")
-box(44, ya, COVER_Z, xa + 0.5, yb, COVER_Z + 3, op="join", target="TerminalCover", label="tcear")
+# Oben geschlossen, zum Netzteil offen, Kabelausgang an der Innenseite. Gedruckt mit der Rueckseite auf dem Bett.
+# Rahmen (s, v) wie beim Netzteil: s entlang der Wand, v von der Wand nach innen.
+ca, cb, cv0, cv1, zb = PSU_S1 - 13, PSU_S1 + 12, 0.5, 41, PSU_Z0 + PSU[1] + 5
+prism(srect(ca, cb, cv0, cv1), FLOOR, zb, body="TerminalCover", label="tc")
+prism(srect(ca - 1, cb - 2, cv0 + 2, cv1 - 2), FLOOR - 1, zb - 2, "cut", "TerminalCover", label="tcin")
+prism(srect(PSU_S1 - 5, PSU_S1 + 7, cv1 - 3, cv1 + 1), FLOOR - 1, 25, "cut", "TerminalCover", label="tccable")
+prism(srect(ca, cb, cv1 - 0.5, 53), COVER_Z, COVER_Z + 3, "join", "TerminalCover", label="tcear")
 for x, y in COVER_EARS:
     cyl(M3_CLEAR, (x, y, COVER_Z - 1), 5, "cut", "TerminalCover", label="tchole")
 
 # ---------- Elektroniktraeger ----------
-box(carr_x0, carr_y0, CARR_Z, carr_x1, carr_y1, CARR_Z + CARR_T, body="Carrier", label="carr")
+box(*CARR_A[:2], CARR_Z, *CARR_A[2:], CARR_Z + CARR_T, body="Carrier", label="carr")
+prism(CARR_B, CARR_Z, CARR_Z + CARR_T, "join", "Carrier", label="carrb")
 ct = CARR_Z + CARR_T
 for x, y in CARR_HOLES:
     cyl(M3_CLEAR, (x, y, CARR_Z - 1), CARR_T + 2, "cut", "Carrier", label="carrhole")
@@ -339,7 +382,7 @@ cyl(22, (0, CY, MOTOR_FACE), 2, "join", "DUMMY_Motor", label="dmpilot")
 cyl(5, (0, CY, MOTOR_FACE), 24, "join", "DUMMY_Motor", label="dmshaft")
 box(n / 2 - 0.1, CY - 8, MOTOR_FACE - NEMA_L + 2, n / 2 + 14, CY + 8, MOTOR_FACE - NEMA_L + 12,
     op="join", target="DUMMY_Motor", label="dmplug")
-box(psu_x1 - PSU[2], PSU_Y1 - PSU[0], PSU_Z0, psu_x1, PSU_Y1, PSU_Z0 + PSU[1], body="DUMMY_PSU", label="dp")
+prism(srect(PSU_S1 - PSU[0], PSU_S1, PSU_GAP, PSU_GAP + PSU[2]), PSU_Z0, PSU_Z0 + PSU[1], body="DUMMY_PSU", label="dp")
 pcb_z = ct + PICO_STANDOFF
 box(px - 10.5, py - 25.5, pcb_z, px + 10.5, py + 25.5, pcb_z + 4.5, body="DUMMY_Pico", label="dpico")
 box(qx - PERF_W / 2, qy - PERF_L / 2, ct + 4, qx + PERF_W / 2, qy + PERF_L / 2, ct + 24, body="DUMMY_Perfboard", label="dperf")

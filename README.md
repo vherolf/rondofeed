@@ -20,7 +20,7 @@ A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a
 </table>
 
 - **47 portions** on a Ø200 mm disc, each one released separately
-- **Fits a Prusa MK4:** every part prints in one piece, housing 200 × 200 × 116 mm
+- **Fits a Prusa MK4:** every part prints in one piece, hexagonal housing 206 mm across the flats, 236 mm across the corners, 116 mm high
 - **Fully parametric:** all dimensions are in one Python script, so you can resize the holes to your pet's food
 - **Open:** CERN-OHL-P hardware, Apache 2.0 or MIT software
 
@@ -55,18 +55,18 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 
 | File | Size (mm) | Face on the bed |
 |---|---|---|
-| `Base.stl` | 200 × 200 × 112 | Bottom |
-| `Plate.stl` | 200 × 200 × 10 | Top (flip) |
+| `Base.stl` | 236 × 206 × 112 | Bottom, flat walls front and back |
+| `Plate.stl` | 236 × 206 × 10 | Top (flip) |
 | `Disc.stl` | Ø200 × 10 | Bottom |
 | `Disc_12.stl` (optional) | Ø200 × 10 | Bottom |
 | `Disc_10.stl` (optional) | Ø200 × 10 | Bottom |
-| `Lid.stl` | Ø206 × 13.5 | Top (flip) |
+| `Lid.stl` | 235 × 206 × 13.5 | Top (flip) |
 | `Cap.stl` | Ø36 × 10 | Top (flip) |
 | `Chute.stl` | 68 × 66 × 55 | Flat top, with the screw plate standing on it |
-| `TerminalCover.stl` | 52.5 × 27 × 92 | Back |
-| `Carrier.stl` | 90 × 78.5 × 7 | Bottom |
+| `TerminalCover.stl` | 58 × 48 × 92 | Back |
+| `Carrier.stl` | 72 × 131.5 × 7 | Bottom |
 
-`Lid` (Ø206) is the largest part and uses almost the full bed depth, so turn the skirt off. `Lid` overhangs the housing by 3 mm at the sides.
+The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The round lid (Ø206) touches the flats of the hexagon, only its three screw tabs reach into the corners.
 
 ## Parts
 
@@ -128,7 +128,7 @@ Print a test piece before the full print: the disc centre (shaft and set screw) 
 
 1. Press in the threaded inserts.
 2. Screw the motor to the plate from below, with the screw heads recessed from above.
-3. Mount the power supply upright on the ribs of the right wall: M3×8 from outside through the wall, heads recessed. Screws must not reach more than 3 mm into the power supply.
+3. Mount the power supply upright on the ribs of the rear right wall (the slanted one next to the IEC inlet): M3×8 from outside through the wall, heads recessed. Screws must not reach more than 3 mm into the power supply.
 4. Screw the Pico and prototyping board to the carrier, then screw the carrier to the floor. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover.
 5. Before fitting the plate, push the chute through the front wall from inside. 2 × M3 from outside, nuts inside. The plate has to come off for cleaning.
 6. Screw on the plate, set the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
