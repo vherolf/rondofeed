@@ -34,7 +34,7 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 
 ## Firmware (Pico W and Pico 2 W)
 
-MicroPython, in [firmware/](firmware/README.md). Commands over USB serial and BLE, no Wi-Fi for now. The protocol is in [firmware/PROTOCOL.md](firmware/PROTOCOL.md). The core is tested on a PC, the hardware part has not run on a board yet.
+MicroPython, in [firmware/](firmware/README.md). Commands over USB serial and BLE, no Wi-Fi for now. The protocol is in [firmware/PROTOCOL.md](firmware/PROTOCOL.md). The core is tested on a PC, USB serial and BLE on a Pico W. The motor and the light barrier have not run yet.
 
 Decisions:
 

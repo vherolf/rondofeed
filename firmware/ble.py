@@ -17,6 +17,8 @@ class Ble:
         self.rx = aioble.Characteristic(service, bluetooth.UUID(config.BLE_RX), write=True, capture=True)
         self.tx = aioble.Characteristic(service, bluetooth.UUID(config.BLE_TX), read=True, notify=True)
         aioble.register_services(service)
+        # Standard sind 20 Byte, laengere Befehle wie AUTH mit Token kaemen sonst abgeschnitten an
+        bluetooth.BLE().gatts_set_buffer(self.rx._value_handle, 128, True)
         self.connection = None
 
     def send(self, line):

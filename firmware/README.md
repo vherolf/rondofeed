@@ -2,7 +2,7 @@
 
 MicroPython for the Raspberry Pi Pico W and Pico 2 W. It moves the disc one position per portion, checks every portion with the light barrier and takes commands over USB serial and BLE. The commands are in [PROTOCOL.md](PROTOCOL.md).
 
-**Status:** the core (`feeder.py`, `protocol.py`, `motor_plan.py`, `store.py`) is tested on a PC. The hardware parts (`motor.py`, `beam.py`, `usb_serial.py`, `ble.py`, `main.py`) are written but **have not run on a board yet**, so expect to fix things on the first run.
+**Status:** the core (`feeder.py`, `protocol.py`, `motor_plan.py`, `store.py`) is tested on a PC. On a Pico W with MicroPython 1.29.0, USB serial and BLE (advertising, login, commands, long lines) work, tested **without a motor, driver or light barrier**. Moving the motor and the light barrier have **not run yet**.
 
 ## Files
 

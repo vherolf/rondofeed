@@ -8,7 +8,7 @@ _ticks_diff = getattr(time, "ticks_diff", lambda a, b: a - b)
 
 class FeedError(Exception):
     def __init__(self, code, text=""):
-        Exception.__init__(self, code)
+        super().__init__(code)
         self.code = code
         self.text = text
 

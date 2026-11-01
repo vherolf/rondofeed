@@ -53,6 +53,8 @@ class Dispatcher:
             answer = self._run(cmd, args, session)
         except FeedError as e:
             answer = "ERR %s %s" % (e.code, e.text) if e.text else "ERR %s" % e.code
+        except Exception as e:   # ein Fehler im Befehl darf die Verbindung nicht beenden
+            answer = "ERR internal %s" % type(e).__name__
         return prefix + answer
 
     def _int(self, args, default=None):

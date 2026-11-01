@@ -76,6 +76,17 @@ class UsbTest(unittest.TestCase):
         self.assertTrue(self.d.handle("SETTOKEN " + "x" * 33, self.usb).startswith("ERR syntax"))
 
 
+class RobustTest(unittest.TestCase):
+    def test_unexpected_error_is_answered(self):
+        d, feeder, store, events = build()
+
+        def boom():
+            raise KeyError("x")
+        feeder.status = boom
+        self.assertEqual(d.handle("@4 STATUS", Session(trusted=True)), "@4 ERR internal KeyError")
+        self.assertEqual(d.handle("PING", Session(trusted=True)), "OK pong")
+
+
 class BleAuthTest(unittest.TestCase):
     def setUp(self):
         self.d, self.feeder, self.store, self.events = build()
