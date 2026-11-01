@@ -62,12 +62,12 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `Disc.stl` | Ø200 × 10 | Bottom |
 | `Disc_12.stl` (optional) | Ø200 × 10 | Bottom |
 | `Disc_10.stl` (optional) | Ø200 × 10 | Bottom |
-| `Lid.stl` | 236 × 206 × 13.5 | Top (flip) |
+| `Lid.stl` | 236 × 206 × 16 | Top (flip), the pins point up |
 | `Chute.stl` | 68 × 66 × 55 | Flat top, with the screw plate standing on it |
 | `TerminalCover.stl` | 99.5 × 26 × 40 | Back |
 | `Carrier.stl` | 83 × 131.5 × 7 | Bottom |
 
-The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The lid has the same hexagon as the housing and sits flush on it. It is held by magnets, so there are no screws on top.
+The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The lid has the same hexagon as the housing and sits flush on it. It is held by magnets, so there are no screws on top, and 6 small pins on the underside fit into holes in the plate so the lid cannot slide.
 
 ## Parts
 
@@ -134,7 +134,7 @@ Print a test piece before the full print: the disc centre (shaft and set screw) 
 4. Screw the Pico and prototyping board to the carrier (one angled plate, one part under each board), then screw the carrier to the floor. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover with 2 screws on its right side.
 5. Before fitting the plate, push the chute through the front wall from inside. 2 × M3 from outside, nuts inside. The plate has to come off for cleaning.
 6. Set the plate on the housing and fix it with 6 M3×8 screws, one in each corner. The heads sit in the counterbores. Set the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
-7. Glue one magnet into each of the 6 pockets on the underside of the lid. Polarity does not matter, as the magnets attract the steel screw heads either way. Place the lid on top. Each magnet sits over a plate screw and holds the lid.
+7. Glue one magnet into each of the 6 pockets on the underside of the lid. Polarity does not matter, as the magnets attract the steel screw heads either way. Place the lid on top, with its 6 pins in the holes of the plate. Each magnet sits over a plate screw and holds the lid.
 
 ## Safety
 

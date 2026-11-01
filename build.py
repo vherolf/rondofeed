@@ -53,13 +53,17 @@ HEAD_DEPTH = 3.5
 LID_TOP_T = 2.5
 LID_Z = DZ + DISC_T + 0.5
 LID_HOLE_D = 12    # Loch fuer das Wellenende, Welle Ø5 ragt etwa 0,5 mm ueber den Deckel
-LID_BOSS_D = 14    # Dom im Deckel, in jeder Ecke, nimmt den Magneten auf
+LID_BOSS_D = 16    # Dom im Deckel, in jeder Ecke, nimmt den Magneten auf
 POST_DEGS = range(0, 360, 60)  # alle 6 Ecken: eine M3x8 haelt die Platte, ein Magnet im Deckel darueber haelt den Deckel
 MAGNET_D = 6       # Neodym-Scheibe Ø6 x 2, haelt am Stahlkopf der Schraube darunter
 MAGNET_T = 2
 MAGNET_FIT = 0.25  # Zugabe im Durchmesser und in der Tiefe
 HEAD_CB_D = 6.5    # Senkung fuer den Schraubenkopf in der Platte
 HEAD_CB_DEPTH = 3
+GUIDE_D = 3        # Fuehrungsstift unten am Deckeldom, greift in ein Loch der Platte
+GUIDE_L = 2.5
+GUIDE_FIT = 0.4
+GUIDE_OFF = 5.6    # Abstand vom Schraubenmittelpunkt zur Ecke hin
 
 # Rutsche: rundes Rohr, Achse faellt nach vorn. Liegt beim Druck mit der Plattenseite auf dem Bett.
 CHUTE_DEG = 40
@@ -221,6 +225,14 @@ prism(hexagon(in_), FLOOR, BASE_H + 1, op="cut", target="Base", label="hollow")
 POST_D = 6.93      # Mitte der Dome 6 mm von beiden Innenwaenden
 POST_R = 8
 POST_HOLES = [polar(a_, R_IN - POST_D) for a_ in POST_DEGS]
+
+
+def guide_pos(x, y):
+    """Fuehrungsstift: auf der Linie Mitte-Ecke, GUIDE_OFF weiter aussen als die Schraube."""
+    k = (R_IN - POST_D + GUIDE_OFF) / (R_IN - POST_D)
+    return x * k, y * k
+
+
 for x, y in POST_HOLES:  # Dom wird in der Ecke in die Wand gezogen, Innenkante rund
     cyl(2 * POST_R, (x, y, FLOOR - 0.5), BASE_H - FLOOR + 0.5, "join", "Base", label="post")
     cyl(INSERT_D, (x, y, BASE_H - INSERT_DEPTH), INSERT_DEPTH + 1, "cut", "Base", label="ins")
@@ -288,6 +300,8 @@ for x0, x1 in ((b - 1, STIFF_END), (-STIFF_END, -b + 1)):
 for x, y in POST_HOLES:
     cyl(M3_CLEAR, (x, y, BASE_H - 1), PLATE_T + 2, "cut", "Plate", label="platehole")
     cyl(HEAD_CB_D, (x, y, TOP - HEAD_CB_DEPTH), HEAD_CB_DEPTH + 1, "cut", "Plate", label="platehead")
+    gx, gy = guide_pos(x, y)
+    cyl(GUIDE_D + GUIDE_FIT, (gx, gy, TOP - GUIDE_L - 0.5), GUIDE_L + 1.5, "cut", "Plate", label="guidehole")
 # ---------- Scheibe ----------
 def food_disc(body, hole, n_ring, disc_d="disc_d", disc_t="disc_t", shaft="shaft_d"):
     """Lochscheibe mit n_ring Loechern je Ring. Position k liegt bei -90 + k * Schritt Grad, k=0 bleibt geschlossen."""
@@ -315,6 +329,8 @@ for x, y in POST_HOLES:  # Dom in jeder Ecke ueber dem Schraubenkopf der Platte
     cyl(LID_BOSS_D, (x, y, TOP), LID_Z + LID_TOP_T - TOP - 0.5, "join", "Lid", label="lidboss")
     # Magnettasche von unten, oben bleibt die Haut geschlossen
     cyl(MAGNET_D + MAGNET_FIT, (x, y, TOP - 1), 1 + MAGNET_T + MAGNET_FIT, "cut", "Lid", label="lidmagnet")
+    gx, gy = guide_pos(x, y)  # Stift nach unten, steht beim Druck (Oberseite auf dem Bett) nach oben
+    cyl(GUIDE_D, (gx, gy, TOP - GUIDE_L), GUIDE_L + 1, "join", "Lid", label="lidguide")
 cyl(LID_HOLE_D, (0, CY, LID_Z - 1), LID_TOP_T + 2, "cut", "Lid", label="shafthole")
 
 # ---------- Rutsche ----------
