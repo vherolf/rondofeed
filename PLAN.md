@@ -38,7 +38,7 @@ Not written yet.
 
 ### Power the motor only when feeding
 
-Only the power supply has ventilation slots, so the motor must not produce continuous heat.
+Only the power supply has ventilation slots (floor and front right wall), so the motor must not produce continuous heat.
 
 - The motor is only powered when a feed is about to happen.
 - After each feeding step it is unpowered again.

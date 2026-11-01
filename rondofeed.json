@@ -235,8 +235,8 @@
     "diameter": 16,
     "height": 109.5,
     "base": [
-     -54.27002691896255,
-     93.99844395177384,
+     108.54005383792514,
+     0.0,
      2.5
     ],
     "name": "post_5",
@@ -252,8 +252,8 @@
     "diameter": 4.0,
     "height": 7,
     "base": [
-     -54.27002691896255,
-     93.99844395177384,
+     108.54005383792514,
+     0.0,
      106
     ],
     "name": "ins_6",
@@ -269,11 +269,113 @@
     "diameter": 16,
     "height": 109.5,
     "base": [
+     54.270026918962586,
+     93.99844395177382,
+     2.5
+    ],
+    "name": "post_7",
+    "operation": "join",
+    "targets": [
+     "Base"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 4.0,
+    "height": 7,
+    "base": [
+     54.270026918962586,
+     93.99844395177382,
+     106
+    ],
+    "name": "ins_8",
+    "operation": "cut",
+    "targets": [
+     "Base"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 16,
+    "height": 109.5,
+    "base": [
+     -54.27002691896255,
+     93.99844395177384,
+     2.5
+    ],
+    "name": "post_9",
+    "operation": "join",
+    "targets": [
+     "Base"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 4.0,
+    "height": 7,
+    "base": [
+     -54.27002691896255,
+     93.99844395177384,
+     106
+    ],
+    "name": "ins_10",
+    "operation": "cut",
+    "targets": [
+     "Base"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 16,
+    "height": 109.5,
+    "base": [
+     -108.54005383792514,
+     1.3292322951189641e-14,
+     2.5
+    ],
+    "name": "post_11",
+    "operation": "join",
+    "targets": [
+     "Base"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 4.0,
+    "height": 7,
+    "base": [
+     -108.54005383792514,
+     1.3292322951189641e-14,
+     106
+    ],
+    "name": "ins_12",
+    "operation": "cut",
+    "targets": [
+     "Base"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 16,
+    "height": 109.5,
+    "base": [
      -54.27002691896262,
      -93.99844395177381,
      2.5
     ],
-    "name": "post_7",
+    "name": "post_13",
     "operation": "join",
     "targets": [
      "Base"
@@ -290,7 +392,7 @@
      -93.99844395177381,
      106
     ],
-    "name": "ins_8",
+    "name": "ins_14",
     "operation": "cut",
     "targets": [
      "Base"
@@ -307,7 +409,7 @@
      -93.99844395177382,
      2.5
     ],
-    "name": "post_9",
+    "name": "post_15",
     "operation": "join",
     "targets": [
      "Base"
@@ -324,7 +426,7 @@
      -93.99844395177382,
      106
     ],
-    "name": "ins_10",
+    "name": "ins_16",
     "operation": "cut",
     "targets": [
      "Base"
@@ -332,47 +434,16 @@
    }
   },
   {
-   "command": "sketch.create",
+   "command": "solid.cylinder",
    "params": {
-    "plane": "XY",
-    "offset": 2.5,
-    "name": "psurib_sk_11"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      78.6531,
-      64.7689
-     ],
-     [
-      72.6531,
-      75.1612
-     ],
-     [
-      67.8899,
-      72.4112
-     ],
-     [
-      73.8899,
-      62.0189
-     ]
+    "diameter": 14,
+    "height": 5.5,
+    "base": [
+     27,
+     3.0,
+     2.5
     ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "psurib_sk_11",
-    "distance": 58.5,
-    "name": "psurib_12",
+    "name": "psupad_17",
     "operation": "join",
     "targets": [
      "Base"
@@ -385,16 +456,11 @@
     "diameter": 4.2,
     "height": 10,
     "base": [
-     70.02390141521852,
-     66.71504500464732,
-     49
+     27,
+     3.0,
+     -1
     ],
-    "name": "psuhole_13",
-    "axis": [
-     0.8660254037844387,
-     0.49999999999999994,
-     0
-    ],
+    "name": "psuhole_18",
     "operation": "cut",
     "targets": [
      "Base"
@@ -405,18 +471,13 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 6.5,
-    "height": 3,
+    "height": 4,
     "base": [
-     76.08607924170958,
-     70.21504500464732,
-     49
+     27,
+     3.0,
+     -1
     ],
-    "name": "psucb_14",
-    "axis": [
-     0.8660254037844387,
-     0.49999999999999994,
-     0
-    ],
+    "name": "psucb_19",
     "operation": "cut",
     "targets": [
      "Base"
@@ -424,47 +485,16 @@
    }
   },
   {
-   "command": "sketch.create",
+   "command": "solid.cylinder",
    "params": {
-    "plane": "XY",
-    "offset": 2.5,
-    "name": "psurib_sk_15"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      106.1531,
-      17.1375
-     ],
-     [
-      100.1531,
-      27.5298
-     ],
-     [
-      95.3899,
-      24.7798
-     ],
-     [
-      101.3899,
-      14.3875
-     ]
+    "diameter": 14,
+    "height": 5.5,
+    "base": [
+     27,
+     -52.0,
+     2.5
     ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "psurib_sk_15",
-    "distance": 58.5,
-    "name": "psurib_16",
+    "name": "psupad_20",
     "operation": "join",
     "targets": [
      "Base"
@@ -477,16 +507,11 @@
     "diameter": 4.2,
     "height": 10,
     "base": [
-     97.52390141521852,
-     19.083647796503186,
-     49
+     27,
+     -52.0,
+     -1
     ],
-    "name": "psuhole_17",
-    "axis": [
-     0.8660254037844387,
-     0.49999999999999994,
-     0
-    ],
+    "name": "psuhole_21",
     "operation": "cut",
     "targets": [
      "Base"
@@ -497,18 +522,13 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 6.5,
-    "height": 3,
+    "height": 4,
     "base": [
-     103.58607924170958,
-     22.583647796503186,
-     49
+     27,
+     -52.0,
+     -1
     ],
-    "name": "psucb_18",
-    "axis": [
-     0.8660254037844387,
-     0.49999999999999994,
-     0
-    ],
+    "name": "psucb_22",
     "operation": "cut",
     "targets": [
      "Base"
@@ -518,24 +538,9 @@
   {
    "command": "sketch.create",
    "params": {
-    "plane": {
-     "origin": [
-      116.76909194360181,
-      0.75,
-      0
-     ],
-     "x_dir": [
-      -0.5,
-      0.8660254037844387,
-      0
-     ],
-     "y_dir": [
-      0,
-      0,
-      1
-     ]
-    },
-    "name": "slot_19"
+    "plane": "XY",
+    "offset": -1,
+    "name": "vent_sk_23"
    }
   },
   {
@@ -543,20 +548,20 @@
    "params": {
     "points": [
      [
-      34.80761184457488,
-      20.97918471982869
+      -3,
+      -66
      ],
      [
-      56.020815280171306,
-      42.19238815542512
+      1,
+      -66
      ],
      [
-      53.19238815542512,
-      45.020815280171306
+      1,
+      14
      ],
      [
-      31.97918471982869,
-      23.807611844574883
+      -3,
+      14
      ]
     ],
     "closed": true
@@ -569,10 +574,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "slot_19",
+    "sketch": "vent_sk_23",
     "distance": 5,
-    "direction": "symmetric",
-    "name": "slot_ex_20",
+    "name": "vent_24",
     "operation": "cut",
     "targets": [
      "Base"
@@ -582,24 +586,9 @@
   {
    "command": "sketch.create",
    "params": {
-    "plane": {
-     "origin": [
-      116.76909194360181,
-      0.75,
-      0
-     ],
-     "x_dir": [
-      -0.5,
-      0.8660254037844387,
-      0
-     ],
-     "y_dir": [
-      0,
-      0,
-      1
-     ]
-    },
-    "name": "slot_21"
+    "plane": "XY",
+    "offset": -1,
+    "name": "vent_sk_25"
    }
   },
   {
@@ -607,20 +596,20 @@
    "params": {
     "points": [
      [
-      43.80761184457488,
-      20.97918471982869
+      9,
+      -66
      ],
      [
-      65.0208152801713,
-      42.19238815542512
+      13,
+      -66
      ],
      [
-      62.19238815542512,
-      45.020815280171306
+      13,
+      14
      ],
      [
-      40.979184719828694,
-      23.807611844574883
+      9,
+      14
      ]
     ],
     "closed": true
@@ -633,10 +622,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "slot_21",
+    "sketch": "vent_sk_25",
     "distance": 5,
-    "direction": "symmetric",
-    "name": "slot_ex_22",
+    "name": "vent_26",
     "operation": "cut",
     "targets": [
      "Base"
@@ -646,24 +634,9 @@
   {
    "command": "sketch.create",
    "params": {
-    "plane": {
-     "origin": [
-      116.76909194360181,
-      0.75,
-      0
-     ],
-     "x_dir": [
-      -0.5,
-      0.8660254037844387,
-      0
-     ],
-     "y_dir": [
-      0,
-      0,
-      1
-     ]
-    },
-    "name": "slot_23"
+    "plane": "XY",
+    "offset": -1,
+    "name": "vent_sk_27"
    }
   },
   {
@@ -671,20 +644,20 @@
    "params": {
     "points": [
      [
-      52.80761184457488,
-      20.97918471982869
+      41,
+      -66
      ],
      [
-      74.0208152801713,
-      42.19238815542512
+      45,
+      -66
      ],
      [
-      71.19238815542512,
-      45.020815280171306
+      45,
+      14
      ],
      [
-      49.979184719828694,
-      23.807611844574883
+      41,
+      14
      ]
     ],
     "closed": true
@@ -697,10 +670,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "slot_23",
+    "sketch": "vent_sk_27",
     "distance": 5,
-    "direction": "symmetric",
-    "name": "slot_ex_24",
+    "name": "vent_28",
     "operation": "cut",
     "targets": [
      "Base"
@@ -710,24 +682,9 @@
   {
    "command": "sketch.create",
    "params": {
-    "plane": {
-     "origin": [
-      116.76909194360181,
-      0.75,
-      0
-     ],
-     "x_dir": [
-      -0.5,
-      0.8660254037844387,
-      0
-     ],
-     "y_dir": [
-      0,
-      0,
-      1
-     ]
-    },
-    "name": "slot_25"
+    "plane": "XY",
+    "offset": -1,
+    "name": "vent_sk_29"
    }
   },
   {
@@ -735,20 +692,20 @@
    "params": {
     "points": [
      [
-      4.807611844574882,
-      62.979184719828694
+      53,
+      -66
      ],
      [
-      26.02081528017131,
-      84.19238815542512
+      57,
+      -66
      ],
      [
-      23.192388155425117,
-      87.0208152801713
+      57,
+      14
      ],
      [
-      1.9791847198286916,
-      65.80761184457488
+      53,
+      14
      ]
     ],
     "closed": true
@@ -761,10 +718,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "slot_25",
+    "sketch": "vent_sk_29",
     "distance": 5,
-    "direction": "symmetric",
-    "name": "slot_ex_26",
+    "name": "vent_30",
     "operation": "cut",
     "targets": [
      "Base"
@@ -776,141 +732,13 @@
    "params": {
     "plane": {
      "origin": [
-      116.76909194360181,
-      0.75,
+      59.03406502463925,
+      -100.74999999999999,
       0
      ],
      "x_dir": [
-      -0.5,
-      0.8660254037844387,
-      0
-     ],
-     "y_dir": [
-      0,
-      0,
-      1
-     ]
-    },
-    "name": "slot_27"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      13.807611844574883,
-      62.979184719828694
-     ],
-     [
-      35.020815280171306,
-      84.19238815542512
-     ],
-     [
-      32.19238815542512,
-      87.0208152801713
-     ],
-     [
-      10.979184719828691,
-      65.80761184457488
-     ]
-    ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "slot_27",
-    "distance": 5,
-    "direction": "symmetric",
-    "name": "slot_ex_28",
-    "operation": "cut",
-    "targets": [
-     "Base"
-    ]
-   }
-  },
-  {
-   "command": "sketch.create",
-   "params": {
-    "plane": {
-     "origin": [
-      116.76909194360181,
-      0.75,
-      0
-     ],
-     "x_dir": [
-      -0.5,
-      0.8660254037844387,
-      0
-     ],
-     "y_dir": [
-      0,
-      0,
-      1
-     ]
-    },
-    "name": "slot_29"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      22.807611844574883,
-      62.979184719828694
-     ],
-     [
-      44.020815280171306,
-      84.19238815542512
-     ],
-     [
-      41.19238815542512,
-      87.0208152801713
-     ],
-     [
-      19.97918471982869,
-      65.80761184457488
-     ]
-    ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "slot_29",
-    "distance": 5,
-    "direction": "symmetric",
-    "name": "slot_ex_30",
-    "operation": "cut",
-    "targets": [
-     "Base"
-    ]
-   }
-  },
-  {
-   "command": "sketch.create",
-   "params": {
-    "plane": {
-     "origin": [
-      116.76909194360181,
-      0.75,
-      0
-     ],
-     "x_dir": [
-      -0.5,
-      0.8660254037844387,
+      0.5000000000000004,
+      0.8660254037844384,
       0
      ],
      "y_dir": [
@@ -927,20 +755,20 @@
    "params": {
     "points": [
      [
-      31.807611844574883,
-      62.979184719828694
+      10.807611844574883,
+      49.979184719828694
      ],
      [
-      53.020815280171306,
-      84.19238815542512
+      32.020815280171306,
+      71.19238815542512
      ],
      [
-      50.19238815542512,
-      87.0208152801713
+      29.192388155425117,
+      74.0208152801713
      ],
      [
-      28.97918471982869,
-      65.80761184457488
+      7.979184719828692,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -968,13 +796,13 @@
    "params": {
     "plane": {
      "origin": [
-      116.76909194360181,
-      0.75,
+      59.03406502463925,
+      -100.74999999999999,
       0
      ],
      "x_dir": [
-      -0.5,
-      0.8660254037844387,
+      0.5000000000000004,
+      0.8660254037844384,
       0
      ],
      "y_dir": [
@@ -991,20 +819,20 @@
    "params": {
     "points": [
      [
-      40.80761184457488,
-      62.979184719828694
+      19.807611844574883,
+      49.979184719828694
      ],
      [
-      62.020815280171306,
-      84.19238815542512
+      41.020815280171306,
+      71.19238815542512
      ],
      [
-      59.19238815542512,
-      87.0208152801713
+      38.19238815542512,
+      74.0208152801713
      ],
      [
-      37.979184719828694,
-      65.80761184457488
+      16.97918471982869,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -1032,13 +860,13 @@
    "params": {
     "plane": {
      "origin": [
-      116.76909194360181,
-      0.75,
+      59.03406502463925,
+      -100.74999999999999,
       0
      ],
      "x_dir": [
-      -0.5,
-      0.8660254037844387,
+      0.5000000000000004,
+      0.8660254037844384,
       0
      ],
      "y_dir": [
@@ -1055,20 +883,20 @@
    "params": {
     "points": [
      [
-      49.80761184457488,
-      62.979184719828694
+      28.807611844574883,
+      49.979184719828694
      ],
      [
-      71.0208152801713,
-      84.19238815542512
+      50.020815280171306,
+      71.19238815542512
      ],
      [
-      68.19238815542512,
-      87.0208152801713
+      47.19238815542512,
+      74.0208152801713
      ],
      [
-      46.979184719828694,
-      65.80761184457488
+      25.97918471982869,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -1096,13 +924,13 @@
    "params": {
     "plane": {
      "origin": [
-      116.76909194360181,
-      0.75,
+      59.03406502463925,
+      -100.74999999999999,
       0
      ],
      "x_dir": [
-      -0.5,
-      0.8660254037844387,
+      0.5000000000000004,
+      0.8660254037844384,
       0
      ],
      "y_dir": [
@@ -1119,20 +947,20 @@
    "params": {
     "points": [
      [
-      58.80761184457488,
-      62.979184719828694
+      37.80761184457488,
+      49.979184719828694
      ],
      [
-      80.0208152801713,
-      84.19238815542512
+      59.020815280171306,
+      71.19238815542512
      ],
      [
-      77.19238815542512,
-      87.0208152801713
+      56.19238815542512,
+      74.0208152801713
      ],
      [
-      55.979184719828694,
-      65.80761184457488
+      34.979184719828694,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -1160,13 +988,13 @@
    "params": {
     "plane": {
      "origin": [
-      116.76909194360181,
-      0.75,
+      59.03406502463925,
+      -100.74999999999999,
       0
      ],
      "x_dir": [
-      -0.5,
-      0.8660254037844387,
+      0.5000000000000004,
+      0.8660254037844384,
       0
      ],
      "y_dir": [
@@ -1183,20 +1011,20 @@
    "params": {
     "points": [
      [
-      67.80761184457488,
-      62.979184719828694
+      46.80761184457488,
+      49.979184719828694
      ],
      [
-      89.0208152801713,
-      84.19238815542512
+      68.0208152801713,
+      71.19238815542512
      ],
      [
-      86.19238815542512,
-      87.0208152801713
+      65.19238815542512,
+      74.0208152801713
      ],
      [
-      64.9791847198287,
-      65.80761184457488
+      43.979184719828694,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -1222,9 +1050,24 @@
   {
    "command": "sketch.create",
    "params": {
-    "plane": "XY",
-    "offset": -1,
-    "name": "vent_sk_41"
+    "plane": {
+     "origin": [
+      59.03406502463925,
+      -100.74999999999999,
+      0
+     ],
+     "x_dir": [
+      0.5000000000000004,
+      0.8660254037844384,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    },
+    "name": "slot_41"
    }
   },
   {
@@ -1232,20 +1075,20 @@
    "params": {
     "points": [
      [
-      101.5777,
-      0.0622
+      55.80761184457488,
+      49.979184719828694
      ],
      [
-      63.0777,
-      66.7461
+      77.0208152801713,
+      71.19238815542512
      ],
      [
-      59.6136,
-      64.7461
+      74.19238815542512,
+      74.0208152801713
      ],
      [
-      98.1136,
-      -1.9378
+      52.979184719828694,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -1258,9 +1101,10 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "vent_sk_41",
+    "sketch": "slot_41",
     "distance": 5,
-    "name": "vent_42",
+    "direction": "symmetric",
+    "name": "slot_ex_42",
     "operation": "cut",
     "targets": [
      "Base"
@@ -1270,9 +1114,24 @@
   {
    "command": "sketch.create",
    "params": {
-    "plane": "XY",
-    "offset": -1,
-    "name": "vent_sk_43"
+    "plane": {
+     "origin": [
+      59.03406502463925,
+      -100.74999999999999,
+      0
+     ],
+     "x_dir": [
+      0.5000000000000004,
+      0.8660254037844384,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    },
+    "name": "slot_43"
    }
   },
   {
@@ -1280,20 +1139,20 @@
    "params": {
     "points": [
      [
-      94.6495,
-      -3.9378
+      64.80761184457488,
+      49.979184719828694
      ],
      [
-      56.1495,
-      62.7461
+      86.0208152801713,
+      71.19238815542512
      ],
      [
-      52.6854,
-      60.7461
+      83.19238815542512,
+      74.0208152801713
      ],
      [
-      91.1854,
-      -5.9378
+      61.979184719828694,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -1306,9 +1165,10 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "vent_sk_43",
+    "sketch": "slot_43",
     "distance": 5,
-    "name": "vent_44",
+    "direction": "symmetric",
+    "name": "slot_ex_44",
     "operation": "cut",
     "targets": [
      "Base"
@@ -1318,9 +1178,24 @@
   {
    "command": "sketch.create",
    "params": {
-    "plane": "XY",
-    "offset": -1,
-    "name": "vent_sk_45"
+    "plane": {
+     "origin": [
+      59.03406502463925,
+      -100.74999999999999,
+      0
+     ],
+     "x_dir": [
+      0.5000000000000004,
+      0.8660254037844384,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    },
+    "name": "slot_45"
    }
   },
   {
@@ -1328,20 +1203,20 @@
    "params": {
     "points": [
      [
-      87.7213,
-      -7.9378
+      73.80761184457488,
+      49.979184719828694
      ],
      [
-      49.2213,
-      58.7461
+      95.0208152801713,
+      71.19238815542512
      ],
      [
-      45.7572,
-      56.7461
+      92.19238815542512,
+      74.0208152801713
      ],
      [
-      84.2572,
-      -9.9378
+      70.9791847198287,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -1354,9 +1229,10 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "vent_sk_45",
+    "sketch": "slot_45",
     "distance": 5,
-    "name": "vent_46",
+    "direction": "symmetric",
+    "name": "slot_ex_46",
     "operation": "cut",
     "targets": [
      "Base"
@@ -1366,9 +1242,24 @@
   {
    "command": "sketch.create",
    "params": {
-    "plane": "XY",
-    "offset": -1,
-    "name": "vent_sk_47"
+    "plane": {
+     "origin": [
+      59.03406502463925,
+      -100.74999999999999,
+      0
+     ],
+     "x_dir": [
+      0.5000000000000004,
+      0.8660254037844384,
+      0
+     ],
+     "y_dir": [
+      0,
+      0,
+      1
+     ]
+    },
+    "name": "slot_47"
    }
   },
   {
@@ -1376,20 +1267,20 @@
    "params": {
     "points": [
      [
-      98.037,
-      29.1949
+      82.80761184457488,
+      49.979184719828694
      ],
      [
-      79.037,
-      62.1038
+      104.0208152801713,
+      71.19238815542512
      ],
      [
-      75.5729,
-      60.1038
+      101.19238815542512,
+      74.0208152801713
      ],
      [
-      94.5729,
-      27.1949
+      79.9791847198287,
+      52.80761184457488
      ]
     ],
     "closed": true
@@ -1402,9 +1293,10 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "vent_sk_47",
+    "sketch": "slot_47",
     "distance": 5,
-    "name": "vent_48",
+    "direction": "symmetric",
+    "name": "slot_ex_48",
     "operation": "cut",
     "targets": [
      "Base"
@@ -1553,8 +1445,8 @@
     "diameter": 9,
     "height": 5.5,
     "base": [
-     27.766859860056528,
-     57.906387955737245,
+     77,
+     15.5,
      2.5
     ],
     "name": "covpost_57",
@@ -1570,8 +1462,8 @@
     "diameter": 4.0,
     "height": 5,
     "base": [
-     27.766859860056528,
-     57.906387955737245,
+     77,
+     15.5,
      3.5
     ],
     "name": "covins_58",
@@ -1587,8 +1479,8 @@
     "diameter": 9,
     "height": 5.5,
     "base": [
-     20.266859860056528,
-     70.89676901250382,
+     77,
+     28.5,
      2.5
     ],
     "name": "covpost_59",
@@ -1604,8 +1496,8 @@
     "diameter": 4.0,
     "height": 5,
     "base": [
-     20.266859860056528,
-     70.89676901250382,
+     77,
+     28.5,
      3.5
     ],
     "name": "covins_60",
@@ -2044,7 +1936,7 @@
   {
    "command": "solid.box",
    "params": {
-    "length": 89.47005383792515,
+    "length": 76.04005383792514,
     "width": 3.0,
     "height": 6.5,
     "corner": [
@@ -2062,11 +1954,11 @@
   {
    "command": "solid.box",
    "params": {
-    "length": 89.47005383792515,
+    "length": 76.04005383792514,
     "width": 3.0,
     "height": 6.5,
     "corner": [
-     -113.47005383792515,
+     -100.04005383792514,
      -1.5,
      106
     ],
@@ -2083,11 +1975,62 @@
     "diameter": 3.4,
     "height": 6,
     "base": [
+     108.54005383792514,
+     0.0,
+     111
+    ],
+    "name": "platehole_84",
+    "operation": "cut",
+    "targets": [
+     "Plate"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 6,
+    "base": [
+     54.270026918962586,
+     93.99844395177382,
+     111
+    ],
+    "name": "platehole_85",
+    "operation": "cut",
+    "targets": [
+     "Plate"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 6,
+    "base": [
      -54.27002691896255,
      93.99844395177384,
      111
     ],
-    "name": "platehole_84",
+    "name": "platehole_86",
+    "operation": "cut",
+    "targets": [
+     "Plate"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 6,
+    "base": [
+     -108.54005383792514,
+     1.3292322951189641e-14,
+     111
+    ],
+    "name": "platehole_87",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2104,7 +2047,7 @@
      -93.99844395177381,
      111
     ],
-    "name": "platehole_85",
+    "name": "platehole_88",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2121,160 +2064,7 @@
      -93.99844395177382,
      111
     ],
-    "name": "platehole_86",
-    "operation": "cut",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 9,
-    "height": 6.5,
-    "base": [
-     109.5,
-     0.0,
-     106
-    ],
-    "name": "lidboss_87",
-    "operation": "join",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 4.0,
-    "height": 8,
-    "base": [
-     109.5,
-     0.0,
-     105
-    ],
-    "name": "lidins_88",
-    "operation": "cut",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 3.4,
-    "height": 5,
-    "base": [
-     109.5,
-     0.0,
-     112
-    ],
-    "name": "lidhole_89",
-    "operation": "cut",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 9,
-    "height": 6.5,
-    "base": [
-     54.750000000000014,
-     94.82978171439602,
-     106
-    ],
-    "name": "lidboss_90",
-    "operation": "join",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 4.0,
-    "height": 8,
-    "base": [
-     54.750000000000014,
-     94.82978171439602,
-     105
-    ],
-    "name": "lidins_91",
-    "operation": "cut",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 3.4,
-    "height": 5,
-    "base": [
-     54.750000000000014,
-     94.82978171439602,
-     112
-    ],
-    "name": "lidhole_92",
-    "operation": "cut",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 9,
-    "height": 6.5,
-    "base": [
-     -109.5,
-     1.3409882450663518e-14,
-     106
-    ],
-    "name": "lidboss_93",
-    "operation": "join",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 4.0,
-    "height": 8,
-    "base": [
-     -109.5,
-     1.3409882450663518e-14,
-     105
-    ],
-    "name": "lidins_94",
-    "operation": "cut",
-    "targets": [
-     "Plate"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 3.4,
-    "height": 5,
-    "base": [
-     -109.5,
-     1.3409882450663518e-14,
-     112
-    ],
-    "name": "lidhole_95",
+    "name": "platehole_89",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2291,7 +2081,7 @@
      0,
      116.5
     ],
-    "name": "disc_96",
+    "name": "disc_90",
     "body_name": "Disc"
    }
   },
@@ -2305,7 +2095,7 @@
      0,
      115.5
     ],
-    "name": "bore_97",
+    "name": "bore_91",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2322,7 +2112,7 @@
      0,
      121.5
     ],
-    "name": "setscrew_98",
+    "name": "setscrew_92",
     "axis": "X",
     "operation": "cut",
     "targets": [
@@ -2341,7 +2131,7 @@
      -2.95,
      118.0
     ],
-    "name": "nutpocket_99",
+    "name": "nutpocket_93",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2359,7 +2149,7 @@
      -4,
      118.0
     ],
-    "name": "access_100",
+    "name": "access_94",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2376,7 +2166,7 @@
      -86.2557029395215,
      115.5
     ],
-    "name": "foodhole_101",
+    "name": "foodhole_95",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2393,7 +2183,7 @@
      -67.61480784023477,
      115.5
     ],
-    "name": "foodhole_102",
+    "name": "foodhole_96",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2410,7 +2200,7 @@
      -80.37751932848195,
      115.5
     ],
-    "name": "foodhole_103",
+    "name": "foodhole_97",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2427,7 +2217,7 @@
      -60.6217782649107,
      115.5
     ],
-    "name": "foodhole_104",
+    "name": "foodhole_98",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2444,7 +2234,7 @@
      -69.02174060533746,
      115.5
     ],
-    "name": "foodhole_105",
+    "name": "foodhole_99",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2461,7 +2251,7 @@
      -49.49747468305832,
      115.5
     ],
-    "name": "foodhole_106",
+    "name": "foodhole_100",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2478,7 +2268,7 @@
      -52.962244323758696,
      115.5
     ],
-    "name": "foodhole_107",
+    "name": "foodhole_101",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2495,7 +2285,7 @@
      -34.99999999999999,
      115.5
     ],
-    "name": "foodhole_108",
+    "name": "foodhole_102",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2512,7 +2302,7 @@
      -33.29345861576281,
      115.5
     ],
-    "name": "foodhole_109",
+    "name": "foodhole_103",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2529,7 +2319,7 @@
      -18.117333157176454,
      115.5
     ],
-    "name": "foodhole_110",
+    "name": "foodhole_104",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2546,7 +2336,7 @@
      -11.355778723144487,
      115.5
     ],
-    "name": "foodhole_111",
+    "name": "foodhole_105",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2563,7 +2353,7 @@
      0.0,
      115.5
     ],
-    "name": "foodhole_112",
+    "name": "foodhole_106",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2580,7 +2370,7 @@
      11.355778723144487,
      115.5
     ],
-    "name": "foodhole_113",
+    "name": "foodhole_107",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2597,7 +2387,7 @@
      18.117333157176454,
      115.5
     ],
-    "name": "foodhole_114",
+    "name": "foodhole_108",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2614,7 +2404,7 @@
      33.29345861576281,
      115.5
     ],
-    "name": "foodhole_115",
+    "name": "foodhole_109",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2631,7 +2421,7 @@
      34.99999999999999,
      115.5
     ],
-    "name": "foodhole_116",
+    "name": "foodhole_110",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2648,7 +2438,7 @@
      52.962244323758696,
      115.5
     ],
-    "name": "foodhole_117",
+    "name": "foodhole_111",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2665,7 +2455,7 @@
      49.49747468305832,
      115.5
     ],
-    "name": "foodhole_118",
+    "name": "foodhole_112",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2682,7 +2472,7 @@
      69.02174060533746,
      115.5
     ],
-    "name": "foodhole_119",
+    "name": "foodhole_113",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2699,7 +2489,7 @@
      60.6217782649107,
      115.5
     ],
-    "name": "foodhole_120",
+    "name": "foodhole_114",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2716,7 +2506,7 @@
      80.37751932848195,
      115.5
     ],
-    "name": "foodhole_121",
+    "name": "foodhole_115",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2733,7 +2523,7 @@
      67.61480784023477,
      115.5
     ],
-    "name": "foodhole_122",
+    "name": "foodhole_116",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2750,7 +2540,7 @@
      86.2557029395215,
      115.5
     ],
-    "name": "foodhole_123",
+    "name": "foodhole_117",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2767,7 +2557,7 @@
      70.0,
      115.5
     ],
-    "name": "foodhole_124",
+    "name": "foodhole_118",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2784,7 +2574,7 @@
      86.2557029395215,
      115.5
     ],
-    "name": "foodhole_125",
+    "name": "foodhole_119",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2801,7 +2591,7 @@
      67.61480784023477,
      115.5
     ],
-    "name": "foodhole_126",
+    "name": "foodhole_120",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2818,7 +2608,7 @@
      80.37751932848195,
      115.5
     ],
-    "name": "foodhole_127",
+    "name": "foodhole_121",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2835,7 +2625,7 @@
      60.62177826491071,
      115.5
     ],
-    "name": "foodhole_128",
+    "name": "foodhole_122",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2852,7 +2642,7 @@
      69.02174060533746,
      115.5
     ],
-    "name": "foodhole_129",
+    "name": "foodhole_123",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2869,7 +2659,7 @@
      49.49747468305833,
      115.5
     ],
-    "name": "foodhole_130",
+    "name": "foodhole_124",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2886,7 +2676,7 @@
      52.96224432375872,
      115.5
     ],
-    "name": "foodhole_131",
+    "name": "foodhole_125",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2903,7 +2693,7 @@
      34.99999999999999,
      115.5
     ],
-    "name": "foodhole_132",
+    "name": "foodhole_126",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2920,7 +2710,7 @@
      33.29345861576282,
      115.5
     ],
-    "name": "foodhole_133",
+    "name": "foodhole_127",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2937,7 +2727,7 @@
      18.11733315717647,
      115.5
     ],
-    "name": "foodhole_134",
+    "name": "foodhole_128",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2954,7 +2744,7 @@
      11.355778723144487,
      115.5
     ],
-    "name": "foodhole_135",
+    "name": "foodhole_129",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2971,7 +2761,7 @@
      8.572527594031473e-15,
      115.5
     ],
-    "name": "foodhole_136",
+    "name": "foodhole_130",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2988,7 +2778,7 @@
      -11.355778723144466,
      115.5
     ],
-    "name": "foodhole_137",
+    "name": "foodhole_131",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3005,7 +2795,7 @@
      -18.117333157176457,
      115.5
     ],
-    "name": "foodhole_138",
+    "name": "foodhole_132",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3022,7 +2812,7 @@
      -33.2934586157628,
      115.5
     ],
-    "name": "foodhole_139",
+    "name": "foodhole_133",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3039,7 +2829,7 @@
      -35.00000000000001,
      115.5
     ],
-    "name": "foodhole_140",
+    "name": "foodhole_134",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3056,7 +2846,7 @@
      -52.962244323758696,
      115.5
     ],
-    "name": "foodhole_141",
+    "name": "foodhole_135",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3073,7 +2863,7 @@
      -49.49747468305832,
      115.5
     ],
-    "name": "foodhole_142",
+    "name": "foodhole_136",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3090,7 +2880,7 @@
      -69.02174060533744,
      115.5
     ],
-    "name": "foodhole_143",
+    "name": "foodhole_137",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3107,7 +2897,7 @@
      -60.62177826491069,
      115.5
     ],
-    "name": "foodhole_144",
+    "name": "foodhole_138",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3124,7 +2914,7 @@
      -80.37751932848195,
      115.5
     ],
-    "name": "foodhole_145",
+    "name": "foodhole_139",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3141,7 +2931,7 @@
      -67.61480784023477,
      115.5
     ],
-    "name": "foodhole_146",
+    "name": "foodhole_140",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3158,7 +2948,7 @@
      -86.2557029395215,
      115.5
     ],
-    "name": "foodhole_147",
+    "name": "foodhole_141",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3166,30 +2956,164 @@
    }
   },
   {
-   "command": "solid.cylinder",
+   "command": "sketch.create",
    "params": {
-    "diameter": 206,
-    "height": 13.5,
-    "base": [
-     0,
-     0,
-     116
+    "plane": "XY",
+    "offset": 116,
+    "name": "lid_sk_142"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "points": [
+     [
+      118.9342,
+      0.0
+     ],
+     [
+      59.4671,
+      103.0
+     ],
+     [
+      -59.4671,
+      103.0
+     ],
+     [
+      -118.9342,
+      0.0
+     ],
+     [
+      -59.4671,
+      -103.0
+     ],
+     [
+      59.4671,
+      -103.0
+     ]
     ],
-    "name": "lid_148",
+    "closed": true
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "lid_sk_142",
+    "distance": 13.5,
+    "name": "lid_143",
+    "operation": "new",
     "body_name": "Lid"
    }
   },
   {
+   "command": "solid.fillet",
+   "params": {
+    "edges": [
+     [
+      118.9341554530629,
+      0.0,
+      121
+     ],
+     [
+      59.467077726531464,
+      102.99999999999999,
+      121
+     ],
+     [
+      -59.46707772653142,
+      103.0,
+      121
+     ],
+     [
+      -118.9341554530629,
+      1.456523327848872e-14,
+      121
+     ],
+     [
+      -59.4670777265315,
+      -102.99999999999996,
+      121
+     ],
+     [
+      59.467077726531464,
+      -102.99999999999999,
+      121
+     ]
+    ],
+    "radius": 6
+   }
+  },
+  {
+   "command": "sketch.create",
+   "params": {
+    "plane": "XY",
+    "offset": 115,
+    "name": "lidhollow_sk_144"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "points": [
+     [
+      116.6248,
+      0.0
+     ],
+     [
+      58.3124,
+      101.0
+     ],
+     [
+      -58.3124,
+      101.0
+     ],
+     [
+      -116.6248,
+      0.0
+     ],
+     [
+      -58.3124,
+      -101.0
+     ],
+     [
+      58.3124,
+      -101.0
+     ]
+    ],
+    "closed": true
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "lidhollow_sk_144",
+    "distance": 12.0,
+    "name": "lidhollow_145",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
    "command": "solid.cylinder",
    "params": {
-    "diameter": 16,
-    "height": 3,
+    "diameter": 14,
+    "height": 13.0,
     "base": [
-     109.5,
+     108.54005383792514,
      0.0,
      116
     ],
-    "name": "lidtab_149",
+    "name": "lidboss_146",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3199,48 +3123,286 @@
   {
    "command": "solid.cylinder",
    "params": {
-    "diameter": 16,
-    "height": 3,
+    "diameter": 3.4,
+    "height": 15.5,
     "base": [
-     54.750000000000014,
-     94.82978171439602,
-     116
-    ],
-    "name": "lidtab_150",
-    "operation": "join",
-    "targets": [
-     "Lid"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 16,
-    "height": 3,
-    "base": [
-     -109.5,
-     1.3409882450663518e-14,
-     116
-    ],
-    "name": "lidtab_151",
-    "operation": "join",
-    "targets": [
-     "Lid"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 202,
-    "height": 12.0,
-    "base": [
-     0,
-     0,
+     108.54005383792514,
+     0.0,
      115
     ],
-    "name": "lidhollow_152",
+    "name": "lidscrew_147",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6.5,
+    "height": 4,
+    "base": [
+     108.54005383792514,
+     0.0,
+     126.5
+    ],
+    "name": "lidcb_148",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 14,
+    "height": 13.0,
+    "base": [
+     54.270026918962586,
+     93.99844395177382,
+     116
+    ],
+    "name": "lidboss_149",
+    "operation": "join",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 15.5,
+    "base": [
+     54.270026918962586,
+     93.99844395177382,
+     115
+    ],
+    "name": "lidscrew_150",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6.5,
+    "height": 4,
+    "base": [
+     54.270026918962586,
+     93.99844395177382,
+     126.5
+    ],
+    "name": "lidcb_151",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 14,
+    "height": 13.0,
+    "base": [
+     -54.27002691896255,
+     93.99844395177384,
+     116
+    ],
+    "name": "lidboss_152",
+    "operation": "join",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 15.5,
+    "base": [
+     -54.27002691896255,
+     93.99844395177384,
+     115
+    ],
+    "name": "lidscrew_153",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6.5,
+    "height": 4,
+    "base": [
+     -54.27002691896255,
+     93.99844395177384,
+     126.5
+    ],
+    "name": "lidcb_154",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 14,
+    "height": 13.0,
+    "base": [
+     -108.54005383792514,
+     1.3292322951189641e-14,
+     116
+    ],
+    "name": "lidboss_155",
+    "operation": "join",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 15.5,
+    "base": [
+     -108.54005383792514,
+     1.3292322951189641e-14,
+     115
+    ],
+    "name": "lidscrew_156",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6.5,
+    "height": 4,
+    "base": [
+     -108.54005383792514,
+     1.3292322951189641e-14,
+     126.5
+    ],
+    "name": "lidcb_157",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 14,
+    "height": 13.0,
+    "base": [
+     -54.27002691896262,
+     -93.99844395177381,
+     116
+    ],
+    "name": "lidboss_158",
+    "operation": "join",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 15.5,
+    "base": [
+     -54.27002691896262,
+     -93.99844395177381,
+     115
+    ],
+    "name": "lidscrew_159",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6.5,
+    "height": 4,
+    "base": [
+     -54.27002691896262,
+     -93.99844395177381,
+     126.5
+    ],
+    "name": "lidcb_160",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 14,
+    "height": 13.0,
+    "base": [
+     54.270026918962586,
+     -93.99844395177382,
+     116
+    ],
+    "name": "lidboss_161",
+    "operation": "join",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 3.4,
+    "height": 15.5,
+    "base": [
+     54.270026918962586,
+     -93.99844395177382,
+     115
+    ],
+    "name": "lidscrew_162",
+    "operation": "cut",
+    "targets": [
+     "Lid"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6.5,
+    "height": 4,
+    "base": [
+     54.270026918962586,
+     -93.99844395177382,
+     126.5
+    ],
+    "name": "lidcb_163",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3257,58 +3419,7 @@
      0,
      126.0
     ],
-    "name": "shafthole_153",
-    "operation": "cut",
-    "targets": [
-     "Lid"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 3.4,
-    "height": 5,
-    "base": [
-     109.5,
-     0.0,
-     115
-    ],
-    "name": "lidtabhole_154",
-    "operation": "cut",
-    "targets": [
-     "Lid"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 3.4,
-    "height": 5,
-    "base": [
-     54.750000000000014,
-     94.82978171439602,
-     115
-    ],
-    "name": "lidtabhole_155",
-    "operation": "cut",
-    "targets": [
-     "Lid"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 3.4,
-    "height": 5,
-    "base": [
-     -109.5,
-     1.3409882450663518e-14,
-     115
-    ],
-    "name": "lidtabhole_156",
+    "name": "shafthole_164",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3325,7 +3436,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chute_157",
+    "name": "chute_165",
     "axis": [
      0,
      -0.766044443118978,
@@ -3345,7 +3456,7 @@
      -100.0,
      80
     ],
-    "name": "ears_158",
+    "name": "ears_166",
     "operation": "join",
     "targets": [
      "Chute"
@@ -3362,7 +3473,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chutein_159",
+    "name": "chutein_167",
     "axis": [
      0,
      -0.766044443118978,
@@ -3385,7 +3496,7 @@
      -220,
      111.9
     ],
-    "name": "trimtop_160",
+    "name": "trimtop_168",
     "operation": "cut",
     "targets": [
      "Chute"
@@ -3403,7 +3514,7 @@
      -260,
      -60
     ],
-    "name": "trimend_161",
+    "name": "trimend_169",
     "operation": "cut",
     "targets": [
      "Chute"
@@ -3420,7 +3531,7 @@
      -101.0,
      90
     ],
-    "name": "earhole_162",
+    "name": "earhole_170",
     "axis": "Y",
     "operation": "cut",
     "targets": [
@@ -3438,7 +3549,7 @@
      -101.0,
      90
     ],
-    "name": "earhole_163",
+    "name": "earhole_171",
     "axis": "Y",
     "operation": "cut",
     "targets": [
@@ -3456,7 +3567,7 @@
      -85,
      98.88096492536035
     ],
-    "name": "irhole_164",
+    "name": "irhole_172",
     "axis": "X",
     "operation": "cut",
     "targets": [
@@ -3465,93 +3576,32 @@
    }
   },
   {
-   "command": "sketch.create",
+   "command": "solid.box",
    "params": {
-    "plane": "XY",
-    "offset": 3,
-    "name": "tc_sk_165"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      71.037,
-      75.9602
-     ],
-     [
-      58.537,
-      97.6109
-     ],
-     [
-      23.463,
-      77.3609
-     ],
-     [
-      35.963,
-      55.7102
-     ]
+    "length": 87.0,
+    "width": 25.0,
+    "height": 40,
+    "corner": [
+     -16.5,
+     10.5,
+     3
     ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "tc_sk_165",
-    "distance": 92,
-    "name": "tc_166",
-    "operation": "new",
+    "name": "tc_173",
     "body_name": "TerminalCover"
    }
   },
   {
-   "command": "sketch.create",
+   "command": "solid.box",
    "params": {
-    "plane": "XY",
-    "offset": 2,
-    "name": "tcin_sk_167"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      69.805,
-      74.0942
-     ],
-     [
-      57.805,
-      94.8788
-     ],
-     [
-      26.1951,
-      76.6288
-     ],
-     [
-      38.1951,
-      55.8442
-     ]
+    "length": 83.0,
+    "width": 24.0,
+    "height": 39,
+    "corner": [
+     -14.5,
+     9.5,
+     2
     ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "tcin_sk_167",
-    "distance": 91,
-    "name": "tcin_168",
+    "name": "tcin_174",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3559,47 +3609,17 @@
    }
   },
   {
-   "command": "sketch.create",
+   "command": "solid.box",
    "params": {
-    "plane": "XY",
-    "offset": 2,
-    "name": "tccable_sk_169"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      34.5611,
-      64.1384
-     ],
-     [
-      28.5611,
-      74.5307
-     ],
-     [
-      25.097,
-      72.5307
-     ],
-     [
-      31.097,
-      62.1384
-     ]
+    "length": 30,
+    "width": 4.0,
+    "height": 36,
+    "corner": [
+     12,
+     32.5,
+     2
     ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "tccable_sk_169",
-    "distance": 23,
-    "name": "tccable_170",
+    "name": "tccable_175",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3607,47 +3627,17 @@
    }
   },
   {
-   "command": "sketch.create",
+   "command": "solid.box",
    "params": {
-    "plane": "XY",
-    "offset": 8,
-    "name": "tcear_sk_171"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      36.396,
-      55.9602
-     ],
-     [
-      23.896,
-      77.6109
-     ],
-     [
-      13.0707,
-      71.3609
-     ],
-     [
-      25.5707,
-      49.7102
-     ]
+    "length": 13.0,
+    "width": 24.0,
+    "height": 3,
+    "corner": [
+     70.0,
+     9.5,
+     8
     ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "tcear_sk_171",
-    "distance": 3,
-    "name": "tcear_172",
+    "name": "tcear_176",
     "operation": "join",
     "targets": [
      "TerminalCover"
@@ -3660,11 +3650,11 @@
     "diameter": 3.4,
     "height": 5,
     "base": [
-     27.766859860056528,
-     57.906387955737245,
+     77,
+     15.5,
      7
     ],
-    "name": "tchole_173",
+    "name": "tchole_177",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3677,11 +3667,11 @@
     "diameter": 3.4,
     "height": 5,
     "base": [
-     20.266859860056528,
-     70.89676901250382,
+     77,
+     28.5,
      7
     ],
-    "name": "tchole_174",
+    "name": "tchole_178",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3699,7 +3689,7 @@
      -32,
      10
     ],
-    "name": "carr_175",
+    "name": "carr_179",
     "body_name": "Carrier"
    }
   },
@@ -3708,7 +3698,7 @@
    "params": {
     "plane": "XY",
     "offset": 10,
-    "name": "carrb_sk_176"
+    "name": "carrb_sk_180"
    }
   },
   {
@@ -3758,9 +3748,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "carrb_sk_176",
+    "sketch": "carrb_sk_180",
     "distance": 3,
-    "name": "carrb_177",
+    "name": "carrb_181",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -3777,7 +3767,7 @@
      -26,
      9
     ],
-    "name": "carrhole_178",
+    "name": "carrhole_182",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3794,7 +3784,7 @@
      -27,
      9
     ],
-    "name": "carrhole_179",
+    "name": "carrhole_183",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3811,7 +3801,7 @@
      46,
      9
     ],
-    "name": "carrhole_180",
+    "name": "carrhole_184",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3828,7 +3818,7 @@
      50,
      9
     ],
-    "name": "carrhole_181",
+    "name": "carrhole_185",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3842,74 +3832,6 @@
     "height": 2.9,
     "base": [
      -28.3,
-     96.5,
-     12.5
-    ],
-    "name": "picopost_182",
-    "operation": "join",
-    "targets": [
-     "Carrier"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 1.7,
-    "height": 3.3,
-    "base": [
-     -28.3,
-     96.5,
-     12.2
-    ],
-    "name": "picopilot_183",
-    "operation": "cut",
-    "targets": [
-     "Carrier"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 4,
-    "height": 2.9,
-    "base": [
-     -28.3,
-     49.5,
-     12.5
-    ],
-    "name": "picopost_184",
-    "operation": "join",
-    "targets": [
-     "Carrier"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 1.7,
-    "height": 3.3,
-    "base": [
-     -28.3,
-     49.5,
-     12.2
-    ],
-    "name": "picopilot_185",
-    "operation": "cut",
-    "targets": [
-     "Carrier"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 4,
-    "height": 2.9,
-    "base": [
-     -39.7,
      96.5,
      12.5
     ],
@@ -3926,7 +3848,7 @@
     "diameter": 1.7,
     "height": 3.3,
     "base": [
-     -39.7,
+     -28.3,
      96.5,
      12.2
     ],
@@ -3943,7 +3865,7 @@
     "diameter": 4,
     "height": 2.9,
     "base": [
-     -39.7,
+     -28.3,
      49.5,
      12.5
     ],
@@ -3960,7 +3882,7 @@
     "diameter": 1.7,
     "height": 3.3,
     "base": [
-     -39.7,
+     -28.3,
      49.5,
      12.2
     ],
@@ -3974,6 +3896,74 @@
   {
    "command": "solid.cylinder",
    "params": {
+    "diameter": 4,
+    "height": 2.9,
+    "base": [
+     -39.7,
+     96.5,
+     12.5
+    ],
+    "name": "picopost_190",
+    "operation": "join",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 1.7,
+    "height": 3.3,
+    "base": [
+     -39.7,
+     96.5,
+     12.2
+    ],
+    "name": "picopilot_191",
+    "operation": "cut",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 4,
+    "height": 2.9,
+    "base": [
+     -39.7,
+     49.5,
+     12.5
+    ],
+    "name": "picopost_192",
+    "operation": "join",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 1.7,
+    "height": 3.3,
+    "base": [
+     -39.7,
+     49.5,
+     12.2
+    ],
+    "name": "picopilot_193",
+    "operation": "cut",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
     "diameter": 6,
     "height": 4.5,
     "base": [
@@ -3981,7 +3971,7 @@
      -9.8,
      12.5
     ],
-    "name": "perfpost_190",
+    "name": "perfpost_194",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -3998,7 +3988,7 @@
      -9.8,
      13
     ],
-    "name": "perfpilot_191",
+    "name": "perfpilot_195",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4015,7 +4005,7 @@
      25.8,
      12.5
     ],
-    "name": "perfpost_192",
+    "name": "perfpost_196",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4032,7 +4022,7 @@
      25.8,
      13
     ],
-    "name": "perfpilot_193",
+    "name": "perfpilot_197",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4050,7 +4040,7 @@
      -21.15,
      58
     ],
-    "name": "dm_194",
+    "name": "dm_198",
     "body_name": "DUMMY_Motor"
    }
   },
@@ -4064,7 +4054,7 @@
      0,
      106
     ],
-    "name": "dmpilot_195",
+    "name": "dmpilot_199",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4081,7 +4071,7 @@
      0,
      106
     ],
-    "name": "dmshaft_196",
+    "name": "dmshaft_200",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4099,7 +4089,7 @@
      -8,
      60
     ],
-    "name": "dmplug_197",
+    "name": "dmplug_201",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4107,48 +4097,17 @@
    }
   },
   {
-   "command": "sketch.create",
+   "command": "solid.box",
    "params": {
-    "plane": "XY",
-    "offset": 8,
-    "name": "dp_sk_198"
-   }
-  },
-  {
-   "command": "sketch.line",
-   "params": {
-    "points": [
-     [
-      110.1399,
-      -0.7679
-     ],
-     [
-      60.6399,
-      84.9686
-     ],
-     [
-      34.6592,
-      69.9686
-     ],
-     [
-      84.1592,
-      -15.7679
-     ]
+    "length": 82.0,
+    "width": 99.0,
+    "height": 30,
+    "corner": [
+     -14.0,
+     -75.5,
+     8
     ],
-    "closed": true
-   }
-  },
-  {
-   "command": "sketch.finish",
-   "params": {}
-  },
-  {
-   "command": "solid.extrude",
-   "params": {
-    "sketch": "dp_sk_198",
-    "distance": 82,
-    "name": "dp_199",
-    "operation": "new",
+    "name": "dp_202",
     "body_name": "DUMMY_PSU"
    }
   },
@@ -4163,7 +4122,7 @@
      47.5,
      15.4
     ],
-    "name": "dpico_200",
+    "name": "dpico_203",
     "body_name": "DUMMY_Pico"
    }
   },
@@ -4178,7 +4137,7 @@
      -14.0,
      17
     ],
-    "name": "dperf_201",
+    "name": "dperf_204",
     "body_name": "DUMMY_Perfboard"
    }
   },
@@ -4193,7 +4152,7 @@
      70.0,
      26
     ],
-    "name": "diec_202",
+    "name": "diec_205",
     "body_name": "DUMMY_IEC"
    }
   },

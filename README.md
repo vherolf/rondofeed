@@ -3,14 +3,14 @@
 **An open, 3D-printable automatic feeder for dogs, birds and other pets.**
 
 <p align="center">
-  <img src="images/exploded.png" alt="Exploded view of the hexagonal rondOfeed: round lid, perforated disc, top plate and housing with chute" width="640">
+  <img src="images/exploded.png" alt="Exploded view of the hexagonal rondOfeed: hexagonal lid, perforated disc, top plate and housing with chute" width="640">
 </p>
 
 A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a time, which slides down a chute into a bowl. A Raspberry Pi Pico 2 W controls it, so Wi-Fi and Bluetooth feeding are possible. The housing is a hexagon, like a honeycomb cell.
 
 <table>
   <tr>
-    <td><img src="images/iso.png" alt="Assembled hexagonal rondOfeed with round lid and chute"></td>
+    <td><img src="images/iso.png" alt="Assembled hexagonal rondOfeed with lid and chute"></td>
     <td><img src="images/inside.png" alt="Top view inside the hexagonal housing with motor, power supply and electronics"></td>
   </tr>
   <tr>
@@ -62,12 +62,12 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `Disc.stl` | Ø200 × 10 | Bottom |
 | `Disc_12.stl` (optional) | Ø200 × 10 | Bottom |
 | `Disc_10.stl` (optional) | Ø200 × 10 | Bottom |
-| `Lid.stl` | 235 × 206 × 13.5 | Top (flip) |
+| `Lid.stl` | 236 × 206 × 13.5 | Top (flip) |
 | `Chute.stl` | 68 × 66 × 55 | Flat top, with the screw plate standing on it |
-| `TerminalCover.stl` | 58 × 48 × 92 | Back |
+| `TerminalCover.stl` | 99.5 × 26 × 40 | Back |
 | `Carrier.stl` | 83 × 131.5 × 7 | Bottom |
 
-The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The round lid (Ø206) touches the flats of the hexagon, only its three screw tabs reach into the corners.
+The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The lid has the same hexagon as the housing and sits flush on it.
 
 ## Parts
 
@@ -85,7 +85,7 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | IR break-beam sensor, emitter and receiver | 1 | Ø5.2 mm hole |
 | IEC C14 inlet with switch and fuse | 1 | 27.5 × 47.5 mm cutout, 3 mm wall |
 | M3 threaded inserts, Ø4.0 mm hole | 12 | |
-| M3 screws: M3×8 (power supply), M3×12 (motor, plate) | 20 | |
+| M3 screws: M3×8 (power supply), M3×12 (motor and the rest), M3×20 (lid and plate, one per corner) | 20 | |
 | M3 nuts for the chute | 2 | |
 | M3 set screw and nut | 1 | Locks the disc on the D-flat |
 | Rubber feet | 4 | The floor vents need airflow |
@@ -129,15 +129,15 @@ Print a test piece before the full print: the disc centre (shaft and set screw) 
 
 1. Press in the threaded inserts.
 2. Screw the motor to the plate from below, with the screw heads recessed from above.
-3. Mount the power supply upright on the ribs of the rear right wall (the slanted one next to the IEC inlet): M3×8 from outside through the wall, heads recessed. Screws must not reach more than 3 mm into the power supply.
-4. Screw the Pico and prototyping board to the carrier (one angled plate, one part under each board), then screw the carrier to the floor. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover.
+3. Lay the power supply flat on its two pads, terminals towards the rear: M3×8 from below through the floor, heads recessed. Screws must not reach more than 3 mm into the power supply.
+4. Screw the Pico and prototyping board to the carrier (one angled plate, one part under each board), then screw the carrier to the floor. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover with 2 screws on its right side.
 5. Before fitting the plate, push the chute through the front wall from inside. 2 × M3 from outside, nuts inside. The plate has to come off for cleaning.
-6. Screw on the plate with 3 screws in the corners of the hexagon, set the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
-7. Place the round lid on top and fix it with 3 screws into the tabs at the other three corners.
+6. Set the plate on the housing and the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
+7. Place the lid on top. The lid and plate are held by 6 M3×20 screws, one in each corner, which go through the lid and the plate into the inserts in the housing.
 
 ## Safety
 
-Heat: only the power supply has ventilation slots. Disable the motor driver when idle and check the internal temperature in continuous use. PETG softens at about 70 °C.
+Heat: only the power supply has ventilation: slots in the floor below it and in the right front wall above it. Disable the motor driver when idle and check the internal temperature in continuous use. PETG softens at about 70 °C.
 
 230 V: connect protective earth to terminal FG, keep the mains terminals under the cover, route mains and low-voltage wiring separately, and use strain relief. Mains wiring must only be done by someone qualified to do it safely.
 
