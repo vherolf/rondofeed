@@ -67,7 +67,7 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `TerminalCover.stl` | 99.5 × 26 × 40 | Back |
 | `Carrier.stl` | 83 × 131.5 × 7 | Bottom |
 
-The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The lid has the same hexagon as the housing and sits flush on it.
+The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The lid has the same hexagon as the housing and sits flush on it. It is held by magnets, so there are no screws on top.
 
 ## Parts
 
@@ -85,7 +85,8 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | IR break-beam sensor, emitter and receiver | 1 | Ø5.2 mm hole |
 | IEC C14 inlet with switch and fuse | 1 | 27.5 × 47.5 mm cutout, 3 mm wall |
 | M3 threaded inserts, Ø4.0 mm hole | 12 | |
-| M3 screws: M3×8 (power supply), M3×12 (motor and the rest), M3×20 (lid and plate, one per corner) | 20 | |
+| M3 screws, steel (not stainless, magnets must hold on the heads): M3×8 (power supply, plate), M3×12 (motor and the rest) | 20 | |
+| Neodymium disc magnets Ø6 × 2 mm | 6 | Glued into the lid, one over each plate screw |
 | M3 nuts for the chute | 2 | |
 | M3 set screw and nut | 1 | Locks the disc on the D-flat |
 | Rubber feet | 4 | The floor vents need airflow |
@@ -132,8 +133,8 @@ Print a test piece before the full print: the disc centre (shaft and set screw) 
 3. Lay the power supply flat on its two pads, terminals towards the rear: M3×8 from below through the floor, heads recessed. Screws must not reach more than 3 mm into the power supply.
 4. Screw the Pico and prototyping board to the carrier (one angled plate, one part under each board), then screw the carrier to the floor. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover with 2 screws on its right side.
 5. Before fitting the plate, push the chute through the front wall from inside. 2 × M3 from outside, nuts inside. The plate has to come off for cleaning.
-6. Set the plate on the housing and the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
-7. Place the lid on top. The lid and plate are held by 6 M3×20 screws, one in each corner, which go through the lid and the plate into the inserts in the housing.
+6. Set the plate on the housing and fix it with 6 M3×8 screws, one in each corner. The heads sit in the counterbores. Set the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
+7. Glue one magnet into each of the 6 pockets on the underside of the lid. Polarity does not matter, as the magnets attract the steel screw heads either way. Place the lid on top. Each magnet sits over a plate screw and holds the lid.
 
 ## Safety
 

@@ -53,8 +53,13 @@ HEAD_DEPTH = 3.5
 LID_TOP_T = 2.5
 LID_Z = DZ + DISC_T + 0.5
 LID_HOLE_D = 12    # Loch fuer das Wellenende, Welle Ø5 ragt etwa 0,5 mm ueber den Deckel
-LID_BOSS_D = 14    # Schraubdom im Deckel, in jeder Ecke
-POST_DEGS = range(0, 360, 60)  # alle 6 Ecken: eine M3x20 haelt Deckel, Platte und Unterteil
+LID_BOSS_D = 14    # Dom im Deckel, in jeder Ecke, nimmt den Magneten auf
+POST_DEGS = range(0, 360, 60)  # alle 6 Ecken: eine M3x8 haelt die Platte, ein Magnet im Deckel darueber haelt den Deckel
+MAGNET_D = 6       # Neodym-Scheibe Ø6 x 2, haelt am Stahlkopf der Schraube darunter
+MAGNET_T = 2
+MAGNET_FIT = 0.25  # Zugabe im Durchmesser und in der Tiefe
+HEAD_CB_D = 6.5    # Senkung fuer den Schraubenkopf in der Platte
+HEAD_CB_DEPTH = 3
 
 # Rutsche: rundes Rohr, Achse faellt nach vorn. Liegt beim Druck mit der Plattenseite auf dem Bett.
 CHUTE_DEG = 40
@@ -282,6 +287,7 @@ for x0, x1 in ((b - 1, STIFF_END), (-STIFF_END, -b + 1)):
 
 for x, y in POST_HOLES:
     cyl(M3_CLEAR, (x, y, BASE_H - 1), PLATE_T + 2, "cut", "Plate", label="platehole")
+    cyl(HEAD_CB_D, (x, y, TOP - HEAD_CB_DEPTH), HEAD_CB_DEPTH + 1, "cut", "Plate", label="platehead")
 # ---------- Scheibe ----------
 def food_disc(body, hole, n_ring, disc_d="disc_d", disc_t="disc_t", shaft="shaft_d"):
     """Lochscheibe mit n_ring Loechern je Ring. Position k liegt bei -90 + k * Schritt Grad, k=0 bleibt geschlossen."""
@@ -305,10 +311,10 @@ food_disc("Disc", "hole_d", N_RING)
 prism(hexagon(h), TOP, LID_Z + LID_TOP_T, body="Lid", label="lid")
 add("solid.fillet", edges=[[*polar(a_, R_OUT), TOP + 5] for a_ in range(0, 360, 60)], radius=CORNER_R)
 prism(hexagon(h - 2), TOP - 1, LID_Z, op="cut", target="Lid", label="lidhollow")
-for x, y in POST_HOLES:  # Dom in jeder Ecke, die Schraube geht durch Deckel und Platte in den Dom im Unterteil
+for x, y in POST_HOLES:  # Dom in jeder Ecke ueber dem Schraubenkopf der Platte
     cyl(LID_BOSS_D, (x, y, TOP), LID_Z + LID_TOP_T - TOP - 0.5, "join", "Lid", label="lidboss")
-    cyl(M3_CLEAR, (x, y, TOP - 1), LID_Z + LID_TOP_T - TOP + 2, "cut", "Lid", label="lidscrew")
-    cyl(6.5, (x, y, LID_Z + LID_TOP_T - 3), 4, "cut", "Lid", label="lidcb")
+    # Magnettasche von unten, oben bleibt die Haut geschlossen
+    cyl(MAGNET_D + MAGNET_FIT, (x, y, TOP - 1), 1 + MAGNET_T + MAGNET_FIT, "cut", "Lid", label="lidmagnet")
 cyl(LID_HOLE_D, (0, CY, LID_Z - 1), LID_TOP_T + 2, "cut", "Lid", label="shafthole")
 
 # ---------- Rutsche ----------
