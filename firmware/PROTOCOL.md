@@ -5,7 +5,7 @@ One text line per message, ending with `\n`. The same commands work over USB ser
 ## Transports
 
 - **USB serial:** the Pico shows up as a serial port (for example `/dev/ttyACM0`), 115200 8N1 is fine, the speed does not matter. USB is trusted, no login is needed.
-- **BLE:** the Pico advertises as `rondOfeed` with a service `7a1c0001-5a3e-4c6b-9d21-0f3c2a8e0001`. Write command lines to the characteristic `…0002`, read answers and events as notifications of `…0003`. A line may be split over several packets, so collect the bytes until `\n`. A BLE client has to send `AUTH <token>` first, see below.
+- **BLE:** the Pico advertises as `rondOfeed` (category Domestic Appliance) with a service `7a1c0001-5a3e-4c6b-9d21-0f3c2a8e0001`. Write command lines to the characteristic `…0002`, read answers and events as notifications of `…0003`. A line may be split over several packets, so collect the bytes until `\n`. A BLE client has to send `AUTH <token>` first, see below. The standard Device Information Service (`0x180A`) tells manufacturer, model and firmware version, so apps can recognise the device.
 
 ## Messages
 

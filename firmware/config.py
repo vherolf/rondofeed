@@ -39,6 +39,9 @@ JOG_MAX = 800           # groesster Wert fuer JOG in Mikroschritten
 WATCHDOG_MS = 8000      # 0 schaltet den Watchdog aus, zum Entwickeln hilfreich
 
 BLE_NAME = "rondOfeed"
+BLE_APPEARANCE = 36 << 6   # Kategorie "Domestic Appliance" der Bluetooth SIG, Unterkategorie 0 (allgemein)
+BLE_MANUFACTURER = "rondOfeed"
+BLE_MODEL = "rondOfeed feeder"
 BLE_SERVICE = "7a1c0001-5a3e-4c6b-9d21-0f3c2a8e0001"
 BLE_RX = "7a1c0002-5a3e-4c6b-9d21-0f3c2a8e0001"   # App schreibt Befehle
 BLE_TX = "7a1c0003-5a3e-4c6b-9d21-0f3c2a8e0001"   # Pico meldet Antworten und Ereignisse

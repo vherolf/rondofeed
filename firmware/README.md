@@ -2,7 +2,7 @@
 
 MicroPython for the Raspberry Pi Pico W and Pico 2 W. It moves the disc one position per portion, checks every portion with the light barrier and takes commands over USB serial and BLE. The commands are in [PROTOCOL.md](PROTOCOL.md).
 
-**Status:** the core (`feeder.py`, `protocol.py`, `motor_plan.py`, `store.py`) is tested on a PC. On a Pico W with MicroPython 1.29.0 these work, tested **without a motor, driver or light barrier**: USB serial, BLE (login, commands, long lines, readable names in nRF Connect), the whole feed sequence including `no_portion`, the step pulses (the duration of a move matches the plan) and `state=uncertain` after a move that is cut off. The motor itself and the light barrier have **not run yet**.
+**Status:** the core (`feeder.py`, `protocol.py`, `motor_plan.py`, `store.py`) is tested on a PC. On a Pico W with MicroPython 1.29.0 these work, tested **without a motor, driver or light barrier**: USB serial, BLE (login, commands, long lines, readable names and the Device Information Service in nRF Connect), the whole feed sequence including `no_portion`, the step pulses (the duration of a move matches the plan) and `state=uncertain` after a move that is cut off. The motor itself and the light barrier have **not run yet**.
 
 ## Files
 

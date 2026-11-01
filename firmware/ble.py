@@ -1,4 +1,5 @@
-"""BLE: ein Dienst mit einer Schreib-Eigenschaft fuer Befehle und einer Benachrichtigung fuer Antworten."""
+"""BLE: ein Dienst mit einer Schreib-Eigenschaft fuer Befehle und einer Benachrichtigung fuer Antworten,
+dazu der genormte Device Information Service."""
 import asyncio
 
 import aioble
@@ -13,13 +14,19 @@ _CHUNK = 20   # Standard-MTU 23 minus 3 Byte Kopf
 class Ble:
     def __init__(self, dispatcher):
         self.dispatcher = dispatcher
+        aioble.config(gap_name=config.BLE_NAME)   # Name im Generic Access Service, sonst steht dort MPY BTSTACK
         service = aioble.Service(bluetooth.UUID(config.BLE_SERVICE))
         self.rx = aioble.Characteristic(service, bluetooth.UUID(config.BLE_RX), write=True, capture=True)
         self.tx = aioble.Characteristic(service, bluetooth.UUID(config.BLE_TX), read=True, notify=True)
         # Lesbare Namen in Tools wie nRF Connect (Characteristic User Description, 0x2901)
         aioble.Descriptor(self.rx, bluetooth.UUID(0x2901), read=True, initial=b"rondOfeed commands")
         aioble.Descriptor(self.tx, bluetooth.UUID(0x2901), read=True, initial=b"rondOfeed answers")
-        aioble.register_services(service)
+        # Device Information Service (0x180A), genormt: Hersteller, Modell, Firmware
+        info = aioble.Service(bluetooth.UUID(0x180A))
+        for uuid, value in ((0x2A29, config.BLE_MANUFACTURER), (0x2A24, config.BLE_MODEL),
+                            (0x2A26, config.FW_VERSION)):
+            aioble.Characteristic(info, bluetooth.UUID(uuid), read=True, initial=value)
+        aioble.register_services(service, info)
         # Standard sind 20 Byte, laengere Befehle wie AUTH mit Token kaemen sonst abgeschnitten an
         bluetooth.BLE().gatts_set_buffer(self.rx._value_handle, 128, True)
         self.connection = None
@@ -55,7 +62,8 @@ class Ble:
     async def run(self):
         while True:
             async with await aioble.advertise(250000, name=config.BLE_NAME,
-                                              services=[bluetooth.UUID(config.BLE_SERVICE)]) as connection:
+                                              services=[bluetooth.UUID(config.BLE_SERVICE)],
+                                              appearance=config.BLE_APPEARANCE) as connection:
                 self.connection = connection
                 try:
                     await self._session(connection)
