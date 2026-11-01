@@ -41,7 +41,7 @@
 <text x="411.2" y="790.0" font-size="12" text-anchor="start" font-weight="600" fill="#1f2933">IR emitter</text>
 <polygon points="247.4,349.0 306.2,349.0 306.2,206.2 247.4,206.2" fill="#eaf6ec" stroke="#3e4c59" stroke-width="2" stroke-linejoin="round"/>
 <text x="276.8" y="297.2" font-size="13" text-anchor="middle" font-weight="700" fill="#1f2933">Pico</text>
-<text x="276.8" y="311.2" font-size="12" text-anchor="middle" font-weight="600" fill="#1f2933">2 W</text>
+<text x="276.8" y="311.2" font-size="12" text-anchor="middle" font-weight="600" fill="#1f2933">W or 2 W</text>
 <polygon points="265.6,223.0 288.0,223.0 288.0,206.2 265.6,206.2" fill="#b8c4d0" stroke="#3e4c59" stroke-width="2" stroke-linejoin="round"/>
 <polygon points="155.3,399.1 297.5,399.1 297.5,520.1 155.3,520.1" fill="#f3ecd8" stroke="#3e4c59" stroke-width="2" stroke-linejoin="round"/>
 <circle cx="226.4" cy="509.4" r="4" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>

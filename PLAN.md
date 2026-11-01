@@ -5,7 +5,7 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 ## Electronics
 
 
-- **Controller:** Raspberry Pi Pico 2 W. Same form factor as the Pico, so the carrier and USB cutout stay as they are.
+- **Controller:** Raspberry Pi Pico W or Pico 2 W. Same form factor as the Pico, so the carrier and USB cutout stay as they are.
 - **Driver:** Adafruit TMC2209 Breakout (ADA6121). Motor 5–29 V, logic 3–5 V, up to 2 A, screw terminals, 22 µF electrolytic capacitor on the board.
 - **Power:** 12 V from the power supply to the breakout, 12 V to 5 V converter through a Schottky diode to `VSYS` on the Pico. See [wiring.svg](wiring.svg).
 

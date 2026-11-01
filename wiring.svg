@@ -88,7 +88,7 @@
 <text x="470" y="430" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">OUT−</text>
 <rect x="640" y="296" width="170" height="346" rx="8" fill="#eaf6ec" stroke="#3e4c59" stroke-width="2"/>
 <text x="725.0" y="320" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933">Raspberry Pi</text>
-<text x="725.0" y="338" font-size="12" text-anchor="middle" font-weight="400" fill="#52606d">Pico 2 W</text>
+<text x="725.0" y="338" font-size="12" text-anchor="middle" font-weight="400" fill="#52606d">Pico W or 2 W</text>
 <circle cx="640" cy="385" r="4" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
 <text x="650" y="390" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">VSYS</text>
 <circle cx="640" cy="425" r="4" fill="#fff" stroke="#3e4c59" stroke-width="2"/>

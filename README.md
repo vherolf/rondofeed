@@ -6,7 +6,7 @@
   <img src="images/exploded.png" alt="Exploded view of the hexagonal rondOfeed: hexagonal lid, perforated disc, top plate and housing with chute" width="640">
 </p>
 
-A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a time, which slides down a chute into a bowl. A Raspberry Pi Pico 2 W controls it, so Wi-Fi and Bluetooth feeding are possible. The housing is a hexagon, like a honeycomb cell.
+A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a time, which slides down a chute into a bowl. A Raspberry Pi Pico W or Pico 2 W controls it and takes commands over USB serial and Bluetooth (BLE). The housing is a hexagon, like a honeycomb cell.
 
 <table>
   <tr>
@@ -29,7 +29,7 @@ A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a
 The rondOfeed is an early design. It has been modelled and checked for collisions, but **it has not been printed or built yet**, and the firmware does not exist yet. That makes this a good time to join in:
 
 - **Build it:** print the parts and report what fits and what does not
-- **Write firmware:** the Pico 2 W needs motor control, feeding schedules and Wi-Fi or Bluetooth control. [PLAN.md](PLAN.md) has the requirements
+- **Finish the firmware:** it takes commands over USB serial and BLE, but the motor and the light barrier have not run yet. [PLAN.md](PLAN.md) has the list of what is left
 - **Design new discs:** for small food such as bird seed, which needs a different hole layout
 - **Test food types:** tell us what dispenses reliably for your pet
 
@@ -74,7 +74,7 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | Part | Qty | Notes |
 |---|---|---|
 | NEMA 17 motor, 0.9° (400 steps/turn), 5 mm D-shaft, up to 48 mm long | 1 | Shaft about 24 mm, about 1 A is enough |
-| Raspberry Pi Pico 2 W | 1 | Wi-Fi and Bluetooth, same form factor as the Pico |
+| Raspberry Pi Pico W or Pico 2 W | 1 | Same size and pins, both work with the firmware. Bluetooth is used, Wi-Fi is not used yet |
 | Mean Well LRS-35-12 or LRS-50-12 | 1 | Same case (Case 239A) |
 | Adafruit TMC2209 Breakout (ADA6121) | 1 | No heatsink included, add one if needed |
 | Electrolytic capacitor, 100–470 µF, at least 25 V | 1 | Directly on the breakout's 12 V terminals |
