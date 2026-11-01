@@ -58,7 +58,7 @@
 <polyline points="276.2,466.6 286.6,466.6 286.6,396.6 462.4,396.6 462.4,459.6" fill="none" stroke="#43a047" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="276.2,473.9 292.2,473.9 292.2,403.6 457.7,403.6 457.7,459.6" fill="none" stroke="#e53935" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="276.2,480.9 297.8,480.9 297.8,410.6 452.9,410.6 452.9,459.6" fill="none" stroke="#1e88e5" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="394.4" y="358.8" font-size="12" text-anchor="middle" font-weight="600" fill="#52606d">motor cable</text>
+<text x="475.6" y="440.0" font-size="12" text-anchor="start" font-weight="600" fill="#52606d">motor cable</text>
 <polyline points="187.2,445.3 178.8,445.3 178.8,386.8 241.0,386.8 241.0,238.4 251.9,238.4" fill="none" stroke="#2e7d32" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="187.2,452.3 173.2,452.3 173.2,382.6 244.3,382.6 244.3,231.3 251.9,231.3" fill="none" stroke="#c2185b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="187.2,473.9 167.6,473.9 167.6,378.4 236.2,378.4 236.2,252.7 251.9,252.7" fill="none" stroke="#6d4c41" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
