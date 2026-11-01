@@ -88,8 +88,8 @@ VENT_L = 30
 
 # Elektroniktraeger
 CARR_A = (-86, -32, -22, 42)  # x0, y0, x1, y1, unter der Loetplatine
-CARR_B = [(-55, 41), (-14, 41), (-14, 99.5), (-45, 99.5), (-45, 70), (-55, 70)]  # unter dem Pico
-CARR_HOLES = [(-80, -26), (-26, -26), (-18, 62), (-50, 50)]  # alle ausserhalb von Pico und Loetplatine
+CARR_B = [(-66, 41), (-3, 41), (-3, 52), (-14, 52), (-14, 99.5), (-45, 99.5), (-45, 70), (-66, 70)]  # unter dem Pico
+CARR_HOLES = [(-80, -26), (-24, -27), (-10, 46), (-60, 50)]  # alle ausserhalb von Pico und Loetplatine
 CARR_Z = 10
 CARR_T = 3
 PICO_C = (-34, 73)
@@ -97,8 +97,8 @@ PICO_DX = 47       # aus pico_case.sc, entlang Y verbaut
 PICO_DY = 11.4
 PICO_STANDOFF = 2.4
 PERF_C = (-52, 8)
-PERF_L = 55        # Adafruit Perma-Proto Quarter-Size, laengs in Y
-PERF_W = 44
+PERF_L = 44        # Adafruit Perma-Proto Quarter-Size, lange Seite quer in X, die 2 Loecher liegen auf der kurzen Achse (Y)
+PERF_W = 55
 PERF_HOLE_DY = 35.6  # 2 Loecher M3, Lage mittig auf der Laengsachse angenommen, am Board pruefen
 
 # Rueckwand

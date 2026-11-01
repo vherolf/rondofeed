@@ -64,7 +64,7 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `Cap.stl` | Ø36 × 10 | Top (flip) |
 | `Chute.stl` | 68 × 66 × 55 | Flat top, with the screw plate standing on it |
 | `TerminalCover.stl` | 58 × 48 × 92 | Back |
-| `Carrier.stl` | 72 × 131.5 × 7 | Bottom |
+| `Carrier.stl` | 83 × 131.5 × 7 | Bottom |
 
 The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The round lid (Ø206) touches the flats of the hexagon, only its three screw tabs reach into the corners.
 

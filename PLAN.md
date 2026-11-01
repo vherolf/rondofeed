@@ -29,7 +29,7 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 - The 10 kΩ pull-up keeps the motor unpowered while the Pico boots.
 - Set the motor current on the potentiometer before any longer test. Exact motor model is not chosen yet, placeholder 1.0 A.
 - Short, secure wires, no jumper wires.
-- Prototyping board: Adafruit Perma-Proto Quarter-Size (43.2 × 50.8 mm), layout in [wiring_layout.svg](wiring_layout.svg). Its 2 mounting holes are 35.6 mm apart on the short axis, so it sits with the long side across the carrier. The `DUMMY_Perfboard` body in the model is still drawn 44 × 55 mm, long side in Y.
+- Prototyping board: Adafruit Perma-Proto Quarter-Size (43.2 × 50.8 mm), layout in [wiring_layout.svg](wiring_layout.svg). Its 2 mounting holes are 35.6 mm apart on the short axis, so it sits with the long side across the carrier (along X). The `DUMMY_Perfboard` body in the model is drawn 55 × 44 mm, a little larger than the board.
 - The converter model is not chosen yet. The layout assumes a 3-pin in-line module of 11.5 × 7.5 mm.
 
 ## Firmware (Pico 2 W)
