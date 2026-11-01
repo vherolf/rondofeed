@@ -16,6 +16,9 @@ class Ble:
         service = aioble.Service(bluetooth.UUID(config.BLE_SERVICE))
         self.rx = aioble.Characteristic(service, bluetooth.UUID(config.BLE_RX), write=True, capture=True)
         self.tx = aioble.Characteristic(service, bluetooth.UUID(config.BLE_TX), read=True, notify=True)
+        # Lesbare Namen in Tools wie nRF Connect (Characteristic User Description, 0x2901)
+        aioble.Descriptor(self.rx, bluetooth.UUID(0x2901), read=True, initial=b"rondOfeed commands")
+        aioble.Descriptor(self.tx, bluetooth.UUID(0x2901), read=True, initial=b"rondOfeed answers")
         aioble.register_services(service)
         # Standard sind 20 Byte, laengere Befehle wie AUTH mit Token kaemen sonst abgeschnitten an
         bluetooth.BLE().gatts_set_buffer(self.rx._value_handle, 128, True)

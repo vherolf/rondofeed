@@ -34,7 +34,7 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 
 ## Firmware (Pico W and Pico 2 W)
 
-MicroPython, in [firmware/](firmware/README.md). Commands over USB serial and BLE, no Wi-Fi for now. The protocol is in [firmware/PROTOCOL.md](firmware/PROTOCOL.md). The core is tested on a PC, USB serial and BLE on a Pico W. The motor and the light barrier have not run yet.
+MicroPython, in [firmware/](firmware/README.md). Commands over USB serial and BLE, no Wi-Fi for now. The protocol is in [firmware/PROTOCOL.md](firmware/PROTOCOL.md). The core is tested on a PC, the rest on a Pico W without motor, driver and light barrier. The motor and the light barrier have not run yet.
 
 Decisions:
 
@@ -54,7 +54,7 @@ The firmware stays as it is for now. Only a Pico W is available, so nothing with
 4. Tune `STEP_RATE_MIN`, `STEP_RATE_MAX` and the ramp with the real disc. The disc is heavy, so the values are guesses. Look for lost steps.
 5. Align the disc, send `ZERO`, then `FEED` and see if the portion lands in the chute. Check that each hole is cleanly over the outlet and that the disc stays put when the driver is off (see Position).
 6. Run the three discs (`DISC 47`, `DISC 59`, `DISC 69`) and check that the positions add up to a full turn.
-7. Test power loss in the middle of a move: the next start must report `state=uncertain`.
+7. Test a real power loss in the middle of a move: the next start must report `state=uncertain`. Cutting off the program with Ctrl-C in the middle of a move already does this on the bench.
 8. Run it for hours and check the motor and driver temperature, see "After assembly".
 
 **Can be done now**

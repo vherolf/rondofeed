@@ -93,7 +93,7 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 
 ## Firmware
 
-MicroPython for the Pico W or Pico 2 W, in [firmware/](firmware/README.md). Commands over USB serial and BLE. USB serial and BLE are tested on a Pico W, the motor and the light barrier are not yet.
+MicroPython for the Pico W or Pico 2 W, in [firmware/](firmware/README.md). Commands over USB serial and BLE. Tested on a Pico W without motor and light barrier.
 
 ## Wiring
 

@@ -28,8 +28,8 @@ class Motor:
     def __init__(self):
         self.en = Pin(config.PIN_EN, Pin.OUT, value=1)   # Treiber aus
         self.dir = Pin(config.PIN_DIR, Pin.OUT, value=0)
-        self.sm = rp2.StateMachine(0, _pulses, freq=config.STEP_RATE_MIN * _CYCLES_PER_STEP,
-                                   set_base=Pin(config.PIN_STEP))
+        self.step = Pin(config.PIN_STEP, Pin.OUT, value=0)
+        self.sm = rp2.StateMachine(0, _pulses, freq=config.STEP_RATE_MIN * _CYCLES_PER_STEP, set_base=self.step)
 
     async def move(self, steps):
         """Faehrt `steps` Mikroschritte, negativ ist rueckwaerts. Der Treiber ist nur waehrend der Fahrt an."""
@@ -40,13 +40,15 @@ class Motor:
         self.en.value(0)
         try:
             await asyncio.sleep_ms(config.ENABLE_SETTLE_MS)
-            self.sm.active(1)
             for count, rate in plan:
-                self.sm.freq(rate * _CYCLES_PER_STEP)
+                # die Taktrate aendert man nur mit init, das setzt die State Machine auf den Anfang zurueck
+                self.sm.init(_pulses, freq=rate * _CYCLES_PER_STEP, set_base=self.step)
+                self.sm.active(1)
                 self.sm.put(count - 1)
                 while self.sm.rx_fifo() == 0:
                     await asyncio.sleep_ms(2)
                 self.sm.get()
+                self.sm.active(0)
         finally:
             self.sm.active(0)
             await asyncio.sleep_ms(config.DISABLE_DELAY_MS)
