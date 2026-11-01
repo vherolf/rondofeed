@@ -42,6 +42,34 @@ Decisions:
 - Every feed is confirmed by the light barrier. If no portion comes, the firmware reports it. Later it may keep trying (`RETRY_EXTRA`).
 - Limits per request, per hour and between requests apply to every source.
 
+### Firmware: still to do
+
+The firmware stays as it is for now. Only a Pico W is available, so nothing with the motor has been tried. Open points, roughly in the order to do them:
+
+**Needs the hardware**
+
+1. Wire the TMC2209, motor, light barrier and the 10 kΩ pull-up on `EN`, as in [wiring.svg](wiring.svg). Check that `EN` reads high at boot, so the driver stays off.
+2. Check the motor: send `JOG 20` and `JOG -20`, flip `DIR_FORWARD` in `firmware/config.py` if it turns the wrong way, then set the motor current on the driver.
+3. Check `BEAM_BROKEN_LEVEL` against the real sensor. If it is wrong, every portion reports `no_portion`.
+4. Tune `STEP_RATE_MIN`, `STEP_RATE_MAX` and the ramp with the real disc. The disc is heavy, so the values are guesses. Look for lost steps.
+5. Align the disc, send `ZERO`, then `FEED` and see if the portion lands in the chute. Check that each hole is cleanly over the outlet and that the disc stays put when the driver is off (see Position).
+6. Run the three discs (`DISC 47`, `DISC 59`, `DISC 69`) and check that the positions add up to a full turn.
+7. Test power loss in the middle of a move: the next start must report `state=uncertain`.
+8. Run it for hours and check the motor and driver temperature, see "After assembly".
+
+**Can be done now**
+
+- Copy the firmware to the board with one script instead of by hand (including the `aioble` library and the `WATCHDOG_MS` setting).
+- Test BLE with a phone or tablet, not only from a PC. Check the pairing, the 20 byte packets with a small MTU and what the app has to do (login, collect lines until `\n`).
+- Decide on BLE security. The token travels unencrypted. Bonding with encryption would protect against someone listening in, but without a display or button there is no pairing passkey. A pairing button on a free pin would help.
+- Make `STOP` work in the middle of a move. It only ends after the current portion now.
+- Let the firmware keep trying: when no portion comes, move on to the next position until one comes, with an upper limit. `RETRY_EXTRA` is the hook for it.
+- A reference for the disc position, for example a magnet and a Hall sensor on the disc, so a power loss does not need a manual `ZERO`.
+- Show the state on the board LED (idle, moving, error, BLE connected).
+- Let the app send the time, if schedules should be checked on the device. There is no clock on the Pico.
+- Move the firmware to C if MicroPython turns out too slow or too big. The protocol would stay the same.
+- Write the tests for `motor.py`, `beam.py`, `usb_serial.py` and `ble.py`, which only run on a board (for example a test script that talks to the board over USB).
+
 ### Power the motor only when feeding
 
 Only the power supply has ventilation slots (floor and front right wall), so the motor must not produce continuous heat.
