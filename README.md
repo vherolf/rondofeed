@@ -66,7 +66,7 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `Chute.stl` | 68 × 47 × 39 | Flat top, with the screw plate standing on it |
 | `Chute_long.stl` (optional) | 68 × 66 × 55 | Same as `Chute.stl` |
 | `TerminalCover.stl` | 99.5 × 26 × 40 | Back |
-| `Carrier.stl` | 83 × 131.5 × 7 | Bottom |
+| `Carrier.stl` | 90 × 160.5 × 7 | Bottom |
 
 `Chute.stl` ends flush with the outer wall of the housing, so nothing sticks out. The portions leave the housing about 70 mm above the table, so the bowl can be up to about 70 mm high, but it has to stand right against the wall. `Chute_long.stl` is a longer version that sticks out 19 mm and puts the outlet lower, so a bowl of up to about 57 mm fits under it and it does not have to touch the wall. It fits the same opening and the same screws, and the light barrier holes are in the same place. Use one of the two, not both.
 
@@ -81,12 +81,15 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | Mean Well LRS-35-12 or LRS-50-12 | 1 | Same case (Case 239A) |
 | Adafruit TMC2209 Breakout (ADA6121) | 1 | No heatsink included, add one if needed |
 | Electrolytic capacitor, 100–470 µF, at least 25 V | 1 | Directly on the breakout's 12 V terminals |
-| 10 kΩ resistor | 1 | Pull-up from `EN` to 3V3 |
+| 10 kΩ resistor | 2 | Pull-ups from `EN` and from GP6 (light barrier) to 3V3 |
 | Schottky diode 1N5819 | 1 | Between the converter and `VSYS`, see Wiring |
 | 12 V to 5 V converter | 1 | On the prototyping board, supplies `VSYS` on the Pico |
-| Adafruit Perma-Proto Quarter-Size (43.2 × 50.8 mm) | 1 | For the breakout and converter, 2 × M3×6 self-tapping screws into the carrier posts |
-| IR break-beam sensor, emitter and receiver | 1 | Ø5.2 mm hole |
-| IEC C14 inlet with switch and fuse | 1 | 27.5 × 47.5 mm cutout, 3 mm wall |
+| Prototyping board, half size: Adafruit Perma-Proto Half-Size (81 × 51 mm, ADA1609) or GeeekPi Half-Size | 1 | For the breakout, converter and light barrier resistors. Lies lengthwise on the carrier, which has posts for both. Adafruit: 2 holes, 73.7 mm apart. GeeekPi: 4 corner holes, 55 × 85 mm apart, drill them to 3.2 mm. M3×6 self-tapping screws into the posts |
+| IR LED, 5 mm, 940 nm, e.g. Vishay TSAL6200 | 1 | Light barrier emitter, in one of the two Ø5.2 mm holes in the chute |
+| IR phototransistor, 5 mm, with daylight filter (black), e.g. Osram SFH 300 FA or Everlight PT334-6C | 1 | Light barrier receiver, in the opposite hole |
+| 100 Ω resistor | 1 | Series resistor for the IR LED at 3V3, about 20 mA |
+| IEC C14 inlet, 3-in-1 module with 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in, for 230 V | 1 | 28 × 47 mm cutout (width × height), 3 mm wall. Check that the snap-in clips hold in 3 mm |
+| Fuse 5 × 20 mm, T1A (slow-blow), 250 V | 1 | Replace the 10 A fuse that often comes with the inlet. A spare fits in the drawer |
 | M3 threaded inserts, Ø4.0 mm hole | 12 | |
 | M3 screws, steel (not stainless, magnets must hold on the heads): M3×8 (power supply, plate), M3×12 (motor and the rest) | 20 | |
 | Neodymium disc magnets Ø6 × 2 mm | 6 | Glued into the lid, one over each plate screw |
@@ -108,7 +111,7 @@ This is a proposal and has not been built or tested yet. Pins are grouped for cl
 
 ![rondOfeed wiring layout: position of the parts in the housing and on the Perma-Proto board](wiring_layout.svg)
 
-This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board's two mounting holes are on the short axis. In the hexagonal housing the board sits on the left of the motor and the Pico behind it at the rear wall, see the picture above. The schematic only shows the board and the wiring, not the exact position in the housing.
+This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board lies lengthwise on the left of the motor, and the Pico sits behind it at the rear wall, see the picture above. The board drawing shows the Adafruit Perma-Proto Half-Size. The GeeekPi Half-Size fits the same carrier, check that its rows and rails match before soldering. The schematic only shows the board and the wiring, not the exact position in the housing.
 
 ## Discs
 

@@ -17,7 +17,7 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 | GP3 | `DIR` |
 | GP4 | `EN`, plus 10 kΩ to 3V3 |
 | GP5 | `DIAG` |
-| GP6 | Break-beam sensor |
+| GP6 | Light barrier: collector of the phototransistor, plus 10 kΩ to 3V3 |
 | VSYS | 5 V from the converter through Schottky diode 1N5819 |
 | 3V3 | `VDD`, `MS1`, `MS2` (high = 1/16 microstep, the default would be 1/8) |
 | GND | Common ground with power supply, converter and breakout |
@@ -29,7 +29,11 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 - The 10 kΩ pull-up keeps the motor unpowered while the Pico boots.
 - Set the motor current on the potentiometer before any longer test. Exact motor model is not chosen yet, placeholder 1.0 A.
 - Short, secure wires, no jumper wires.
-- Prototyping board: Adafruit Perma-Proto Quarter-Size (43.2 × 50.8 mm), layout in [wiring_layout.svg](wiring_layout.svg). Its 2 mounting holes are 35.6 mm apart on the short axis, so it sits with the long side across the carrier (along X). The `DUMMY_Perfboard` body in the model is drawn 55 × 44 mm, a little larger than the board.
+- Prototyping board, half size, lengthwise (along Y) on the carrier, left of the motor and in front of the Pico. Layout in [wiring_layout.svg](wiring_layout.svg), drawn for the Adafruit board.
+  - Adafruit Perma-Proto Half-Size (81 × 51 mm, ADA1609): 2 mounting holes 73.7 mm apart on the long axis, in the middle of the short sides.
+  - GeeekPi Half-Size: 4 corner holes Ø3 mm, 55 × 85 mm apart (centre to centre). Drill them to 3.2 mm for the M3 screws. Its outline is not known yet, the model assumes 62 × 92 mm (`DUMMY_Perfboard`).
+  - The carrier has posts for both boards (`PERF_HOLE_DY`, `GEEK_HOLES`). The two Adafruit posts end up under the GeeekPi board. If they touch a solder joint there, file them down.
+  - The carrier has tabs on the left and at the front, so that all 4 carrier screws stay clear of both boards.
 - The converter model is not chosen yet. The layout assumes a 3-pin in-line module of 11.5 × 7.5 mm.
 
 ## Firmware (Pico W and Pico 2 W)
@@ -95,14 +99,28 @@ Only the power supply has ventilation slots (floor and front right wall), so the
 
 - Counts each dispensed portion in the chute.
 - If no portion arrives after a step, this is reported.
+- Built from two single 5 mm parts, because ready-made break-beam modules (for example Adafruit ADA2168, 20 × 10 × 8 mm) do not fit the Ø5.2 mm holes in the chute.
+- Emitter: IR LED 5 mm, 940 nm (Vishay TSAL6200). 3V3 → 100 Ω → anode, cathode to GND, about 20 mA.
+- Receiver: IR phototransistor 5 mm with daylight filter (Osram SFH 300 FA or Everlight PT334-6C). Collector to GP6 with 10 kΩ to 3V3, emitter to GND. The chute is open at the outlet, so the filter helps against room light.
+- The beam crosses about 25–30 mm (24 mm inside plus the walls). A simple unmodulated barrier is enough for this.
+- GP6 is low while the beam is seen and high when it is broken, so `BEAM_BROKEN_LEVEL = 1`. Check on the real build.
+- The holes are 8 mm above the bottom of the tube, so even small pieces cross the beam.
+
+### Mains inlet (Europe, 230 V)
+
+- IEC C14 inlet as a 3-in-1 module: inlet, 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in. Cutout `IEC_CUT` = 28 × 47 mm (width × height), about 31 mm deep inside the housing (`DUMMY_IEC` is 30 mm).
+- Fuse T1A (slow-blow), 250 V. The power supply draws well under 1 A at 230 V, but has a high inrush current when switched on, so use a slow-blow fuse. These modules often come with 10 A, which is far too much.
+- Snap-in clips are often made for 1–2 mm panels. Check that they hold in the 3 mm wall, otherwise glue the module or make the wall thinner around the cutout.
+- Connect protective earth from the inlet to terminal FG on the power supply.
 
 ## Before printing
 
-- Choose the IEC inlet, and check the `IEC_CUT` cutout and the 3 mm wall thickness.
-- Check the break-beam sensor `IR_D` and threaded insert `INSERT_D` on the real parts.
+- Check the chosen IEC inlet against the `IEC_CUT` cutout and the 3 mm wall thickness, see Mains inlet.
+- Check `IR_D` with the real IR LED and phototransistor, and the threaded insert `INSERT_D`.
 - Measure the food and set `HOLE_D`. Pieces under about 8 mm can fall through to the neighbouring hole.
 - Print a test piece: disc centre with shaft and set screw, plus the motor block.
 - Plan the wiring with the real parts, as there is little room next to the power supply and carrier.
+- Measure the hole spacing of the board before printing the carrier: Adafruit 73.7 mm, GeeekPi 55 × 85 mm. For the GeeekPi board also check the outline (assumed 62 × 92 mm) and that the rows and rails match the wiring layout.
 - Bowl: at most about 70 mm high with `Chute.stl`, but it has to stand right against the wall. With `Chute_long.stl` at most about 57 mm.
 
 ## After assembly

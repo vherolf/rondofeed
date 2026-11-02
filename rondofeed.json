@@ -1309,8 +1309,8 @@
     "diameter": 9,
     "height": 7.5,
     "base": [
-     -80,
-     -26,
+     -88,
+     -4,
      2.5
     ],
     "name": "carrpost_49",
@@ -1326,8 +1326,8 @@
     "diameter": 4.0,
     "height": 6.5,
     "base": [
-     -80,
-     -26,
+     -88,
+     -4,
      4.5
     ],
     "name": "carrins_50",
@@ -1343,8 +1343,8 @@
     "diameter": 9,
     "height": 7.5,
     "base": [
-     -24,
-     -27,
+     -52,
+     -56,
      2.5
     ],
     "name": "carrpost_51",
@@ -1360,8 +1360,8 @@
     "diameter": 4.0,
     "height": 6.5,
     "base": [
-     -24,
-     -27,
+     -52,
+     -56,
      4.5
     ],
     "name": "carrins_52",
@@ -1510,13 +1510,13 @@
   {
    "command": "solid.box",
    "params": {
-    "length": 27.5,
+    "length": 28.0,
     "width": 5.0,
-    "height": 47.5,
+    "height": 47.0,
     "corner": [
-     -13.75,
+     -14.0,
      99.0,
-     26.25
+     26.5
     ],
     "name": "iec_61",
     "operation": "cut",
@@ -3883,17 +3883,80 @@
    }
   },
   {
-   "command": "solid.box",
+   "command": "sketch.create",
    "params": {
-    "length": 64,
-    "width": 74,
-    "height": 3,
-    "corner": [
-     -86,
-     -32,
-     10
+    "plane": "XY",
+    "offset": 10,
+    "name": "carr_sk_191"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "points": [
+     [
+      -83,
+      -49
+     ],
+     [
+      -60,
+      -49
+     ],
+     [
+      -60,
+      -61
+     ],
+     [
+      -44,
+      -61
+     ],
+     [
+      -44,
+      -49
+     ],
+     [
+      -21,
+      -49
+     ],
+     [
+      -21,
+      43
+     ],
+     [
+      -83,
+      43
+     ],
+     [
+      -83,
+      4
+     ],
+     [
+      -93,
+      4
+     ],
+     [
+      -93,
+      -12
+     ],
+     [
+      -83,
+      -12
+     ]
     ],
-    "name": "carr_191",
+    "closed": true
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "carr_sk_191",
+    "distance": 3,
+    "name": "carr_192",
+    "operation": "new",
     "body_name": "Carrier"
    }
   },
@@ -3902,7 +3965,7 @@
    "params": {
     "plane": "XY",
     "offset": 10,
-    "name": "carrb_sk_192"
+    "name": "carrb_sk_193"
    }
   },
   {
@@ -3952,9 +4015,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "carrb_sk_192",
+    "sketch": "carrb_sk_193",
     "distance": 3,
-    "name": "carrb_193",
+    "name": "carrb_194",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -3967,11 +4030,11 @@
     "diameter": 3.4,
     "height": 5,
     "base": [
-     -80,
-     -26,
+     -88,
+     -4,
      9
     ],
-    "name": "carrhole_194",
+    "name": "carrhole_195",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -3984,11 +4047,11 @@
     "diameter": 3.4,
     "height": 5,
     "base": [
-     -24,
-     -27,
+     -52,
+     -56,
      9
     ],
-    "name": "carrhole_195",
+    "name": "carrhole_196",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4005,7 +4068,7 @@
      46,
      9
     ],
-    "name": "carrhole_196",
+    "name": "carrhole_197",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4022,7 +4085,7 @@
      50,
      9
     ],
-    "name": "carrhole_197",
+    "name": "carrhole_198",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4039,7 +4102,7 @@
      96.5,
      12.5
     ],
-    "name": "picopost_198",
+    "name": "picopost_199",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4056,7 +4119,7 @@
      96.5,
      12.2
     ],
-    "name": "picopilot_199",
+    "name": "picopilot_200",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4073,7 +4136,7 @@
      49.5,
      12.5
     ],
-    "name": "picopost_200",
+    "name": "picopost_201",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4090,7 +4153,7 @@
      49.5,
      12.2
     ],
-    "name": "picopilot_201",
+    "name": "picopilot_202",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4107,7 +4170,7 @@
      96.5,
      12.5
     ],
-    "name": "picopost_202",
+    "name": "picopost_203",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4124,7 +4187,7 @@
      96.5,
      12.2
     ],
-    "name": "picopilot_203",
+    "name": "picopilot_204",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4141,7 +4204,7 @@
      49.5,
      12.5
     ],
-    "name": "picopost_204",
+    "name": "picopost_205",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4158,7 +4221,7 @@
      49.5,
      12.2
     ],
-    "name": "picopilot_205",
+    "name": "picopilot_206",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4172,10 +4235,10 @@
     "height": 4.5,
     "base": [
      -52,
-     -9.8,
+     -39.85,
      12.5
     ],
-    "name": "perfpost_206",
+    "name": "perfpost_207",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4189,10 +4252,10 @@
     "height": 4.5,
     "base": [
      -52,
-     -9.8,
+     -39.85,
      13
     ],
-    "name": "perfpilot_207",
+    "name": "perfpilot_208",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4206,10 +4269,10 @@
     "height": 4.5,
     "base": [
      -52,
-     25.8,
+     33.85,
      12.5
     ],
-    "name": "perfpost_208",
+    "name": "perfpost_209",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4223,10 +4286,146 @@
     "height": 4.5,
     "base": [
      -52,
-     25.8,
+     33.85,
      13
     ],
-    "name": "perfpilot_209",
+    "name": "perfpilot_210",
+    "operation": "cut",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6,
+    "height": 4.5,
+    "base": [
+     -24.5,
+     39.5,
+     12.5
+    ],
+    "name": "perfpost_211",
+    "operation": "join",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 2.5,
+    "height": 4.5,
+    "base": [
+     -24.5,
+     39.5,
+     13
+    ],
+    "name": "perfpilot_212",
+    "operation": "cut",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6,
+    "height": 4.5,
+    "base": [
+     -24.5,
+     -45.5,
+     12.5
+    ],
+    "name": "perfpost_213",
+    "operation": "join",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 2.5,
+    "height": 4.5,
+    "base": [
+     -24.5,
+     -45.5,
+     13
+    ],
+    "name": "perfpilot_214",
+    "operation": "cut",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6,
+    "height": 4.5,
+    "base": [
+     -79.5,
+     39.5,
+     12.5
+    ],
+    "name": "perfpost_215",
+    "operation": "join",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 2.5,
+    "height": 4.5,
+    "base": [
+     -79.5,
+     39.5,
+     13
+    ],
+    "name": "perfpilot_216",
+    "operation": "cut",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6,
+    "height": 4.5,
+    "base": [
+     -79.5,
+     -45.5,
+     12.5
+    ],
+    "name": "perfpost_217",
+    "operation": "join",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 2.5,
+    "height": 4.5,
+    "base": [
+     -79.5,
+     -45.5,
+     13
+    ],
+    "name": "perfpilot_218",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4244,7 +4443,7 @@
      -21.15,
      58
     ],
-    "name": "dm_210",
+    "name": "dm_219",
     "body_name": "DUMMY_Motor"
    }
   },
@@ -4258,7 +4457,7 @@
      0,
      106
     ],
-    "name": "dmpilot_211",
+    "name": "dmpilot_220",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4275,7 +4474,7 @@
      0,
      106
     ],
-    "name": "dmshaft_212",
+    "name": "dmshaft_221",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4293,7 +4492,7 @@
      -8,
      60
     ],
-    "name": "dmplug_213",
+    "name": "dmplug_222",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4311,7 +4510,7 @@
      -75.5,
      8
     ],
-    "name": "dp_214",
+    "name": "dp_223",
     "body_name": "DUMMY_PSU"
    }
   },
@@ -4326,22 +4525,22 @@
      47.5,
      15.4
     ],
-    "name": "dpico_215",
+    "name": "dpico_224",
     "body_name": "DUMMY_Pico"
    }
   },
   {
    "command": "solid.box",
    "params": {
-    "length": 55.0,
-    "width": 44.0,
+    "length": 62.0,
+    "width": 92.0,
     "height": 20,
     "corner": [
-     -79.5,
-     -14.0,
+     -83.0,
+     -49.0,
      17
     ],
-    "name": "dperf_216",
+    "name": "dperf_225",
     "body_name": "DUMMY_Perfboard"
    }
   },
@@ -4356,7 +4555,7 @@
      70.0,
      26
     ],
-    "name": "diec_217",
+    "name": "diec_226",
     "body_name": "DUMMY_IEC"
    }
   },

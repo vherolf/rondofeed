@@ -24,7 +24,7 @@ DISABLE_DELAY_MS = 20   # Wartezeit nach der Fahrt bis der Treiber wieder aus is
 DEFAULT_PORTIONS = 47
 
 # Lichtschranke
-BEAM_BROKEN_LEVEL = 0   # Pegel am Pin, wenn der Strahl unterbrochen ist, am Sensor pruefen
+BEAM_BROKEN_LEVEL = 1   # Pegel am Pin, wenn der Strahl unterbrochen ist: Fototransistor mit Pull-up, am Aufbau pruefen
 BEAM_DEBOUNCE_MS = 20
 BEAM_TIMEOUT_MS = 4000  # solange wartet ein Feed nach dem Schritt auf eine Portion
 BEAM_SETTLE_MS = 500    # nach der ersten Portion noch so lange weiterzaehlen

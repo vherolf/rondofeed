@@ -44,8 +44,17 @@
 <text x="942" y="305" font-size="12" text-anchor="end" font-weight="600" fill="#1f2933">R1 10 kΩ</text>
 <polyline points="810,554 1000,554" fill="none" stroke="#5c6ac4" stroke-width="3" stroke-linejoin="round"/>
 <polyline points="810,588 1000,588" fill="none" stroke="#1b1f23" stroke-width="3" stroke-linejoin="round"/>
-<polyline points="810,622 1000,622" fill="none" stroke="#7b2cbf" stroke-width="3" stroke-linejoin="round"/>
-<polyline points="925,622 925,735 1000,735" fill="none" stroke="#7b2cbf" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="810,622 925,622" fill="none" stroke="#7b2cbf" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="890,622 890,582" fill="none" stroke="#7b2cbf" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="890" cy="622" r="5" fill="#7b2cbf"/>
+<polyline points="890,560 890,554" fill="none" stroke="#5c6ac4" stroke-width="3" stroke-linejoin="round"/>
+<circle cx="890" cy="554" r="5" fill="#5c6ac4"/>
+<rect x="882" y="560" width="16" height="22" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
+<text x="904" y="576" font-size="12" text-anchor="start" font-weight="600" fill="#1f2933">R3 10 kΩ</text>
+<polyline points="925,622 925,735 950,735" fill="none" stroke="#7b2cbf" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="972,735 1000,735" fill="none" stroke="#9e9d24" stroke-width="3" stroke-linejoin="round"/>
+<rect x="950" y="727" width="22" height="16" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
+<text x="961" y="762" font-size="12" text-anchor="middle" font-weight="600" fill="#1f2933">R2 100 Ω</text>
 <circle cx="925" cy="622" r="5" fill="#7b2cbf"/>
 <polyline points="960,588 960,700 1000,700" fill="none" stroke="#1b1f23" stroke-width="3" stroke-linejoin="round"/>
 <circle cx="960" cy="588" r="5" fill="#1b1f23"/>
@@ -144,20 +153,18 @@
 <text x="1150" y="335" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">2B</text>
 <rect x="1000" y="530" width="170" height="120" rx="8" fill="#f3effa" stroke="#3e4c59" stroke-width="2"/>
 <text x="1110.0" y="590" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933">IR receiver</text>
-<text x="1110.0" y="608" font-size="12" text-anchor="middle" font-weight="400" fill="#52606d">break-beam</text>
+<text x="1110.0" y="608" font-size="12" text-anchor="middle" font-weight="400" fill="#52606d">phototransistor</text>
 <circle cx="1000" cy="554" r="4" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
-<text x="1010" y="559" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">OUT</text>
+<text x="1010" y="559" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">C</text>
 <circle cx="1000" cy="588" r="4" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
-<text x="1010" y="593" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">GND</text>
-<circle cx="1000" cy="622" r="4" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
-<text x="1010" y="627" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">VCC</text>
+<text x="1010" y="593" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">E</text>
 <rect x="1000" y="675" width="170" height="80" rx="8" fill="#f3effa" stroke="#3e4c59" stroke-width="2"/>
 <text x="1110.0" y="715" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933">IR emitter</text>
-<text x="1110.0" y="733" font-size="12" text-anchor="middle" font-weight="400" fill="#52606d">across the chute</text>
+<text x="1110.0" y="733" font-size="12" text-anchor="middle" font-weight="400" fill="#52606d">IR LED</text>
 <circle cx="1000" cy="700" r="4" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
-<text x="1010" y="705" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">GND</text>
+<text x="1010" y="705" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">K</text>
 <circle cx="1000" cy="735" r="4" fill="#fff" stroke="#3e4c59" stroke-width="2"/>
-<text x="1010" y="740" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">VCC</text>
+<text x="1010" y="740" font-size="13" text-anchor="start" font-weight="600" fill="#1f2933">A</text>
 <rect x="1275" y="140" width="130" height="220" rx="10" fill="#e4e7eb" stroke="#3e4c59" stroke-width="2"/>
 <text x="1340" y="170" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933">NEMA 17</text>
 <circle cx="1340" cy="250" r="44" fill="#cbd2d9" stroke="#3e4c59" stroke-width="2"/><circle cx="1340" cy="250" r="8" fill="#3e4c59"/>
@@ -190,11 +197,13 @@
 <text x="86" y="657" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">DIAG</text>
 <polyline points="300,652 336,652" fill="none" stroke="#5c6ac4" stroke-width="4" stroke-linejoin="round"/>
 <text x="346" y="657" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">Break-beam signal</text>
-<text x="40" y="690" font-size="15" text-anchor="start" font-weight="700" fill="#1f2933">Important</text>
-<text x="40" y="714" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Mains wiring only by someone qualified. Cover the mains terminals. Keep 230 V and low voltage apart.</text>
-<text x="40" y="736" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Never connect or disconnect the motor while powered. Find the coil pairs with a multimeter.</text>
-<text x="40" y="758" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  GP6 needs the internal pull-up: the receiver output is open collector on common break-beam sensors.</text>
-<text x="40" y="780" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  D1 keeps the 5 V supply from feeding back when USB is plugged in. Connect OUT− and IN− if the converter does not.</text>
-<text x="40" y="802" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Set the motor current on the breakout potentiometer before longer tests. Motor stays off while EN is high.</text>
-<text x="40" y="824" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Proposal, not yet built or tested.</text>
+<polyline points="40,676 76,676" fill="none" stroke="#9e9d24" stroke-width="4" stroke-linejoin="round"/>
+<text x="86" y="681" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">IR LED anode (after R2)</text>
+<text x="40" y="714" font-size="15" text-anchor="start" font-weight="700" fill="#1f2933">Important</text>
+<text x="40" y="738" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Mains wiring only by someone qualified. Cover the mains terminals. Keep 230 V and low voltage apart.</text>
+<text x="40" y="760" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Never connect or disconnect the motor while powered. Find the coil pairs with a multimeter.</text>
+<text x="40" y="782" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  R3 pulls GP6 up to 3V3, the phototransistor pulls it low while it sees the IR LED. R2 sets the LED current to about 20 mA.</text>
+<text x="40" y="804" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  D1 keeps the 5 V supply from feeding back when USB is plugged in. Connect OUT− and IN− if the converter does not.</text>
+<text x="40" y="826" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Set the motor current on the breakout potentiometer before longer tests. Motor stays off while EN is high.</text>
+<text x="40" y="848" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Proposal, not yet built or tested.</text>
 </svg>

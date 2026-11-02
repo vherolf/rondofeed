@@ -94,23 +94,25 @@ VENT_L = 30
 FLOOR_VENT_X = (-28, -16, 16, 28)  # Bodenschlitze unter dem Netzteil, neben den Auflagen
 
 # Elektroniktraeger
-CARR_A = (-86, -32, -22, 42)  # x0, y0, x1, y1, unter der Loetplatine
+CARR_A = [(-83, -49), (-60, -49), (-60, -61), (-44, -61), (-44, -49), (-21, -49), (-21, 43), (-83, 43),
+          (-83, 4), (-93, 4), (-93, -12), (-83, -12)]  # unter der Loetplatine, Laschen links und vorn fuer je eine Schraube
 CARR_B = [(-66, 41), (-3, 41), (-3, 52), (-14, 52), (-14, 99.5), (-45, 99.5), (-45, 70), (-66, 70)]  # unter dem Pico
-CARR_HOLES = [(-80, -26), (-24, -27), (-10, 46), (-60, 50)]  # alle ausserhalb von Pico und Loetplatine
+CARR_HOLES = [(-88, -4), (-52, -56), (-10, 46), (-60, 50)]  # alle ausserhalb von Pico und Loetplatine
 CARR_Z = 10
 CARR_T = 3
 PICO_C = (-34, 73)
 PICO_DX = 47       # aus pico_case.sc, entlang Y verbaut
 PICO_DY = 11.4
 PICO_STANDOFF = 2.4
-PERF_C = (-52, 8)
-PERF_L = 44        # Adafruit Perma-Proto Quarter-Size, lange Seite quer in X, die 2 Loecher liegen auf der kurzen Achse (Y)
-PERF_W = 55
-PERF_HOLE_DY = 35.6  # 2 Loecher M3, Lage mittig auf der Laengsachse angenommen, am Board pruefen
+PERF_C = (-52, -3)
+PERF_L = 92        # Platzhalter fuer die groessere der beiden Platinen (GeeekPi, Aussenmass angenommen), lange Seite in Y
+PERF_W = 62
+PERF_HOLE_DY = 73.7  # Adafruit Perma-Proto Half-Size (81 x 51): 2 Loecher auf der Laengsachse, mittig auf der kurzen Achse
+GEEK_HOLES = (55, 85)  # GeeekPi Half-Size: 4 Loecher Ø3 in den Ecken, Abstand Mitte zu Mitte in X und Y
 
 # Rueckwand
 IEC_C = (0, 50)    # x, z
-IEC_CUT = (27.5, 47.5)
+IEC_CUT = (28, 47)     # Breite x Hoehe
 USB_C = (-34, 18)
 USB_CUT = (13, 10)
 
@@ -363,7 +365,7 @@ for x, y in COVER_EARS:
     cyl(M3_CLEAR, (x, y, COVER_Z - 1), 5, "cut", "TerminalCover", label="tchole")
 
 # ---------- Elektroniktraeger ----------
-box(*CARR_A[:2], CARR_Z, *CARR_A[2:], CARR_Z + CARR_T, body="Carrier", label="carr")
+prism(CARR_A, CARR_Z, CARR_Z + CARR_T, body="Carrier", label="carr")
 prism(CARR_B, CARR_Z, CARR_Z + CARR_T, "join", "Carrier", label="carrb")
 ct = CARR_Z + CARR_T
 for x, y in CARR_HOLES:
@@ -374,7 +376,8 @@ for x, y in pico_pts:
     cyl(4, (x, y, ct - 0.5), PICO_STANDOFF + 0.5, "join", "Carrier", label="picopost")
     cyl(1.7, (x, y, ct + PICO_STANDOFF - 3.2), 3.3, "cut", "Carrier", label="picopilot")
 qx, qy = PERF_C
-for x, y in ((qx, qy - PERF_HOLE_DY / 2), (qx, qy + PERF_HOLE_DY / 2)):
+gx_, gy_ = GEEK_HOLES[0] / 2, GEEK_HOLES[1] / 2
+for x, y in [(qx, qy - PERF_HOLE_DY / 2), (qx, qy + PERF_HOLE_DY / 2)] + [(qx + a * gx_, qy + b_ * gy_) for a in (1, -1) for b_ in (1, -1)]:
     cyl(6, (x, y, ct - 0.5), 4.5, "join", "Carrier", label="perfpost")
     cyl(2.5, (x, y, ct), 4.5, "cut", "Carrier", label="perfpilot")
 
