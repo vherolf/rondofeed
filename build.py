@@ -113,6 +113,8 @@ GEEK_HOLES = (55, 85)  # GeeekPi Half-Size: 4 Loecher Ø3 in den Ecken, Abstand 
 # Rueckwand
 IEC_C = (0, 50)    # x, z
 IEC_CUT = (28, 47)     # Breite x Hoehe
+IEC_WALL = 2       # Wand um den Ausschnitt, fuer die Rastfedern der Buchse, Tasche von innen
+IEC_RIM = 7        # Rand der Tasche um den Ausschnitt
 USB_C = (-34, 18)
 USB_CUT = (13, 10)
 
@@ -265,6 +267,8 @@ for x, y in COVER_EARS:
 ix, iz = IEC_C
 box(ix - IEC_CUT[0] / 2, in_ - 1, iz - IEC_CUT[1] / 2, ix + IEC_CUT[0] / 2, h + 1, iz + IEC_CUT[1] / 2,
     op="cut", target="Base", label="iec")
+pw, ph = IEC_CUT[0] / 2 + IEC_RIM, IEC_CUT[1] / 2 + IEC_RIM
+box(ix - pw, in_ - 1, iz - ph, ix + pw, h - IEC_WALL, iz + ph, op="cut", target="Base", label="iecpocket")
 ux, uz = USB_C
 box(ux - USB_CUT[0] / 2, in_ - 1, uz - USB_CUT[1] / 2, ux + USB_CUT[0] / 2, h + 1, uz + USB_CUT[1] / 2,
     op="cut", target="Base", label="usb")

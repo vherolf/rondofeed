@@ -1528,6 +1528,24 @@
   {
    "command": "solid.box",
    "params": {
+    "length": 42.0,
+    "width": 2.0,
+    "height": 61.0,
+    "corner": [
+     -21.0,
+     99.0,
+     19.5
+    ],
+    "name": "iecpocket_62",
+    "operation": "cut",
+    "targets": [
+     "Base"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
     "length": 13.0,
     "width": 5.0,
     "height": 10.0,
@@ -1536,7 +1554,7 @@
      99.0,
      13.0
     ],
-    "name": "usb_62",
+    "name": "usb_63",
     "operation": "cut",
     "targets": [
      "Base"
@@ -1553,7 +1571,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chuteopen_63",
+    "name": "chuteopen_64",
     "axis": [
      0,
      -0.766044443118978,
@@ -1576,7 +1594,7 @@
      -104.0,
      91.44205903615665
     ],
-    "name": "chutenotch_64",
+    "name": "chutenotch_65",
     "operation": "cut",
     "targets": [
      "Base"
@@ -1593,7 +1611,7 @@
      -104.0,
      90
     ],
-    "name": "earhole_65",
+    "name": "earhole_66",
     "axis": "Y",
     "operation": "cut",
     "targets": [
@@ -1611,7 +1629,7 @@
      -104.0,
      90
     ],
-    "name": "earhole_66",
+    "name": "earhole_67",
     "axis": "Y",
     "operation": "cut",
     "targets": [
@@ -1624,7 +1642,7 @@
    "params": {
     "plane": "XY",
     "offset": 112,
-    "name": "plate_sk_67"
+    "name": "plate_sk_68"
    }
   },
   {
@@ -1666,9 +1684,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "plate_sk_67",
+    "sketch": "plate_sk_68",
     "distance": 4,
-    "name": "plate_68",
+    "name": "plate_69",
     "operation": "new",
     "body_name": "Plate"
    }
@@ -1722,7 +1740,7 @@
      -25.0,
      106
     ],
-    "name": "nemablock_69",
+    "name": "nemablock_70",
     "operation": "join",
     "targets": [
      "Plate"
@@ -1739,7 +1757,7 @@
      0,
      105
     ],
-    "name": "pilot_70",
+    "name": "pilot_71",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1756,7 +1774,7 @@
      0,
      106
     ],
-    "name": "shaftclear_71",
+    "name": "shaftclear_72",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1773,7 +1791,7 @@
      15.5,
      105
     ],
-    "name": "nemahole_72",
+    "name": "nemahole_73",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1790,7 +1808,7 @@
      15.5,
      112.5
     ],
-    "name": "nemahead_73",
+    "name": "nemahead_74",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1807,7 +1825,7 @@
      -15.5,
      105
     ],
-    "name": "nemahole_74",
+    "name": "nemahole_75",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1824,7 +1842,7 @@
      -15.5,
      112.5
     ],
-    "name": "nemahead_75",
+    "name": "nemahead_76",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1841,7 +1859,7 @@
      15.5,
      105
     ],
-    "name": "nemahole_76",
+    "name": "nemahole_77",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1858,7 +1876,7 @@
      15.5,
      112.5
     ],
-    "name": "nemahead_77",
+    "name": "nemahead_78",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1875,7 +1893,7 @@
      -15.5,
      105
     ],
-    "name": "nemahole_78",
+    "name": "nemahole_79",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1892,7 +1910,7 @@
      -15.5,
      112.5
     ],
-    "name": "nemahead_79",
+    "name": "nemahead_80",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1909,7 +1927,7 @@
      -70,
      111
     ],
-    "name": "port_80",
+    "name": "port_81",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1926,7 +1944,7 @@
      -87,
      111
     ],
-    "name": "port_81",
+    "name": "port_82",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1944,7 +1962,7 @@
      -1.5,
      106
     ],
-    "name": "stiff_82",
+    "name": "stiff_83",
     "operation": "join",
     "targets": [
      "Plate"
@@ -1962,7 +1980,7 @@
      -1.5,
      106
     ],
-    "name": "stiff_83",
+    "name": "stiff_84",
     "operation": "join",
     "targets": [
      "Plate"
@@ -1979,7 +1997,7 @@
      0.0,
      111
     ],
-    "name": "platehole_84",
+    "name": "platehole_85",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -1996,7 +2014,7 @@
      0.0,
      113
     ],
-    "name": "platehead_85",
+    "name": "platehead_86",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2013,7 +2031,7 @@
      0.0,
      113.0
     ],
-    "name": "guidehole_86",
+    "name": "guidehole_87",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2030,7 +2048,7 @@
      93.99844395177382,
      111
     ],
-    "name": "platehole_87",
+    "name": "platehole_88",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2047,7 +2065,7 @@
      93.99844395177382,
      113
     ],
-    "name": "platehead_88",
+    "name": "platehead_89",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2064,7 +2082,7 @@
      98.84818621296667,
      113.0
     ],
-    "name": "guidehole_89",
+    "name": "guidehole_90",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2081,7 +2099,7 @@
      93.99844395177384,
      111
     ],
-    "name": "platehole_90",
+    "name": "platehole_91",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2098,7 +2116,7 @@
      93.99844395177384,
      113
     ],
-    "name": "platehead_91",
+    "name": "platehead_92",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2115,7 +2133,7 @@
      98.84818621296668,
      113.0
     ],
-    "name": "guidehole_92",
+    "name": "guidehole_93",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2132,7 +2150,7 @@
      1.3292322951189641e-14,
      111
     ],
-    "name": "platehole_93",
+    "name": "platehole_94",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2149,7 +2167,7 @@
      1.3292322951189641e-14,
      113
     ],
-    "name": "platehead_94",
+    "name": "platehead_95",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2166,7 +2184,7 @@
      1.3978125158712158e-14,
      113.0
     ],
-    "name": "guidehole_95",
+    "name": "guidehole_96",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2183,7 +2201,7 @@
      -93.99844395177381,
      111
     ],
-    "name": "platehole_96",
+    "name": "platehole_97",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2200,7 +2218,7 @@
      -93.99844395177381,
      113
     ],
-    "name": "platehead_97",
+    "name": "platehead_98",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2217,7 +2235,7 @@
      -98.84818621296665,
      113.0
     ],
-    "name": "guidehole_98",
+    "name": "guidehole_99",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2234,7 +2252,7 @@
      -93.99844395177382,
      111
     ],
-    "name": "platehole_99",
+    "name": "platehole_100",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2251,7 +2269,7 @@
      -93.99844395177382,
      113
     ],
-    "name": "platehead_100",
+    "name": "platehead_101",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2268,7 +2286,7 @@
      -98.84818621296667,
      113.0
     ],
-    "name": "guidehole_101",
+    "name": "guidehole_102",
     "operation": "cut",
     "targets": [
      "Plate"
@@ -2285,7 +2303,7 @@
      0,
      116.5
     ],
-    "name": "disc_102",
+    "name": "disc_103",
     "body_name": "Disc"
    }
   },
@@ -2299,7 +2317,7 @@
      0,
      115.5
     ],
-    "name": "bore_103",
+    "name": "bore_104",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2316,7 +2334,7 @@
      0,
      121.5
     ],
-    "name": "setscrew_104",
+    "name": "setscrew_105",
     "axis": "X",
     "operation": "cut",
     "targets": [
@@ -2335,7 +2353,7 @@
      -2.95,
      118.0
     ],
-    "name": "nutpocket_105",
+    "name": "nutpocket_106",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2353,7 +2371,7 @@
      -4,
      118.0
     ],
-    "name": "access_106",
+    "name": "access_107",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2370,7 +2388,7 @@
      -86.2557029395215,
      115.5
     ],
-    "name": "foodhole_107",
+    "name": "foodhole_108",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2387,7 +2405,7 @@
      -67.61480784023477,
      115.5
     ],
-    "name": "foodhole_108",
+    "name": "foodhole_109",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2404,7 +2422,7 @@
      -80.37751932848195,
      115.5
     ],
-    "name": "foodhole_109",
+    "name": "foodhole_110",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2421,7 +2439,7 @@
      -60.6217782649107,
      115.5
     ],
-    "name": "foodhole_110",
+    "name": "foodhole_111",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2438,7 +2456,7 @@
      -69.02174060533746,
      115.5
     ],
-    "name": "foodhole_111",
+    "name": "foodhole_112",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2455,7 +2473,7 @@
      -49.49747468305832,
      115.5
     ],
-    "name": "foodhole_112",
+    "name": "foodhole_113",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2472,7 +2490,7 @@
      -52.962244323758696,
      115.5
     ],
-    "name": "foodhole_113",
+    "name": "foodhole_114",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2489,7 +2507,7 @@
      -34.99999999999999,
      115.5
     ],
-    "name": "foodhole_114",
+    "name": "foodhole_115",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2506,7 +2524,7 @@
      -33.29345861576281,
      115.5
     ],
-    "name": "foodhole_115",
+    "name": "foodhole_116",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2523,7 +2541,7 @@
      -18.117333157176454,
      115.5
     ],
-    "name": "foodhole_116",
+    "name": "foodhole_117",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2540,7 +2558,7 @@
      -11.355778723144487,
      115.5
     ],
-    "name": "foodhole_117",
+    "name": "foodhole_118",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2557,7 +2575,7 @@
      0.0,
      115.5
     ],
-    "name": "foodhole_118",
+    "name": "foodhole_119",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2574,7 +2592,7 @@
      11.355778723144487,
      115.5
     ],
-    "name": "foodhole_119",
+    "name": "foodhole_120",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2591,7 +2609,7 @@
      18.117333157176454,
      115.5
     ],
-    "name": "foodhole_120",
+    "name": "foodhole_121",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2608,7 +2626,7 @@
      33.29345861576281,
      115.5
     ],
-    "name": "foodhole_121",
+    "name": "foodhole_122",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2625,7 +2643,7 @@
      34.99999999999999,
      115.5
     ],
-    "name": "foodhole_122",
+    "name": "foodhole_123",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2642,7 +2660,7 @@
      52.962244323758696,
      115.5
     ],
-    "name": "foodhole_123",
+    "name": "foodhole_124",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2659,7 +2677,7 @@
      49.49747468305832,
      115.5
     ],
-    "name": "foodhole_124",
+    "name": "foodhole_125",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2676,7 +2694,7 @@
      69.02174060533746,
      115.5
     ],
-    "name": "foodhole_125",
+    "name": "foodhole_126",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2693,7 +2711,7 @@
      60.6217782649107,
      115.5
     ],
-    "name": "foodhole_126",
+    "name": "foodhole_127",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2710,7 +2728,7 @@
      80.37751932848195,
      115.5
     ],
-    "name": "foodhole_127",
+    "name": "foodhole_128",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2727,7 +2745,7 @@
      67.61480784023477,
      115.5
     ],
-    "name": "foodhole_128",
+    "name": "foodhole_129",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2744,7 +2762,7 @@
      86.2557029395215,
      115.5
     ],
-    "name": "foodhole_129",
+    "name": "foodhole_130",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2761,7 +2779,7 @@
      70.0,
      115.5
     ],
-    "name": "foodhole_130",
+    "name": "foodhole_131",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2778,7 +2796,7 @@
      86.2557029395215,
      115.5
     ],
-    "name": "foodhole_131",
+    "name": "foodhole_132",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2795,7 +2813,7 @@
      67.61480784023477,
      115.5
     ],
-    "name": "foodhole_132",
+    "name": "foodhole_133",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2812,7 +2830,7 @@
      80.37751932848195,
      115.5
     ],
-    "name": "foodhole_133",
+    "name": "foodhole_134",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2829,7 +2847,7 @@
      60.62177826491071,
      115.5
     ],
-    "name": "foodhole_134",
+    "name": "foodhole_135",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2846,7 +2864,7 @@
      69.02174060533746,
      115.5
     ],
-    "name": "foodhole_135",
+    "name": "foodhole_136",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2863,7 +2881,7 @@
      49.49747468305833,
      115.5
     ],
-    "name": "foodhole_136",
+    "name": "foodhole_137",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2880,7 +2898,7 @@
      52.96224432375872,
      115.5
     ],
-    "name": "foodhole_137",
+    "name": "foodhole_138",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2897,7 +2915,7 @@
      34.99999999999999,
      115.5
     ],
-    "name": "foodhole_138",
+    "name": "foodhole_139",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2914,7 +2932,7 @@
      33.29345861576282,
      115.5
     ],
-    "name": "foodhole_139",
+    "name": "foodhole_140",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2931,7 +2949,7 @@
      18.11733315717647,
      115.5
     ],
-    "name": "foodhole_140",
+    "name": "foodhole_141",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2948,7 +2966,7 @@
      11.355778723144487,
      115.5
     ],
-    "name": "foodhole_141",
+    "name": "foodhole_142",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2965,7 +2983,7 @@
      8.572527594031473e-15,
      115.5
     ],
-    "name": "foodhole_142",
+    "name": "foodhole_143",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2982,7 +3000,7 @@
      -11.355778723144466,
      115.5
     ],
-    "name": "foodhole_143",
+    "name": "foodhole_144",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -2999,7 +3017,7 @@
      -18.117333157176457,
      115.5
     ],
-    "name": "foodhole_144",
+    "name": "foodhole_145",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3016,7 +3034,7 @@
      -33.2934586157628,
      115.5
     ],
-    "name": "foodhole_145",
+    "name": "foodhole_146",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3033,7 +3051,7 @@
      -35.00000000000001,
      115.5
     ],
-    "name": "foodhole_146",
+    "name": "foodhole_147",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3050,7 +3068,7 @@
      -52.962244323758696,
      115.5
     ],
-    "name": "foodhole_147",
+    "name": "foodhole_148",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3067,7 +3085,7 @@
      -49.49747468305832,
      115.5
     ],
-    "name": "foodhole_148",
+    "name": "foodhole_149",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3084,7 +3102,7 @@
      -69.02174060533744,
      115.5
     ],
-    "name": "foodhole_149",
+    "name": "foodhole_150",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3101,7 +3119,7 @@
      -60.62177826491069,
      115.5
     ],
-    "name": "foodhole_150",
+    "name": "foodhole_151",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3118,7 +3136,7 @@
      -80.37751932848195,
      115.5
     ],
-    "name": "foodhole_151",
+    "name": "foodhole_152",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3135,7 +3153,7 @@
      -67.61480784023477,
      115.5
     ],
-    "name": "foodhole_152",
+    "name": "foodhole_153",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3152,7 +3170,7 @@
      -86.2557029395215,
      115.5
     ],
-    "name": "foodhole_153",
+    "name": "foodhole_154",
     "operation": "cut",
     "targets": [
      "Disc"
@@ -3164,7 +3182,7 @@
    "params": {
     "plane": "XY",
     "offset": 116,
-    "name": "lid_sk_154"
+    "name": "lid_sk_155"
    }
   },
   {
@@ -3206,9 +3224,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "lid_sk_154",
+    "sketch": "lid_sk_155",
     "distance": 13.5,
-    "name": "lid_155",
+    "name": "lid_156",
     "operation": "new",
     "body_name": "Lid"
    }
@@ -3256,7 +3274,7 @@
    "params": {
     "plane": "XY",
     "offset": 115,
-    "name": "lidhollow_sk_156"
+    "name": "lidhollow_sk_157"
    }
   },
   {
@@ -3298,9 +3316,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "lidhollow_sk_156",
+    "sketch": "lidhollow_sk_157",
     "distance": 12.0,
-    "name": "lidhollow_157",
+    "name": "lidhollow_158",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3317,7 +3335,7 @@
      0.0,
      116
     ],
-    "name": "lidboss_158",
+    "name": "lidboss_159",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3334,7 +3352,7 @@
      0.0,
      115
     ],
-    "name": "lidmagnet_159",
+    "name": "lidmagnet_160",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3351,7 +3369,7 @@
      0.0,
      113.5
     ],
-    "name": "lidguide_160",
+    "name": "lidguide_161",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3368,7 +3386,7 @@
      93.99844395177382,
      116
     ],
-    "name": "lidboss_161",
+    "name": "lidboss_162",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3385,7 +3403,7 @@
      93.99844395177382,
      115
     ],
-    "name": "lidmagnet_162",
+    "name": "lidmagnet_163",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3402,7 +3420,7 @@
      98.84818621296667,
      113.5
     ],
-    "name": "lidguide_163",
+    "name": "lidguide_164",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3419,7 +3437,7 @@
      93.99844395177384,
      116
     ],
-    "name": "lidboss_164",
+    "name": "lidboss_165",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3436,7 +3454,7 @@
      93.99844395177384,
      115
     ],
-    "name": "lidmagnet_165",
+    "name": "lidmagnet_166",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3453,7 +3471,7 @@
      98.84818621296668,
      113.5
     ],
-    "name": "lidguide_166",
+    "name": "lidguide_167",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3470,7 +3488,7 @@
      1.3292322951189641e-14,
      116
     ],
-    "name": "lidboss_167",
+    "name": "lidboss_168",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3487,7 +3505,7 @@
      1.3292322951189641e-14,
      115
     ],
-    "name": "lidmagnet_168",
+    "name": "lidmagnet_169",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3504,7 +3522,7 @@
      1.3978125158712158e-14,
      113.5
     ],
-    "name": "lidguide_169",
+    "name": "lidguide_170",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3521,7 +3539,7 @@
      -93.99844395177381,
      116
     ],
-    "name": "lidboss_170",
+    "name": "lidboss_171",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3538,7 +3556,7 @@
      -93.99844395177381,
      115
     ],
-    "name": "lidmagnet_171",
+    "name": "lidmagnet_172",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3555,7 +3573,7 @@
      -98.84818621296665,
      113.5
     ],
-    "name": "lidguide_172",
+    "name": "lidguide_173",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3572,7 +3590,7 @@
      -93.99844395177382,
      116
     ],
-    "name": "lidboss_173",
+    "name": "lidboss_174",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3589,7 +3607,7 @@
      -93.99844395177382,
      115
     ],
-    "name": "lidmagnet_174",
+    "name": "lidmagnet_175",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3606,7 +3624,7 @@
      -98.84818621296667,
      113.5
     ],
-    "name": "lidguide_175",
+    "name": "lidguide_176",
     "operation": "join",
     "targets": [
      "Lid"
@@ -3623,7 +3641,7 @@
      0,
      126.0
     ],
-    "name": "shafthole_176",
+    "name": "shafthole_177",
     "operation": "cut",
     "targets": [
      "Lid"
@@ -3640,7 +3658,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chute_177",
+    "name": "chute_178",
     "axis": [
      0,
      -0.766044443118978,
@@ -3660,7 +3678,7 @@
      -100.0,
      80
     ],
-    "name": "ears_178",
+    "name": "ears_179",
     "operation": "join",
     "targets": [
      "Chute"
@@ -3677,7 +3695,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chutein_179",
+    "name": "chutein_180",
     "axis": [
      0,
      -0.766044443118978,
@@ -3700,7 +3718,7 @@
      -220,
      111.9
     ],
-    "name": "trimtop_180",
+    "name": "trimtop_181",
     "operation": "cut",
     "targets": [
      "Chute"
@@ -3718,7 +3736,7 @@
      -260,
      -60
     ],
-    "name": "trimend_181",
+    "name": "trimend_182",
     "operation": "cut",
     "targets": [
      "Chute"
@@ -3735,7 +3753,7 @@
      -101.0,
      90
     ],
-    "name": "earhole_182",
+    "name": "earhole_183",
     "axis": "Y",
     "operation": "cut",
     "targets": [
@@ -3753,7 +3771,7 @@
      -101.0,
      90
     ],
-    "name": "earhole_183",
+    "name": "earhole_184",
     "axis": "Y",
     "operation": "cut",
     "targets": [
@@ -3771,7 +3789,7 @@
      -85,
      98.88096492536035
     ],
-    "name": "irhole_184",
+    "name": "irhole_185",
     "axis": "X",
     "operation": "cut",
     "targets": [
@@ -3790,7 +3808,7 @@
      10.5,
      3
     ],
-    "name": "tc_185",
+    "name": "tc_186",
     "body_name": "TerminalCover"
    }
   },
@@ -3805,7 +3823,7 @@
      9.5,
      2
     ],
-    "name": "tcin_186",
+    "name": "tcin_187",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3823,7 +3841,7 @@
      32.5,
      2
     ],
-    "name": "tccable_187",
+    "name": "tccable_188",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3841,7 +3859,7 @@
      9.5,
      8
     ],
-    "name": "tcear_188",
+    "name": "tcear_189",
     "operation": "join",
     "targets": [
      "TerminalCover"
@@ -3858,7 +3876,7 @@
      15.5,
      7
     ],
-    "name": "tchole_189",
+    "name": "tchole_190",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3875,7 +3893,7 @@
      28.5,
      7
     ],
-    "name": "tchole_190",
+    "name": "tchole_191",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3887,7 +3905,7 @@
    "params": {
     "plane": "XY",
     "offset": 10,
-    "name": "carr_sk_191"
+    "name": "carr_sk_192"
    }
   },
   {
@@ -3953,9 +3971,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "carr_sk_191",
+    "sketch": "carr_sk_192",
     "distance": 3,
-    "name": "carr_192",
+    "name": "carr_193",
     "operation": "new",
     "body_name": "Carrier"
    }
@@ -3965,7 +3983,7 @@
    "params": {
     "plane": "XY",
     "offset": 10,
-    "name": "carrb_sk_193"
+    "name": "carrb_sk_194"
    }
   },
   {
@@ -4015,9 +4033,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "carrb_sk_193",
+    "sketch": "carrb_sk_194",
     "distance": 3,
-    "name": "carrb_194",
+    "name": "carrb_195",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4034,7 +4052,7 @@
      -4,
      9
     ],
-    "name": "carrhole_195",
+    "name": "carrhole_196",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4051,7 +4069,7 @@
      -56,
      9
     ],
-    "name": "carrhole_196",
+    "name": "carrhole_197",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4068,7 +4086,7 @@
      46,
      9
     ],
-    "name": "carrhole_197",
+    "name": "carrhole_198",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4085,7 +4103,7 @@
      50,
      9
     ],
-    "name": "carrhole_198",
+    "name": "carrhole_199",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4102,7 +4120,7 @@
      96.5,
      12.5
     ],
-    "name": "picopost_199",
+    "name": "picopost_200",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4119,7 +4137,7 @@
      96.5,
      12.2
     ],
-    "name": "picopilot_200",
+    "name": "picopilot_201",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4136,7 +4154,7 @@
      49.5,
      12.5
     ],
-    "name": "picopost_201",
+    "name": "picopost_202",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4153,7 +4171,7 @@
      49.5,
      12.2
     ],
-    "name": "picopilot_202",
+    "name": "picopilot_203",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4170,7 +4188,7 @@
      96.5,
      12.5
     ],
-    "name": "picopost_203",
+    "name": "picopost_204",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4187,7 +4205,7 @@
      96.5,
      12.2
     ],
-    "name": "picopilot_204",
+    "name": "picopilot_205",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4204,7 +4222,7 @@
      49.5,
      12.5
     ],
-    "name": "picopost_205",
+    "name": "picopost_206",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4221,7 +4239,7 @@
      49.5,
      12.2
     ],
-    "name": "picopilot_206",
+    "name": "picopilot_207",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4238,7 +4256,7 @@
      -39.85,
      12.5
     ],
-    "name": "perfpost_207",
+    "name": "perfpost_208",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4255,7 +4273,7 @@
      -39.85,
      13
     ],
-    "name": "perfpilot_208",
+    "name": "perfpilot_209",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4272,7 +4290,7 @@
      33.85,
      12.5
     ],
-    "name": "perfpost_209",
+    "name": "perfpost_210",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4289,7 +4307,7 @@
      33.85,
      13
     ],
-    "name": "perfpilot_210",
+    "name": "perfpilot_211",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4306,7 +4324,7 @@
      39.5,
      12.5
     ],
-    "name": "perfpost_211",
+    "name": "perfpost_212",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4323,7 +4341,7 @@
      39.5,
      13
     ],
-    "name": "perfpilot_212",
+    "name": "perfpilot_213",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4340,7 +4358,7 @@
      -45.5,
      12.5
     ],
-    "name": "perfpost_213",
+    "name": "perfpost_214",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4357,7 +4375,7 @@
      -45.5,
      13
     ],
-    "name": "perfpilot_214",
+    "name": "perfpilot_215",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4374,7 +4392,7 @@
      39.5,
      12.5
     ],
-    "name": "perfpost_215",
+    "name": "perfpost_216",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4391,7 +4409,7 @@
      39.5,
      13
     ],
-    "name": "perfpilot_216",
+    "name": "perfpilot_217",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4408,7 +4426,7 @@
      -45.5,
      12.5
     ],
-    "name": "perfpost_217",
+    "name": "perfpost_218",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4425,7 +4443,7 @@
      -45.5,
      13
     ],
-    "name": "perfpilot_218",
+    "name": "perfpilot_219",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4443,7 +4461,7 @@
      -21.15,
      58
     ],
-    "name": "dm_219",
+    "name": "dm_220",
     "body_name": "DUMMY_Motor"
    }
   },
@@ -4457,7 +4475,7 @@
      0,
      106
     ],
-    "name": "dmpilot_220",
+    "name": "dmpilot_221",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4474,7 +4492,7 @@
      0,
      106
     ],
-    "name": "dmshaft_221",
+    "name": "dmshaft_222",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4492,7 +4510,7 @@
      -8,
      60
     ],
-    "name": "dmplug_222",
+    "name": "dmplug_223",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4510,7 +4528,7 @@
      -75.5,
      8
     ],
-    "name": "dp_223",
+    "name": "dp_224",
     "body_name": "DUMMY_PSU"
    }
   },
@@ -4525,7 +4543,7 @@
      47.5,
      15.4
     ],
-    "name": "dpico_224",
+    "name": "dpico_225",
     "body_name": "DUMMY_Pico"
    }
   },
@@ -4540,7 +4558,7 @@
      -49.0,
      17
     ],
-    "name": "dperf_225",
+    "name": "dperf_226",
     "body_name": "DUMMY_Perfboard"
    }
   },
@@ -4555,7 +4573,7 @@
      70.0,
      26
     ],
-    "name": "diec_226",
+    "name": "diec_227",
     "body_name": "DUMMY_IEC"
    }
   },

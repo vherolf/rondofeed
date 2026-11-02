@@ -88,7 +88,7 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | IR LED, 5 mm, 940 nm, e.g. Vishay TSAL6200 | 1 | Light barrier emitter, in one of the two Ø5.2 mm holes in the chute |
 | IR phototransistor, 5 mm, with daylight filter (black), e.g. Osram SFH 300 FA or Everlight PT334-6C | 1 | Light barrier receiver, in the opposite hole |
 | 100 Ω resistor | 1 | Series resistor for the IR LED at 3V3, about 20 mA |
-| IEC C14 inlet, 3-in-1 module with 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in, for 230 V | 1 | 28 × 47 mm cutout (width × height), 3 mm wall. Check that the snap-in clips hold in 3 mm |
+| IEC C14 inlet, 3-in-1 module with 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in, for 230 V | 1 | 28 × 47 mm cutout (width × height). The rear wall is thinned to 2 mm around the cutout for the snap-in clips |
 | Fuse 5 × 20 mm, T1A (slow-blow), 250 V | 1 | Replace the 10 A fuse that often comes with the inlet. A spare fits in the drawer |
 | M3 threaded inserts, Ø4.0 mm hole | 12 | |
 | M3 screws, steel (not stainless, magnets must hold on the heads): M3×8 (power supply, plate), M3×12 (motor and the rest) | 20 | |
@@ -130,6 +130,7 @@ The outlets in the plate stay Ø15 mm, so a neighbouring hole can open by up to 
 These values do not come from the purchased parts. If yours differ, change them at the top of `build.py`:
 
 - `IEC_CUT`: the cutout depends on the IEC inlet model
+- `IEC_WALL`: wall thickness around the IEC cutout, match it to the panel range of the snap-in clips
 - `IR_D`: diameter of the break-beam sensor
 - `INSERT_D`: manufacturer's hole size for the threaded insert
 - `HOLE_D`: match this to the food, see [Discs](#discs)

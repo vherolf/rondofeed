@@ -110,12 +110,12 @@ Only the power supply has ventilation slots (floor and front right wall), so the
 
 - IEC C14 inlet as a 3-in-1 module: inlet, 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in. Cutout `IEC_CUT` = 28 × 47 mm (width × height), about 31 mm deep inside the housing (`DUMMY_IEC` is 30 mm).
 - Fuse T1A (slow-blow), 250 V. The power supply draws well under 1 A at 230 V, but has a high inrush current when switched on, so use a slow-blow fuse. These modules often come with 10 A, which is far too much.
-- Snap-in clips are often made for 1–2 mm panels. Check that they hold in the 3 mm wall, otherwise glue the module or make the wall thinner around the cutout.
+- Snap-in clips are often made for 1–2 mm panels. The 3 mm rear wall has a pocket on the inside, so it is only `IEC_WALL` = 2 mm thick for 7 mm around the cutout (`IEC_RIM`). The outside stays flat.
 - Connect protective earth from the inlet to terminal FG on the power supply.
 
 ## Before printing
 
-- Check the chosen IEC inlet against the `IEC_CUT` cutout and the 3 mm wall thickness, see Mains inlet.
+- Check the chosen IEC inlet against the `IEC_CUT` cutout and the panel range of its clips (`IEC_WALL`, 2 mm), see Mains inlet.
 - Check `IR_D` with the real IR LED and phototransistor, and the threaded insert `INSERT_D`.
 - Measure the food and set `HOLE_D`. Pieces under about 8 mm can fall through to the neighbouring hole.
 - Print a test piece: disc centre with shaft and set screw, plus the motor block.
