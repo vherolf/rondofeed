@@ -31,7 +31,7 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 - Short, secure wires, no jumper wires.
 - Prototyping board, half size, lengthwise (along Y) on the carrier, left of the motor and in front of the Pico. Layout in [wiring_layout.svg](wiring_layout.svg), drawn for the Adafruit board.
   - Adafruit Perma-Proto Half-Size (81 × 51 mm, ADA1609): 2 mounting holes 73.7 mm apart on the long axis, in the middle of the short sides.
-  - GeeekPi Half-Size: 4 corner holes Ø3 mm, 55 × 85 mm apart (centre to centre). Drill them to 3.2 mm for the M3 screws. Its outline is not known yet, the model assumes 62 × 92 mm (`DUMMY_Perfboard`).
+  - GeeekPi Half-Size: 4 corner holes Ø3 mm, 55 × 85 mm apart (centre to centre). Drill them to 3.2 mm for the M3×8 screws. Its outline is not known yet, the model assumes 62 × 92 mm (`DUMMY_Perfboard`).
   - The carrier has posts for both boards (`PERF_HOLE_DY`, `GEEK_HOLES`). The two Adafruit posts end up under the GeeekPi board. If they touch a solder joint there, file them down.
   - The carrier has tabs on the left and at the front, so that all 4 carrier screws stay clear of both boards.
 - The converter model is not chosen yet. The layout assumes a 3-pin in-line module of 11.5 × 7.5 mm.

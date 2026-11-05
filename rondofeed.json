@@ -250,11 +250,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 4.0,
-    "height": 7,
+    "height": 9,
     "base": [
      108.54005383792514,
      0.0,
-     106
+     104
     ],
     "name": "ins_6",
     "operation": "cut",
@@ -284,11 +284,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 4.0,
-    "height": 7,
+    "height": 9,
     "base": [
      54.270026918962586,
      93.99844395177382,
-     106
+     104
     ],
     "name": "ins_8",
     "operation": "cut",
@@ -318,11 +318,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 4.0,
-    "height": 7,
+    "height": 9,
     "base": [
      -54.27002691896255,
      93.99844395177384,
-     106
+     104
     ],
     "name": "ins_10",
     "operation": "cut",
@@ -352,11 +352,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 4.0,
-    "height": 7,
+    "height": 9,
     "base": [
      -108.54005383792514,
      1.3292322951189641e-14,
-     106
+     104
     ],
     "name": "ins_12",
     "operation": "cut",
@@ -386,11 +386,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 4.0,
-    "height": 7,
+    "height": 9,
     "base": [
      -54.27002691896262,
      -93.99844395177381,
-     106
+     104
     ],
     "name": "ins_14",
     "operation": "cut",
@@ -420,11 +420,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 4.0,
-    "height": 7,
+    "height": 9,
     "base": [
      54.270026918962586,
      -93.99844395177382,
-     106
+     104
     ],
     "name": "ins_16",
     "operation": "cut",
@@ -1460,11 +1460,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 4.0,
-    "height": 5,
+    "height": 5.5,
     "base": [
      77,
      15.5,
-     3.5
+     3
     ],
     "name": "covins_58",
     "operation": "cut",
@@ -1494,11 +1494,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 4.0,
-    "height": 5,
+    "height": 5.5,
     "base": [
      77,
      28.5,
-     3.5
+     3
     ],
     "name": "covins_60",
     "operation": "cut",
@@ -1802,11 +1802,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 6.0,
-    "height": 4.5,
+    "height": 6.5,
     "base": [
      15.5,
      15.5,
-     112.5
+     110.5
     ],
     "name": "nemahead_74",
     "operation": "cut",
@@ -1836,11 +1836,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 6.0,
-    "height": 4.5,
+    "height": 6.5,
     "base": [
      15.5,
      -15.5,
-     112.5
+     110.5
     ],
     "name": "nemahead_76",
     "operation": "cut",
@@ -1870,11 +1870,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 6.0,
-    "height": 4.5,
+    "height": 6.5,
     "base": [
      -15.5,
      15.5,
-     112.5
+     110.5
     ],
     "name": "nemahead_78",
     "operation": "cut",
@@ -1904,11 +1904,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 6.0,
-    "height": 4.5,
+    "height": 6.5,
     "base": [
      -15.5,
      -15.5,
-     112.5
+     110.5
     ],
     "name": "nemahead_80",
     "operation": "cut",
@@ -3671,7 +3671,7 @@
    "command": "solid.box",
    "params": {
     "length": 68,
-    "width": 3.0,
+    "width": 4.0,
     "height": 31.900000000000006,
     "corner": [
      -34,
@@ -3747,7 +3747,7 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 3.4,
-    "height": 5,
+    "height": 6,
     "base": [
      28,
      -101.0,
@@ -3762,17 +3762,53 @@
    }
   },
   {
+   "command": "solid.box",
+   "params": {
+    "length": 5.799999999999997,
+    "width": 3.5999999999999943,
+    "height": 26.200000000000003,
+    "corner": [
+     25.1,
+     -98.6,
+     86.8
+    ],
+    "name": "nutslot_184",
+    "operation": "cut",
+    "targets": [
+     "Chute"
+    ]
+   }
+  },
+  {
    "command": "solid.cylinder",
    "params": {
     "diameter": 3.4,
-    "height": 5,
+    "height": 6,
     "base": [
      -28,
      -101.0,
      90
     ],
-    "name": "earhole_184",
+    "name": "earhole_185",
     "axis": "Y",
+    "operation": "cut",
+    "targets": [
+     "Chute"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 5.799999999999997,
+    "width": 3.5999999999999943,
+    "height": 26.200000000000003,
+    "corner": [
+     -30.9,
+     -98.6,
+     86.8
+    ],
+    "name": "nutslot_186",
     "operation": "cut",
     "targets": [
      "Chute"
@@ -3789,7 +3825,7 @@
      -85,
      98.88096492536035
     ],
-    "name": "irhole_185",
+    "name": "irhole_187",
     "axis": "X",
     "operation": "cut",
     "targets": [
@@ -3808,7 +3844,7 @@
      10.5,
      3
     ],
-    "name": "tc_186",
+    "name": "tc_188",
     "body_name": "TerminalCover"
    }
   },
@@ -3823,7 +3859,7 @@
      9.5,
      2
     ],
-    "name": "tcin_187",
+    "name": "tcin_189",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3841,7 +3877,7 @@
      32.5,
      2
     ],
-    "name": "tccable_188",
+    "name": "tccable_190",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3859,7 +3895,7 @@
      9.5,
      8
     ],
-    "name": "tcear_189",
+    "name": "tcear_191",
     "operation": "join",
     "targets": [
      "TerminalCover"
@@ -3876,7 +3912,7 @@
      15.5,
      7
     ],
-    "name": "tchole_190",
+    "name": "tchole_192",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3893,7 +3929,7 @@
      28.5,
      7
     ],
-    "name": "tchole_191",
+    "name": "tchole_193",
     "operation": "cut",
     "targets": [
      "TerminalCover"
@@ -3905,7 +3941,7 @@
    "params": {
     "plane": "XY",
     "offset": 10,
-    "name": "carr_sk_192"
+    "name": "carr_sk_194"
    }
   },
   {
@@ -3971,9 +4007,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "carr_sk_192",
+    "sketch": "carr_sk_194",
     "distance": 3,
-    "name": "carr_193",
+    "name": "carr_195",
     "operation": "new",
     "body_name": "Carrier"
    }
@@ -3983,7 +4019,7 @@
    "params": {
     "plane": "XY",
     "offset": 10,
-    "name": "carrb_sk_194"
+    "name": "carrb_sk_196"
    }
   },
   {
@@ -4033,9 +4069,9 @@
   {
    "command": "solid.extrude",
    "params": {
-    "sketch": "carrb_sk_194",
+    "sketch": "carrb_sk_196",
     "distance": 3,
-    "name": "carrb_195",
+    "name": "carrb_197",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4052,7 +4088,7 @@
      -4,
      9
     ],
-    "name": "carrhole_196",
+    "name": "carrhole_198",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4069,7 +4105,7 @@
      -56,
      9
     ],
-    "name": "carrhole_197",
+    "name": "carrhole_199",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4086,7 +4122,7 @@
      46,
      9
     ],
-    "name": "carrhole_198",
+    "name": "carrhole_200",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4103,7 +4139,7 @@
      50,
      9
     ],
-    "name": "carrhole_199",
+    "name": "carrhole_201",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4118,40 +4154,6 @@
     "base": [
      -28.3,
      96.5,
-     12.5
-    ],
-    "name": "picopost_200",
-    "operation": "join",
-    "targets": [
-     "Carrier"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 1.7,
-    "height": 3.3,
-    "base": [
-     -28.3,
-     96.5,
-     12.2
-    ],
-    "name": "picopilot_201",
-    "operation": "cut",
-    "targets": [
-     "Carrier"
-    ]
-   }
-  },
-  {
-   "command": "solid.cylinder",
-   "params": {
-    "diameter": 4,
-    "height": 2.9,
-    "base": [
-     -28.3,
-     49.5,
      12.5
     ],
     "name": "picopost_202",
@@ -4168,7 +4170,7 @@
     "height": 3.3,
     "base": [
      -28.3,
-     49.5,
+     96.5,
      12.2
     ],
     "name": "picopilot_203",
@@ -4184,8 +4186,8 @@
     "diameter": 4,
     "height": 2.9,
     "base": [
-     -39.7,
-     96.5,
+     -28.3,
+     49.5,
      12.5
     ],
     "name": "picopost_204",
@@ -4201,8 +4203,8 @@
     "diameter": 1.7,
     "height": 3.3,
     "base": [
-     -39.7,
-     96.5,
+     -28.3,
+     49.5,
      12.2
     ],
     "name": "picopilot_205",
@@ -4219,7 +4221,7 @@
     "height": 2.9,
     "base": [
      -39.7,
-     49.5,
+     96.5,
      12.5
     ],
     "name": "picopost_206",
@@ -4236,7 +4238,7 @@
     "height": 3.3,
     "base": [
      -39.7,
-     49.5,
+     96.5,
      12.2
     ],
     "name": "picopilot_207",
@@ -4249,14 +4251,14 @@
   {
    "command": "solid.cylinder",
    "params": {
-    "diameter": 6,
-    "height": 4.5,
+    "diameter": 4,
+    "height": 2.9,
     "base": [
-     -52,
-     -39.85,
+     -39.7,
+     49.5,
      12.5
     ],
-    "name": "perfpost_208",
+    "name": "picopost_208",
     "operation": "join",
     "targets": [
      "Carrier"
@@ -4266,14 +4268,14 @@
   {
    "command": "solid.cylinder",
    "params": {
-    "diameter": 2.5,
-    "height": 4.5,
+    "diameter": 1.7,
+    "height": 3.3,
     "base": [
-     -52,
-     -39.85,
-     13
+     -39.7,
+     49.5,
+     12.2
     ],
-    "name": "perfpilot_209",
+    "name": "picopilot_209",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4287,7 +4289,7 @@
     "height": 4.5,
     "base": [
      -52,
-     33.85,
+     -39.85,
      12.5
     ],
     "name": "perfpost_210",
@@ -4301,11 +4303,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 2.5,
-    "height": 4.5,
+    "height": 6,
     "base": [
      -52,
-     33.85,
-     13
+     -39.85,
+     11.5
     ],
     "name": "perfpilot_211",
     "operation": "cut",
@@ -4320,8 +4322,8 @@
     "diameter": 6,
     "height": 4.5,
     "base": [
-     -24.5,
-     39.5,
+     -52,
+     33.85,
      12.5
     ],
     "name": "perfpost_212",
@@ -4335,11 +4337,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 2.5,
-    "height": 4.5,
+    "height": 6,
     "base": [
-     -24.5,
-     39.5,
-     13
+     -52,
+     33.85,
+     11.5
     ],
     "name": "perfpilot_213",
     "operation": "cut",
@@ -4355,7 +4357,7 @@
     "height": 4.5,
     "base": [
      -24.5,
-     -45.5,
+     39.5,
      12.5
     ],
     "name": "perfpost_214",
@@ -4369,11 +4371,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 2.5,
-    "height": 4.5,
+    "height": 6,
     "base": [
      -24.5,
-     -45.5,
-     13
+     39.5,
+     11.5
     ],
     "name": "perfpilot_215",
     "operation": "cut",
@@ -4388,8 +4390,8 @@
     "diameter": 6,
     "height": 4.5,
     "base": [
-     -79.5,
-     39.5,
+     -24.5,
+     -45.5,
      12.5
     ],
     "name": "perfpost_216",
@@ -4403,11 +4405,11 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 2.5,
-    "height": 4.5,
+    "height": 6,
     "base": [
-     -79.5,
-     39.5,
-     13
+     -24.5,
+     -45.5,
+     11.5
     ],
     "name": "perfpilot_217",
     "operation": "cut",
@@ -4423,7 +4425,7 @@
     "height": 4.5,
     "base": [
      -79.5,
-     -45.5,
+     39.5,
      12.5
     ],
     "name": "perfpost_218",
@@ -4437,13 +4439,47 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 2.5,
+    "height": 6,
+    "base": [
+     -79.5,
+     39.5,
+     11.5
+    ],
+    "name": "perfpilot_219",
+    "operation": "cut",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 6,
     "height": 4.5,
     "base": [
      -79.5,
      -45.5,
-     13
+     12.5
     ],
-    "name": "perfpilot_219",
+    "name": "perfpost_220",
+    "operation": "join",
+    "targets": [
+     "Carrier"
+    ]
+   }
+  },
+  {
+   "command": "solid.cylinder",
+   "params": {
+    "diameter": 2.5,
+    "height": 6,
+    "base": [
+     -79.5,
+     -45.5,
+     11.5
+    ],
+    "name": "perfpilot_221",
     "operation": "cut",
     "targets": [
      "Carrier"
@@ -4461,7 +4497,7 @@
      -21.15,
      58
     ],
-    "name": "dm_220",
+    "name": "dm_222",
     "body_name": "DUMMY_Motor"
    }
   },
@@ -4475,7 +4511,7 @@
      0,
      106
     ],
-    "name": "dmpilot_221",
+    "name": "dmpilot_223",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4492,7 +4528,7 @@
      0,
      106
     ],
-    "name": "dmshaft_222",
+    "name": "dmshaft_224",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4510,7 +4546,7 @@
      -8,
      60
     ],
-    "name": "dmplug_223",
+    "name": "dmplug_225",
     "operation": "join",
     "targets": [
      "DUMMY_Motor"
@@ -4528,7 +4564,7 @@
      -75.5,
      8
     ],
-    "name": "dp_224",
+    "name": "dp_226",
     "body_name": "DUMMY_PSU"
    }
   },
@@ -4543,7 +4579,7 @@
      47.5,
      15.4
     ],
-    "name": "dpico_225",
+    "name": "dpico_227",
     "body_name": "DUMMY_Pico"
    }
   },
@@ -4558,7 +4594,7 @@
      -49.0,
      17
     ],
-    "name": "dperf_226",
+    "name": "dperf_228",
     "body_name": "DUMMY_Perfboard"
    }
   },
@@ -4573,7 +4609,7 @@
      70.0,
      26
     ],
-    "name": "diec_227",
+    "name": "diec_229",
     "body_name": "DUMMY_IEC"
    }
   },

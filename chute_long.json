@@ -10,7 +10,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chute_366",
+    "name": "chute_368",
     "axis": [
      0,
      -0.766044443118978,
@@ -23,14 +23,14 @@
    "command": "solid.box",
    "params": {
     "length": 68,
-    "width": 3.0,
+    "width": 4.0,
     "height": 31.900000000000006,
     "corner": [
      -34,
      -100.0,
      80
     ],
-    "name": "ears_367",
+    "name": "ears_369",
     "operation": "join",
     "targets": [
      "Chute_long"
@@ -47,7 +47,7 @@
      -38.5,
      145.56398524709118
     ],
-    "name": "chutein_368",
+    "name": "chutein_370",
     "axis": [
      0,
      -0.766044443118978,
@@ -70,7 +70,7 @@
      -220,
      111.9
     ],
-    "name": "trimtop_369",
+    "name": "trimtop_371",
     "operation": "cut",
     "targets": [
      "Chute_long"
@@ -88,7 +88,7 @@
      -260,
      -60
     ],
-    "name": "trimend_370",
+    "name": "trimend_372",
     "operation": "cut",
     "targets": [
      "Chute_long"
@@ -99,14 +99,32 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 3.4,
-    "height": 5,
+    "height": 6,
     "base": [
      28,
      -101.0,
      90
     ],
-    "name": "earhole_371",
+    "name": "earhole_373",
     "axis": "Y",
+    "operation": "cut",
+    "targets": [
+     "Chute_long"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 5.799999999999997,
+    "width": 3.5999999999999943,
+    "height": 26.200000000000003,
+    "corner": [
+     25.1,
+     -98.6,
+     86.8
+    ],
+    "name": "nutslot_374",
     "operation": "cut",
     "targets": [
      "Chute_long"
@@ -117,14 +135,32 @@
    "command": "solid.cylinder",
    "params": {
     "diameter": 3.4,
-    "height": 5,
+    "height": 6,
     "base": [
      -28,
      -101.0,
      90
     ],
-    "name": "earhole_372",
+    "name": "earhole_375",
     "axis": "Y",
+    "operation": "cut",
+    "targets": [
+     "Chute_long"
+    ]
+   }
+  },
+  {
+   "command": "solid.box",
+   "params": {
+    "length": 5.799999999999997,
+    "width": 3.5999999999999943,
+    "height": 26.200000000000003,
+    "corner": [
+     -30.9,
+     -98.6,
+     86.8
+    ],
+    "name": "nutslot_376",
     "operation": "cut",
     "targets": [
      "Chute_long"
@@ -141,7 +177,7 @@
      -85,
      98.88096492536035
     ],
-    "name": "irhole_373",
+    "name": "irhole_377",
     "axis": "X",
     "operation": "cut",
     "targets": [

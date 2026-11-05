@@ -24,6 +24,9 @@ COS30 = math.cos(math.radians(30))
 M3_CLEAR = 3.4
 INSERT_D = 4.0     # Gewindeeinsatz M3, am Einsatz pruefen
 INSERT_DEPTH = 6
+INSERT_HOLE_DEPTH = 8  # Loch unter dem Einsatz bleibt frei, damit eine M3x8 bis zum Anschlag eindreht
+# Alle Schrauben sind Stahl M3x8 (Platte, Motor, Netzteil, Traeger, Klemmenabdeckung, Rutsche, Platinen).
+# Ausnahmen: M2x5 fuer den Pico und die Madenschraube M3x8 ohne Kopf.
 
 # Scheibe
 DISC_D = 200
@@ -47,7 +50,7 @@ NEMA_BLOCK_H = 6
 MOTOR_FACE = BASE_H - NEMA_BLOCK_H
 NEMA_L = 48
 HEAD_D = 6.0
-HEAD_DEPTH = 3.5
+HEAD_DEPTH = 5.5   # Motorschrauben M3x8: 4,5 mm durch die Platte, 3,5 mm ins Motorgewinde
 
 # Abdeckung
 LID_TOP_T = 2.5
@@ -74,6 +77,9 @@ SPOUT_Y_LONG = -122   # Ausfuehrung Chute_long, steht 19 mm aus dem Gehaeuse
 AX = (0, -math.cos(math.radians(CHUTE_DEG)), -math.sin(math.radians(CHUTE_DEG)))
 EAR_X = 28         # Platte innen an der Frontwand, Schrauben M3 von aussen, Mutter innen
 EAR_Z = 90
+EAR_T = 4          # Dicke der Befestigungsplatte der Rutsche, 1,4 mm bleiben hinter der Mutter
+NUT_W = 5.8        # M3-Mutter 5,5 SW plus Spiel
+NUT_T = 2.6        # Mutter 2,4 dick plus Spiel
 IR_D = 5.2
 IR_Y = -85
 
@@ -239,7 +245,7 @@ def guide_pos(x, y):
 
 for x, y in POST_HOLES:  # Dom wird in der Ecke in die Wand gezogen, Innenkante rund
     cyl(2 * POST_R, (x, y, FLOOR - 0.5), BASE_H - FLOOR + 0.5, "join", "Base", label="post")
-    cyl(INSERT_D, (x, y, BASE_H - INSERT_DEPTH), INSERT_DEPTH + 1, "cut", "Base", label="ins")
+    cyl(INSERT_D, (x, y, BASE_H - INSERT_HOLE_DEPTH), INSERT_HOLE_DEPTH + 1, "cut", "Base", label="ins")
 
 # Netzteil liegt flach auf zwei Auflagen, Schrauben von unten durch den Boden, Kopf versenkt
 psx, psy = PSU_C
@@ -261,7 +267,7 @@ for x, y in CARR_HOLES:
 COVER_EARS = [(psx + 50, PSU_Y1 - 8), (psx + 50, PSU_Y1 + 5)]
 for x, y in COVER_EARS:
     cyl(9, (x, y, FLOOR - 0.5), COVER_Z - FLOOR + 0.5, "join", "Base", label="covpost")
-    cyl(INSERT_D, (x, y, FLOOR + 0.5), COVER_Z - FLOOR, "cut", "Base", label="covins")
+    cyl(INSERT_D, (x, y, FLOOR), COVER_Z - FLOOR + 0.5, "cut", "Base", label="covins")
 
 # Rueckwand: Kaltgeraetebuchse und USB
 ix, iz = IEC_C
@@ -343,12 +349,15 @@ cyl(LID_HOLE_D, (0, CY, LID_Z - 1), LID_TOP_T + 2, "cut", "Lid", label="shafthol
 def chute(body, spout_y):
     """Rohr mit Befestigungsplatte und Loechern fuer die Lichtschranke, endet senkrecht bei y = spout_y."""
     cyl(CHUTE_D + 2 * CHUTE_WALL, chute_start, chute_len, body=body, axis=list(AX), label="chute")
-    box(-EAR_X - 6, -in_, EAR_Z - 10, EAR_X + 6, -in_ + 3, BASE_H - 0.1, op="join", target=body, label="ears")
+    box(-EAR_X - 6, -in_, EAR_Z - 10, EAR_X + 6, -in_ + EAR_T, BASE_H - 0.1, op="join", target=body, label="ears")
     cyl(CHUTE_D, chute_start, chute_len + 5, "cut", body, axis=list(AX), label="chutein")
     box(-50, -220, BASE_H - 0.1, 50, 60, 200, op="cut", target=body, label="trimtop")
     box(-50, -260, -60, 50, spout_y, 200, op="cut", target=body, label="trimend")
     for sx in (1, -1):
-        cyl(M3_CLEAR, (sx * EAR_X, -in_ - 1, EAR_Z), 5, "cut", body, axis="Y", label="earhole")
+        cyl(M3_CLEAR, (sx * EAR_X, -in_ - 1, EAR_Z), EAR_T + 2, "cut", body, axis="Y", label="earhole")
+        # Mutterschlitz von oben, nach innen offen: die Mutter wird vor dem Einsetzen der Platte eingelegt
+        box(sx * EAR_X - NUT_W / 2, -in_ + EAR_T - NUT_T, EAR_Z - NUT_W / 2 - 0.3, sx * EAR_X + NUT_W / 2, -in_ + EAR_T + 1,
+            BASE_H + 1, op="cut", target=body, label="nutslot")
     ir_z = chute_axis(IR_Y)[2] - (CHUTE_D / 2) / math.cos(math.radians(CHUTE_DEG)) + 8
     cyl(IR_D, (-30, IR_Y, ir_z), 60, "cut", body, axis="X", label="irhole")
 
@@ -383,7 +392,7 @@ qx, qy = PERF_C
 gx_, gy_ = GEEK_HOLES[0] / 2, GEEK_HOLES[1] / 2
 for x, y in [(qx, qy - PERF_HOLE_DY / 2), (qx, qy + PERF_HOLE_DY / 2)] + [(qx + a * gx_, qy + b_ * gy_) for a in (1, -1) for b_ in (1, -1)]:
     cyl(6, (x, y, ct - 0.5), 4.5, "join", "Carrier", label="perfpost")
-    cyl(2.5, (x, y, ct), 4.5, "cut", "Carrier", label="perfpilot")
+    cyl(2.5, (x, y, ct - 1.5), 6, "cut", "Carrier", label="perfpilot")  # M3x8 selbstschneidend, 1,5 mm tief in den Traeger
 
 # ---------- Platzhalter, nicht drucken ----------
 n = 42.3

@@ -84,17 +84,18 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | 10 kΩ resistor | 2 | Pull-ups from `EN` and from GP6 (light barrier) to 3V3 |
 | Schottky diode 1N5819 | 1 | Between the converter and `VSYS`, see Wiring |
 | 12 V to 5 V converter | 1 | On the prototyping board, supplies `VSYS` on the Pico |
-| Prototyping board, half size: Adafruit Perma-Proto Half-Size (81 × 51 mm, ADA1609) or GeeekPi Half-Size | 1 | For the breakout, converter and light barrier resistors. Lies lengthwise on the carrier, which has posts for both. Adafruit: 2 holes, 73.7 mm apart. GeeekPi: 4 corner holes, 55 × 85 mm apart, drill them to 3.2 mm. M3×6 self-tapping screws into the posts |
+| Prototyping board, half size: Adafruit Perma-Proto Half-Size (81 × 51 mm, ADA1609) or GeeekPi Half-Size | 1 | For the breakout, converter and light barrier resistors. Lies lengthwise on the carrier, which has posts for both. Adafruit: 2 holes, 73.7 mm apart. GeeekPi: 4 corner holes, 55 × 85 mm apart, drill them to 3.2 mm. M3×8 self-tapping screws into the posts |
 | IR LED, 5 mm, 940 nm, e.g. Vishay TSAL6200 | 1 | Light barrier emitter, in one of the two Ø5.2 mm holes in the chute |
 | IR phototransistor, 5 mm, with daylight filter (black), e.g. Osram SFH 300 FA or Everlight PT334-6C | 1 | Light barrier receiver, in the opposite hole |
 | 100 Ω resistor | 1 | Series resistor for the IR LED at 3V3, about 20 mA |
 | IEC C14 inlet, 3-in-1 module with 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in, for 230 V | 1 | 28 × 47 mm cutout (width × height). The rear wall is thinned to 2 mm around the cutout for the snap-in clips |
 | Fuse 5 × 20 mm, T1A (slow-blow), 250 V | 1 | Replace the 10 A fuse that often comes with the inlet. A spare fits in the drawer |
 | M3 threaded inserts, Ø4.0 mm hole | 12 | |
-| M3 screws, steel (not stainless, magnets must hold on the heads): M3×8 (power supply, plate), M3×12 (motor and the rest) | 20 | |
+| M3×8 screws, steel (not stainless, magnets must hold on the heads of the plate screws) | 24 | All screws in the build are this one size: 6 plate, 4 motor, 2 power supply, 4 carrier, 2 terminal cover, 2 chute, 4 prototyping board (2 are enough for the Adafruit board) |
+| M2×5 self-tapping screws | 4 | Pico, its holes are Ø2.1 mm, M3 does not fit |
 | Neodymium disc magnets Ø6 × 2 mm | 6 | Glued into the lid, one over each plate screw |
-| M3 nuts for the chute | 2 | |
-| M3 set screw and nut | 1 | Locks the disc on the D-flat |
+| M3 nuts for the chute | 2 | Drop into the slots in the chute |
+| M3×8 set screw (grub screw) and nut | 1 | Locks the disc on the D-flat |
 | Rubber feet | 4 | The floor vents need airflow |
 
 ## Firmware
@@ -140,10 +141,10 @@ Print a test piece before the full print: the disc centre (shaft and set screw) 
 ## Assembly
 
 1. Press in the threaded inserts.
-2. Screw the motor to the plate from below, with the screw heads recessed from above.
-3. Lay the power supply flat on its two pads, terminals towards the rear: M3×8 from below through the floor, heads recessed. Screws must not reach more than 3 mm into the power supply.
-4. Screw the Pico and prototyping board to the carrier (one angled plate, one part under each board), then screw the carrier to the floor. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover with 2 screws on its right side.
-5. Before fitting the plate, push the chute through the front wall from inside. 2 × M3 from outside, nuts inside. The plate has to come off for cleaning.
+2. Screw the motor to the plate with 4 M3×8 from above, the heads are recessed 5.5 mm. They reach 3.5 mm into the motor, a NEMA 17 allows about 4.5 mm.
+3. Lay the power supply flat on its two pads, terminals towards the rear: M3×8 from below through the floor, heads recessed. The M3×8 reach 3 mm into the power supply, which is the limit.
+4. Screw the Pico (4 × M2×5) and the prototyping board (M3×8) to the carrier (one angled plate, one part under each board), then screw the carrier to the floor with 4 M3×8. All 4 screws sit clear of the boards. The Pico's USB port faces the cutout in the rear wall. Fit the terminal cover with 2 M3×8 on its right side.
+5. Before fitting the plate, push the chute through the front wall from inside. Drop the 2 M3 nuts into the slots at the top of the chute plate, then 2 × M3×8 from outside. The plate has to come off for cleaning.
 6. Set the plate on the housing and fix it with 6 M3×8 screws, one in each corner. The heads sit in the counterbores. Set the disc on the shaft with a 0.5 mm gap, and tighten the set screw on the D-flat.
 7. Glue one magnet into each of the 6 pockets on the underside of the lid. Polarity does not matter, as the magnets attract the steel screw heads either way. Place the lid on top, with its 6 pins in the holes of the plate. Each magnet sits over a plate screw and holds the lid.
 
