@@ -20,7 +20,7 @@ A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a
 </table>
 
 - **47 portions** on a Ø200 mm disc, each one released separately
-- **Fits a Prusa MK4:** every part prints in one piece, hexagonal housing 206 mm across the flats, 236 mm across the corners, 116 mm high
+- **Fits a Prusa MK4:** every part prints in one piece, hexagonal housing 206 mm across the flats, 236 mm across the corners, 104 mm high
 - **Fully parametric:** all dimensions are in one Python script, so you can resize the holes to your pet's food
 - **Open:** CERN-OHL-P hardware, Apache 2.0 or MIT software
 
@@ -57,7 +57,7 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 
 | File | Size (mm) | Face on the bed |
 |---|---|---|
-| `Base.stl` | 236 × 206 × 112 | Bottom, flat walls front and back |
+| `Base.stl` | 236 × 206 × 100 | Bottom, flat walls front and back |
 | `Plate.stl` | 236 × 206 × 10 | Top (flip) |
 | `Disc.stl` | Ø200 × 10 | Bottom |
 | `Disc_12.stl` (optional) | Ø200 × 10 | Bottom |
@@ -68,7 +68,7 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `TerminalCover.stl` | 99.5 × 26 × 40 | Back |
 | `Carrier.stl` | 90 × 160.5 × 7 | Bottom |
 
-`Chute.stl` ends flush with the outer wall of the housing, so nothing sticks out. The portions leave the housing about 70 mm above the table, so the bowl can be up to about 70 mm high, but it has to stand right against the wall. `Chute_long.stl` is a longer version that sticks out 19 mm and puts the outlet lower, so a bowl of up to about 57 mm fits under it and it does not have to touch the wall. It fits the same opening and the same screws, and the light barrier holes are in the same place. Use one of the two, not both.
+`Chute.stl` ends flush with the outer wall of the housing, so nothing sticks out. The portions leave the housing about 58 mm above the table, so the bowl can be up to about 58 mm high, but it has to stand right against the wall. `Chute_long.stl` is a longer version that sticks out 19 mm and puts the outlet lower, so a bowl of up to about 45 mm fits under it and it does not have to touch the wall. It fits the same opening and the same screws, and the light barrier holes are in the same place. Use one of the two, not both.
 
 The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The lid has the same hexagon as the housing and sits flush on it. It is held by magnets, so there are no screws on top, and 6 small pins on the underside fit into holes in the plate so the lid cannot slide.
 
@@ -88,7 +88,7 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | IR LED, 5 mm, 940 nm, e.g. Vishay TSAL6200 | 1 | Light barrier emitter, in one of the two Ø5.2 mm holes in the chute |
 | IR phototransistor, 5 mm, with daylight filter (black), e.g. Osram SFH 300 FA or Everlight PT334-6C | 1 | Light barrier receiver, in the opposite hole |
 | 100 Ω resistor | 1 | Series resistor for the IR LED at 3V3, about 20 mA |
-| IEC C14 inlet, 3-in-1 module with 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in, for 230 V | 1 | 28 × 47 mm cutout (width × height). The rear wall is thinned to 2 mm around the cutout for the snap-in clips |
+| IEC C14 inlet, 3-in-1 module with 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in, for 230 V | 1 | 28 × 47 mm cutout (width × height). The rear wall is thinned to 1 mm around the cutout for the snap-in clips |
 | Fuse 5 × 20 mm, T1A (slow-blow), 250 V | 1 | Replace the 10 A fuse that often comes with the inlet. A spare fits in the drawer |
 | M3 threaded inserts, Ø4.0 mm hole | 12 | |
 | M3×8 screws, steel (not stainless, magnets must hold on the heads of the plate screws) | 24 | All screws in the build are this one size: 6 plate, 4 motor, 2 power supply, 4 carrier, 2 terminal cover, 2 chute, 4 prototyping board (2 are enough for the Adafruit board) |

@@ -110,18 +110,18 @@ Only the power supply has ventilation slots (floor and front right wall), so the
 
 - IEC C14 inlet as a 3-in-1 module: inlet, 2-pole rocker switch and 5 × 20 mm fuse drawer, snap-in. Cutout `IEC_CUT` = 28 × 47 mm (width × height), about 31 mm deep inside the housing (`DUMMY_IEC` is 30 mm).
 - Fuse T1A (slow-blow), 250 V. The power supply draws well under 1 A at 230 V, but has a high inrush current when switched on, so use a slow-blow fuse. These modules often come with 10 A, which is far too much.
-- Snap-in clips are often made for 1–2 mm panels. The 3 mm rear wall has a pocket on the inside, so it is only `IEC_WALL` = 2 mm thick for 7 mm around the cutout (`IEC_RIM`). The outside stays flat.
+- Snap-in clips are often made for 1–2 mm panels. The 3 mm rear wall has a pocket on the inside, so it is only `IEC_WALL` = 1 mm thick for 4 mm around the cutout (`IEC_RIM`). The outside stays flat.
 - Connect protective earth from the inlet to terminal FG on the power supply.
 
 ## Before printing
 
-- Check the chosen IEC inlet against the `IEC_CUT` cutout and the panel range of its clips (`IEC_WALL`, 2 mm), see Mains inlet.
+- Check the chosen IEC inlet against the `IEC_CUT` cutout and the panel range of its clips (`IEC_WALL`, 1 mm), see Mains inlet.
 - Check `IR_D` with the real IR LED and phototransistor, and the threaded insert `INSERT_D`.
 - Measure the food and set `HOLE_D`. Pieces under about 8 mm can fall through to the neighbouring hole.
 - Print a test piece: disc centre with shaft and set screw, plus the motor block.
 - Plan the wiring with the real parts, as there is little room next to the power supply and carrier.
 - Measure the hole spacing of the board before printing the carrier: Adafruit 73.7 mm, GeeekPi 55 × 85 mm. For the GeeekPi board also check the outline (assumed 62 × 92 mm) and that the rows and rails match the wiring layout.
-- Bowl: at most about 70 mm high with `Chute.stl`, but it has to stand right against the wall. With `Chute_long.stl` at most about 57 mm.
+- Bowl: at most about 58 mm high with `Chute.stl`, but it has to stand right against the wall. With `Chute_long.stl` at most about 45 mm.
 
 ## After assembly
 
