@@ -24,17 +24,6 @@ A perforated disc turns on a NEMA 17 stepper motor and releases one portion at a
 - **Fully parametric:** all dimensions are in one Python script, so you can resize the holes to your pet's food
 - **Open:** CERN-OHL-P hardware, Apache 2.0 or MIT software
 
-## Status: version 0.8, help wanted
-
-The rondOfeed is an early design. It has been modelled and checked for collisions, but **it has not been printed or built yet**, and the firmware does not exist yet. That makes this a good time to join in:
-
-- **Build it:** print the parts and report what fits and what does not
-- **Finish the firmware:** it takes commands over USB serial and BLE, but the motor and the light barrier have not run yet. [PLAN.md](PLAN.md) has the list of what is left
-- **Design new discs:** for small food such as bird seed, which needs a different hole layout
-- **Test food types:** tell us what dispenses reliably for your pet
-
-Open an issue with your ideas, questions or build photos. Pull requests are welcome.
-
 The electronics include 230 V mains wiring. Read the [Safety](#safety) section before building.
 
 ## Design files
