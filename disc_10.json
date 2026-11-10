@@ -10,21 +10,200 @@
      0,
      104.5
     ],
-    "name": "disc_294",
+    "name": "disc_296",
     "body_name": "Disc_10"
    }
   },
   {
-   "command": "solid.cylinder",
+   "command": "sketch.create",
    "params": {
-    "diameter": 5.2,
-    "height": 12,
-    "base": [
-     0,
-     0,
-     103.5
+    "plane": "XY",
+    "offset": 103.5,
+    "name": "bore_sk_297"
+   }
+  },
+  {
+   "command": "sketch.line",
+   "params": {
+    "points": [
+     [
+      2.0,
+      1.6613
+     ],
+     [
+      1.7822,
+      1.8931
+     ],
+     [
+      1.5376,
+      2.0966
+     ],
+     [
+      1.2701,
+      2.2687
+     ],
+     [
+      0.9836,
+      2.4068
+     ],
+     [
+      0.6823,
+      2.5089
+     ],
+     [
+      0.3708,
+      2.5734
+     ],
+     [
+      0.0538,
+      2.5994
+     ],
+     [
+      -0.2641,
+      2.5866
+     ],
+     [
+      -0.5779,
+      2.535
+     ],
+     [
+      -0.8832,
+      2.4454
+     ],
+     [
+      -1.1752,
+      2.3193
+     ],
+     [
+      -1.4496,
+      2.1584
+     ],
+     [
+      -1.7023,
+      1.9652
+     ],
+     [
+      -1.9296,
+      1.7426
+     ],
+     [
+      -2.1279,
+      1.4939
+     ],
+     [
+      -2.2944,
+      1.2229
+     ],
+     [
+      -2.4266,
+      0.9336
+     ],
+     [
+      -2.5225,
+      0.6303
+     ],
+     [
+      -2.5805,
+      0.3175
+     ],
+     [
+      -2.6,
+      0.0
+     ],
+     [
+      -2.5805,
+      -0.3175
+     ],
+     [
+      -2.5225,
+      -0.6303
+     ],
+     [
+      -2.4266,
+      -0.9336
+     ],
+     [
+      -2.2944,
+      -1.2229
+     ],
+     [
+      -2.1279,
+      -1.4939
+     ],
+     [
+      -1.9296,
+      -1.7426
+     ],
+     [
+      -1.7023,
+      -1.9652
+     ],
+     [
+      -1.4496,
+      -2.1584
+     ],
+     [
+      -1.1752,
+      -2.3193
+     ],
+     [
+      -0.8832,
+      -2.4454
+     ],
+     [
+      -0.5779,
+      -2.535
+     ],
+     [
+      -0.2641,
+      -2.5866
+     ],
+     [
+      0.0538,
+      -2.5994
+     ],
+     [
+      0.3708,
+      -2.5734
+     ],
+     [
+      0.6823,
+      -2.5089
+     ],
+     [
+      0.9836,
+      -2.4068
+     ],
+     [
+      1.2701,
+      -2.2687
+     ],
+     [
+      1.5376,
+      -2.0966
+     ],
+     [
+      1.7822,
+      -1.8931
+     ],
+     [
+      2.0,
+      -1.6613
+     ]
     ],
-    "name": "bore_295",
+    "closed": true
+   }
+  },
+  {
+   "command": "sketch.finish",
+   "params": {}
+  },
+  {
+   "command": "solid.extrude",
+   "params": {
+    "sketch": "bore_sk_297",
+    "distance": 12.0,
+    "name": "bore_298",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -41,7 +220,7 @@
      0,
      109.5
     ],
-    "name": "setscrew_296",
+    "name": "setscrew_299",
     "axis": "X",
     "operation": "cut",
     "targets": [
@@ -60,7 +239,7 @@
      -2.95,
      106.0
     ],
-    "name": "nutpocket_297",
+    "name": "nutpocket_300",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -78,7 +257,7 @@
      -4,
      106.0
     ],
-    "name": "access_298",
+    "name": "access_301",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -95,7 +274,7 @@
      -86.6497635775858,
      103.5
     ],
-    "name": "foodhole_299",
+    "name": "foodhole_302",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -112,7 +291,7 @@
      -68.87507120190408,
      103.5
     ],
-    "name": "foodhole_300",
+    "name": "foodhole_303",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -129,7 +308,7 @@
      -83.86476888053923,
      103.5
     ],
-    "name": "foodhole_301",
+    "name": "foodhole_304",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -146,7 +325,7 @@
      -65.5364409447816,
      103.5
     ],
-    "name": "foodhole_302",
+    "name": "foodhole_305",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -163,7 +342,7 @@
      -78.38429150751045,
      103.5
     ],
-    "name": "foodhole_303",
+    "name": "foodhole_306",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -180,7 +359,7 @@
      -60.09141555213063,
      103.5
     ],
-    "name": "foodhole_304",
+    "name": "foodhole_307",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -197,7 +376,7 @@
      -70.38447851062043,
      103.5
     ],
-    "name": "foodhole_305",
+    "name": "foodhole_308",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -214,7 +393,7 @@
      -52.71500262025276,
      103.5
     ],
-    "name": "foodhole_306",
+    "name": "foodhole_309",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -231,7 +410,7 @@
      -60.12245046185721,
      103.5
     ],
-    "name": "foodhole_307",
+    "name": "foodhole_310",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -248,7 +427,7 @@
      -43.64428613011135,
      103.5
     ],
-    "name": "foodhole_308",
+    "name": "foodhole_311",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -265,7 +444,7 @@
      -47.92803738633291,
      103.5
     ],
-    "name": "foodhole_309",
+    "name": "foodhole_312",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -282,7 +461,7 @@
      -33.1708063731099,
      103.5
     ],
-    "name": "foodhole_310",
+    "name": "foodhole_313",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -299,7 +478,7 @@
      -34.19317775389135,
      103.5
     ],
-    "name": "foodhole_311",
+    "name": "foodhole_314",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -316,7 +495,7 @@
      -21.631189606246316,
      103.5
     ],
-    "name": "foodhole_312",
+    "name": "foodhole_315",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -333,7 +512,7 @@
      -19.359321254199337,
      103.5
     ],
-    "name": "foodhole_313",
+    "name": "foodhole_316",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -350,7 +529,7 @@
      -9.396328607235874,
      103.5
     ],
-    "name": "foodhole_314",
+    "name": "foodhole_317",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -367,7 +546,7 @@
      -3.9032402404947955,
      103.5
     ],
-    "name": "foodhole_315",
+    "name": "foodhole_318",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -384,7 +563,7 @@
      3.14053812453606,
      103.5
     ],
-    "name": "foodhole_316",
+    "name": "foodhole_319",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -401,7 +580,7 @@
      11.678294126136038,
      103.5
     ],
-    "name": "foodhole_317",
+    "name": "foodhole_320",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -418,7 +597,7 @@
      15.576465376942012,
      103.5
     ],
-    "name": "foodhole_318",
+    "name": "foodhole_321",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -435,7 +614,7 @@
      26.884478510620447,
      103.5
     ],
-    "name": "foodhole_319",
+    "name": "foodhole_322",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -452,7 +631,7 @@
      27.511752215774663,
      103.5
     ],
-    "name": "foodhole_320",
+    "name": "foodhole_323",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -469,7 +648,7 @@
      41.22657363515089,
      103.5
     ],
-    "name": "foodhole_321",
+    "name": "foodhole_324",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -486,7 +665,7 @@
      38.56278870164719,
      103.5
     ],
-    "name": "foodhole_322",
+    "name": "foodhole_325",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -503,7 +682,7 @@
      54.243612761709834,
      103.5
     ],
-    "name": "foodhole_323",
+    "name": "foodhole_326",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -520,7 +699,7 @@
      48.37438542908053,
      103.5
     ],
-    "name": "foodhole_324",
+    "name": "foodhole_327",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -537,7 +716,7 @@
      65.51721754231416,
      103.5
     ],
-    "name": "foodhole_325",
+    "name": "foodhole_328",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -554,7 +733,7 @@
      56.63118960624632,
      103.5
     ],
-    "name": "foodhole_326",
+    "name": "foodhole_329",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -571,7 +750,7 @@
      74.68504504336236,
      103.5
     ],
-    "name": "foodhole_327",
+    "name": "foodhole_330",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -588,7 +767,7 @@
      63.06782075316935,
      103.5
     ],
-    "name": "foodhole_328",
+    "name": "foodhole_331",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -605,7 +784,7 @@
      81.45243374565715,
      103.5
     ],
-    "name": "foodhole_329",
+    "name": "foodhole_332",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -622,7 +801,7 @@
      67.47740024870973,
      103.5
     ],
-    "name": "foodhole_330",
+    "name": "foodhole_333",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -639,7 +818,7 @@
      85.60187420808079,
      103.5
     ],
-    "name": "foodhole_331",
+    "name": "foodhole_334",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -656,7 +835,7 @@
      69.71820057966673,
      103.5
     ],
-    "name": "foodhole_332",
+    "name": "foodhole_335",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -673,7 +852,7 @@
      87.0,
      103.5
     ],
-    "name": "foodhole_333",
+    "name": "foodhole_336",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -690,7 +869,7 @@
      69.71820057966673,
      103.5
     ],
-    "name": "foodhole_334",
+    "name": "foodhole_337",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -707,7 +886,7 @@
      85.60187420808077,
      103.5
     ],
-    "name": "foodhole_335",
+    "name": "foodhole_338",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -724,7 +903,7 @@
      67.47740024870973,
      103.5
     ],
-    "name": "foodhole_336",
+    "name": "foodhole_339",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -741,7 +920,7 @@
      81.45243374565713,
      103.5
     ],
-    "name": "foodhole_337",
+    "name": "foodhole_340",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -758,7 +937,7 @@
      63.06782075316934,
      103.5
     ],
-    "name": "foodhole_338",
+    "name": "foodhole_341",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -775,7 +954,7 @@
      74.68504504336236,
      103.5
     ],
-    "name": "foodhole_339",
+    "name": "foodhole_342",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -792,7 +971,7 @@
      56.63118960624631,
      103.5
     ],
-    "name": "foodhole_340",
+    "name": "foodhole_343",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -809,7 +988,7 @@
      65.51721754231413,
      103.5
     ],
-    "name": "foodhole_341",
+    "name": "foodhole_344",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -826,7 +1005,7 @@
      48.37438542908051,
      103.5
     ],
-    "name": "foodhole_342",
+    "name": "foodhole_345",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -843,7 +1022,7 @@
      54.24361276170979,
      103.5
     ],
-    "name": "foodhole_343",
+    "name": "foodhole_346",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -860,7 +1039,7 @@
      38.56278870164715,
      103.5
     ],
-    "name": "foodhole_344",
+    "name": "foodhole_347",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -877,7 +1056,7 @@
      41.22657363515089,
      103.5
     ],
-    "name": "foodhole_345",
+    "name": "foodhole_348",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -894,7 +1073,7 @@
      27.51175221577463,
      103.5
     ],
-    "name": "foodhole_346",
+    "name": "foodhole_349",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -911,7 +1090,7 @@
      26.8844785106204,
      103.5
     ],
-    "name": "foodhole_347",
+    "name": "foodhole_350",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -928,7 +1107,7 @@
      15.576465376941986,
      103.5
     ],
-    "name": "foodhole_348",
+    "name": "foodhole_351",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -945,7 +1124,7 @@
      11.678294126136038,
      103.5
     ],
-    "name": "foodhole_349",
+    "name": "foodhole_352",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -962,7 +1141,7 @@
      3.140538124536022,
      103.5
     ],
-    "name": "foodhole_350",
+    "name": "foodhole_353",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -979,7 +1158,7 @@
      -3.9032402404948647,
      103.5
     ],
-    "name": "foodhole_351",
+    "name": "foodhole_354",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -996,7 +1175,7 @@
      -9.396328607235874,
      103.5
     ],
-    "name": "foodhole_352",
+    "name": "foodhole_355",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1013,7 +1192,7 @@
      -19.35932125419938,
      103.5
     ],
-    "name": "foodhole_353",
+    "name": "foodhole_356",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1030,7 +1209,7 @@
      -21.63118960624631,
      103.5
     ],
-    "name": "foodhole_354",
+    "name": "foodhole_357",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1047,7 +1226,7 @@
      -34.193177753891376,
      103.5
     ],
-    "name": "foodhole_355",
+    "name": "foodhole_358",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1064,7 +1243,7 @@
      -33.170806373109954,
      103.5
     ],
-    "name": "foodhole_356",
+    "name": "foodhole_359",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1081,7 +1260,7 @@
      -47.92803738633294,
      103.5
     ],
-    "name": "foodhole_357",
+    "name": "foodhole_360",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1098,7 +1277,7 @@
      -43.64428613011139,
      103.5
     ],
-    "name": "foodhole_358",
+    "name": "foodhole_361",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1115,7 +1294,7 @@
      -60.12245046185724,
      103.5
     ],
-    "name": "foodhole_359",
+    "name": "foodhole_362",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1132,7 +1311,7 @@
      -52.715002620252776,
      103.5
     ],
-    "name": "foodhole_360",
+    "name": "foodhole_363",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1149,7 +1328,7 @@
      -70.38447851062043,
      103.5
     ],
-    "name": "foodhole_361",
+    "name": "foodhole_364",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1166,7 +1345,7 @@
      -60.091415552130655,
      103.5
     ],
-    "name": "foodhole_362",
+    "name": "foodhole_365",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1183,7 +1362,7 @@
      -78.3842915075105,
      103.5
     ],
-    "name": "foodhole_363",
+    "name": "foodhole_366",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1200,7 +1379,7 @@
      -65.5364409447816,
      103.5
     ],
-    "name": "foodhole_364",
+    "name": "foodhole_367",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1217,7 +1396,7 @@
      -83.86476888053924,
      103.5
     ],
-    "name": "foodhole_365",
+    "name": "foodhole_368",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1234,7 +1413,7 @@
      -68.87507120190408,
      103.5
     ],
-    "name": "foodhole_366",
+    "name": "foodhole_369",
     "operation": "cut",
     "targets": [
      "Disc_10"
@@ -1251,7 +1430,7 @@
      -86.6497635775858,
      103.5
     ],
-    "name": "foodhole_367",
+    "name": "foodhole_370",
     "operation": "cut",
     "targets": [
      "Disc_10"

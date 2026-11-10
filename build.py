@@ -39,6 +39,7 @@ R_OUTER = 87
 N_RING = 24        # Loecher je Ring, ergibt 48 Positionen
 EXTRA_DISCS = ((12, 30), (10, 35))  # (Lochdurchmesser, Loecher je Ring)
 SHAFT_D = 5.2      # NEMA-Welle 5 mm plus Druckzugabe
+SHAFT_FLAT = 4.6   # D-Welle: Flaeche 4,5 mm vom Gegenrand plus Druckzugabe, Flaeche zeigt nach +X zur Madenschraube
 DZ = TOP + DISC_GAP
 
 # Motor, Lochbild und Pilot aus nema17_disc.sc
@@ -215,6 +216,7 @@ for n, v, c in [
     ("disc_t", DISC_T, "Scheibendicke"),
     ("hole_d", HOLE_D, "Futterloch"),
     ("shaft_d", SHAFT_D, "Wellenbohrung"),
+    ("shaft_flat", SHAFT_FLAT, "Wellenbohrung bis zur D-Flaeche"),
     ("pilot_d", PILOT_D, "NEMA-Pilot"),
     ("pilot_depth", PILOT_DEPTH, "NEMA-Pilot Tiefe"),
     ("nema_spacing", NEMA_SPACING, "NEMA-Lochbild"),
@@ -315,11 +317,22 @@ for x, y in POST_HOLES:
     gx, gy = guide_pos(x, y)
     cyl(GUIDE_D + GUIDE_FIT, (gx, gy, TOP - GUIDE_L - 0.5), GUIDE_L + 1.5, "cut", "Plate", label="guidehole")
 # ---------- Scheibe ----------
-def food_disc(body, hole, n_ring, disc_d="disc_d", disc_t="disc_t", shaft="shaft_d"):
+def d_bore(body):
+    """D-Bohrung fuer die abgeflachte NEMA-Welle, die Flaeche liegt bei x = SHAFT_FLAT - r."""
+    r = SHAFT_D / 2
+    xf = SHAFT_FLAT - r
+    t = math.acos(xf / r)
+    n = 40
+    pts = [(r * math.cos(t + (2 * math.pi - 2 * t) * i / n), CY + r * math.sin(t + (2 * math.pi - 2 * t) * i / n))
+           for i in range(n + 1)]
+    prism(pts, DZ - 1, DZ + DISC_T + 1, "cut", body, label="bore")
+
+
+def food_disc(body, hole, n_ring, disc_d="disc_d", disc_t="disc_t"):
     """Lochscheibe mit n_ring Loechern je Ring. Position k liegt bei -90 + k * Schritt Grad, k=0 bleibt geschlossen."""
     step = 360 / (2 * n_ring)
     cyl(disc_d, (0, CY, DZ), disc_t, body=body, label="disc")
-    cyl(shaft, (0, CY, DZ - 1), DISC_T + 2, "cut", body, label="bore")
+    d_bore(body)
     # Madenschraube entlang +X, Muttertasche von oben offen
     zm = DZ + DISC_T / 2
     cyl(M3_CLEAR, (1, CY, zm), 23, "cut", body, axis="X", label="setscrew")
@@ -419,7 +432,7 @@ print(len(cmds), "Befehle geschrieben")
 # Wechselscheiben mit kleineren Loechern, passen auf dieselben Auslaesse
 for hole, n_ring in EXTRA_DISCS:
     cmds.clear()
-    food_disc(f"Disc_{hole}", hole, n_ring, DISC_D, DISC_T, SHAFT_D)
+    food_disc(f"Disc_{hole}", hole, n_ring, DISC_D, DISC_T)
     (HERE / f"disc_{hole}.json").write_text(json.dumps({"commands": cmds}, indent=1))
 
 # Lange Rutsche: steht aus dem Gehaeuse heraus, der Auslauf liegt tiefer

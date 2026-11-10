@@ -125,7 +125,7 @@ These values do not come from the purchased parts. If yours differ, change them 
 - `INSERT_D`: manufacturer's hole size for the threaded insert
 - `HOLE_D`: match this to the food, see [Discs](#discs)
 
-Print a test piece before the full print: the disc centre (shaft and set screw) and the motor block.
+Print a test piece before the full print: the disc centre (shaft and set screw) and the motor block. The disc has a D-shaped bore for the flat on the motor shaft. If it is too tight or too loose, change `SHAFT_D` (diameter) or `SHAFT_FLAT` (distance from the flat to the opposite side) in `build.py`.
 
 ## Assembly
 
