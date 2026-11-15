@@ -31,7 +31,7 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 - The 10 kΩ pull-up keeps the motor unpowered while the Pico boots.
 - Set the motor current on the potentiometer before any longer test (the A4988 formula depends on its sense resistor, check the board). Exact motor model is not chosen yet, placeholder 1.0 A.
 - Short, secure wires, no jumper wires.
-- Prototyping board, half size, lengthwise (along Y) on the carrier, left of the motor and in front of the Pico. Layout in [wiring_layout.svg](wiring_layout.svg), drawn for the Adafruit Perma-Proto board and the TMC2209. No layout for the A4988 yet: the Adafruit page gives no pin positions or outline, measure the board first.
+- Prototyping board, half size, lengthwise (along Y) on the carrier, left of the motor and in front of the Pico. Layouts in [wiring_layout_tmc2209.svg](wiring_layout_tmc2209.svg) and [wiring_layout_a4988.svg](wiring_layout_a4988.svg), drawn for the Adafruit Perma-Proto board. Both driver boards have the same outline, holes and terminal position (checked against the Adafruit CAD files), so only the jumpers differ.
   - Adafruit Perma-Proto Half-Size (81 × 51 mm, ADA1609): 2 mounting holes 73.7 mm apart on the long axis, in the middle of the short sides.
   - GeeekPi Half-Size: 4 corner holes Ø3 mm, 55 × 85 mm apart (centre to centre). Drill them to 3.2 mm for the M3×8 screws. Its outline is not known yet, the model assumes 62 × 92 mm (`DUMMY_Perfboard`).
   - The carrier has posts for both boards (`PERF_HOLE_DY`, `GEEK_HOLES`). The two Adafruit posts end up under the GeeekPi board. If they touch a solder joint there, file them down.

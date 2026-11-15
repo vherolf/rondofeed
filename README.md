@@ -114,11 +114,17 @@ These are proposals and have not been built or tested yet. Pins are grouped for 
 | Current | up to 2 A | up to 2 A, add a heatsink above about 1 A |
 | Noise | quiet | audible |
 
-### Layout in the machine (TMC2209)
+### Layout in the machine
 
-![rondOfeed wiring layout: position of the parts in the housing and on the Perma-Proto board](wiring_layout.svg)
+**TMC2209** ([wiring_layout_tmc2209.svg](wiring_layout_tmc2209.svg)):
 
-This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board lies lengthwise on the left of the motor, and the Pico sits behind it at the rear wall, see the picture above. The drawing is for the TMC2209. For the A4988 follow the schematic above, a layout drawing is not made yet. The board drawing shows the Adafruit Perma-Proto Half-Size. The GeeekPi Half-Size fits the same carrier, check that its rows and rails match before soldering. The schematic only shows the board and the wiring, not the exact position in the housing.
+![rondOfeed wiring layout, TMC2209: position of the parts in the housing and on the Perma-Proto board](wiring_layout_tmc2209.svg)
+
+**A4988** ([wiring_layout_a4988.svg](wiring_layout_a4988.svg)):
+
+![rondOfeed wiring layout, A4988: position of the parts in the housing and on the Perma-Proto board](wiring_layout_a4988.svg)
+
+This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board lies lengthwise on the left of the motor, and the Pico sits behind it at the rear wall, see the picture above. Both Adafruit boards have the same outline (26.67 × 24.13 mm), the same mounting holes and the same terminal block position, so they sit in the same place and the housing, carrier and Pico do not change. Only the labels of the header pins and a few jumpers differ: the A4988 has `MS3` (to 3V3) and a link between `RST` and `SLP` where the TMC2209 has `DIAG`, `INDEX` and `UART`, and it has no GP5 wire. The board drawing shows the Adafruit Perma-Proto Half-Size. The GeeekPi Half-Size fits the same carrier, check that its rows and rails match before soldering. The schematic only shows the board and the wiring, not the exact position in the housing.
 
 ## Discs
 

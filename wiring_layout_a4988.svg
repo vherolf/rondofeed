@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1700 1426" width="1700" height="1426" font-family="Helvetica, Arial, sans-serif">
-<title>rondOfeed wiring layout</title>
+<title>rondOfeed wiring layout, A4988</title>
 <rect width="1700" height="1426" fill="#ffffff"/>
-<text x="30.0" y="38.0" font-size="26" text-anchor="start" font-weight="700" fill="#1f2933">rondOfeed wiring layout</text>
+<text x="30.0" y="38.0" font-size="26" text-anchor="start" font-weight="700" fill="#1f2933">rondOfeed wiring layout, A4988</text>
 <text x="30.0" y="60.0" font-size="13" text-anchor="start" font-weight="400" fill="#52606d">Top view, rear wall at the top. Both drawings have the same orientation. Board on a 2.54 mm grid, mounting holes as given by Adafruit and GeeekPi.</text>
 <text x="40.0" y="100.0" font-size="18" text-anchor="start" font-weight="700" fill="#1f2933">1. Inside the machine</text>
 <text x="40.0" y="119.0" font-size="13" text-anchor="start" font-weight="400" fill="#52606d">To scale. Plate, disc and lid removed. Dashed: the GeeekPi Half-Size board (outline assumed) and its 4 corner holes.</text>
@@ -53,7 +53,7 @@
 <circle cx="149.4" cy="371.4" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5" stroke-dasharray="2 2"/>
 <circle cx="149.4" cy="609.4" r="3.5" fill="#fff" stroke="#3e4c59" stroke-width="1.5" stroke-dasharray="2 2"/>
 <polygon points="208.6,492.2 276.1,492.2 276.1,417.5 208.6,417.5" fill="#d5e3f5" stroke="#3e4c59" stroke-width="2" stroke-linejoin="round" fill-opacity="0.9"/>
-<text x="242.1" y="447.4" font-size="12" text-anchor="middle" font-weight="700" fill="#1f2933">TMC2209</text>
+<text x="242.1" y="447.4" font-size="12" text-anchor="middle" font-weight="700" fill="#1f2933">A4988</text>
 <polygon points="190.8,410.7 212.1,410.7 212.1,378.2 190.8,378.2" fill="#fde6c8" stroke="#3e4c59" stroke-width="1.5" stroke-linejoin="round"/>
 <polyline points="433.6,382.6 433.6,277.6 409.8,277.6" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="442.0,382.6 442.0,269.2 409.8,269.2" fill="none" stroke="#1f6fd1" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
@@ -70,7 +70,6 @@
 <polyline points="165.9,387.3 165.9,356.0 314.6,356.0 314.6,224.3 301.7,224.3" fill="none" stroke="#1b1f23" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="187.3,437.1 150.2,437.1 150.2,354.6 240.4,354.6 240.4,238.5 251.9,238.5" fill="none" stroke="#2e7d32" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="187.3,444.2 146.6,444.2 146.6,351.0 236.8,351.0 236.8,231.4 251.9,231.4" fill="none" stroke="#c2185b" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
-<polyline points="187.3,465.5 143.0,465.5 143.0,347.3 233.1,347.3 233.1,252.7 251.9,252.7" fill="none" stroke="#6d4c41" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="187.3,486.8 139.3,486.8 139.3,343.7 229.5,343.7 229.5,245.6 251.9,245.6" fill="none" stroke="#0b8f8f" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="187.3,543.7 135.7,543.7 135.7,340.0 225.8,340.0 225.8,266.9 251.9,266.9" fill="none" stroke="#5c6ac4" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
 <polyline points="279.7,586.4 283.2,586.4 283.2,624.8 323.0,624.8 323.0,717.8 338.4,717.8" fill="none" stroke="#1b1f23" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
@@ -624,7 +623,7 @@
 <text x="1244.0" y="282.1" font-size="11" text-anchor="middle" font-weight="700" fill="#1f2933">M3</text>
 <rect x="1180.3" y="386.1" width="241.3" height="266.7" fill="#d5e3f5" stroke="#3e4c59" stroke-width="2.5" fill-opacity="0.72"/>
 <rect x="1352.7" y="438.1" width="63.0" height="162.7" fill="#7fb08a" stroke="#3e4c59" stroke-width="2" fill-opacity="0.85"/>
-<text x="1271.2" y="507.5" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933" transform="rotate(90 1271.2 507.5)">Adafruit TMC2209</text>
+<text x="1271.2" y="507.5" font-size="15" text-anchor="middle" font-weight="700" fill="#1f2933" transform="rotate(90 1271.2 507.5)">Adafruit A4988</text>
 <circle cx="1250.4" cy="411.5" r="6" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
 <circle cx="1250.4" cy="627.3" r="6" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
 <circle cx="1396.4" cy="411.5" r="6" fill="#fff" stroke="#3e4c59" stroke-width="1.5"/>
@@ -649,13 +648,13 @@
 <text x="1215.9" y="536.1" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">MS2</text>
 <rect x="1199.9" y="551.5" width="12.0" height="12.0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
 <circle cx="1205.9" cy="557.5" r="2.6" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
-<text x="1215.9" y="561.5" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">DIAG</text>
+<text x="1215.9" y="561.5" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">MS3</text>
 <rect x="1199.9" y="576.9" width="12.0" height="12.0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
 <circle cx="1205.9" cy="582.9" r="2.6" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
-<text x="1215.9" y="586.9" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">INDEX</text>
+<text x="1215.9" y="586.9" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">RST</text>
 <rect x="1199.9" y="602.3" width="12.0" height="12.0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
 <circle cx="1205.9" cy="608.3" r="2.6" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
-<text x="1215.9" y="612.3" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">UART</text>
+<text x="1215.9" y="612.3" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">SLP</text>
 <rect x="1199.9" y="627.7" width="12.0" height="12.0" fill="#1f2933" stroke="#3e4c59" stroke-width="1"/>
 <circle cx="1205.9" cy="633.7" r="2.6" fill="#ffd54f" stroke="#1f2933" stroke-width="1"/>
 <text x="1215.9" y="637.7" font-size="11" text-anchor="start" font-weight="700" fill="#1f2933">EN</text>
@@ -763,9 +762,11 @@
 <polyline points="1104.3,481.3 926.0,481.3" fill="none" stroke="#c2185b" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="1104.3" cy="481.3" r="4" fill="#c2185b" stroke="#ffffff" stroke-width="1"/>
 <text x="920.0" y="485.3" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 4 (GP2)</text>
-<polyline points="1104.3,557.5 926.0,557.5" fill="none" stroke="#6d4c41" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
-<circle cx="1104.3" cy="557.5" r="4" fill="#6d4c41" stroke="#ffffff" stroke-width="1"/>
-<text x="920.0" y="561.5" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 7 (GP5)</text>
+<polyline points="1104.3,557.5 1053.5,557.5" fill="none" stroke="#7b2cbf" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1104.3" cy="557.5" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/><circle cx="1053.5" cy="557.5" r="4" fill="#7b2cbf" stroke="#ffffff" stroke-width="1"/>
+<polyline points="1155.1,582.9 1155.1,608.3" fill="none" stroke="#546e7a" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
+<circle cx="1155.1" cy="582.9" r="4" fill="#546e7a" stroke="#ffffff" stroke-width="1"/><circle cx="1155.1" cy="608.3" r="4" fill="#546e7a" stroke="#ffffff" stroke-width="1"/>
+<text x="1147.0" y="597.0" font-size="11" text-anchor="end" font-weight="600" fill="#52606d">link</text>
 <polyline points="1104.3,633.7 926.0,633.7" fill="none" stroke="#0b8f8f" stroke-width="3.5" stroke-linejoin="round" stroke-linecap="round"/>
 <circle cx="1104.3" cy="633.7" r="4" fill="#0b8f8f" stroke="#ffffff" stroke-width="1"/>
 <text x="920.0" y="637.7" font-size="13" text-anchor="end" font-weight="600" fill="#1f2933">Pico pin 6 (GP4)</text>
@@ -799,8 +800,8 @@
 <text x="516.0" y="933.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">STEP</text>
 <polyline points="40.0,952.0 76.0,952.0" fill="none" stroke="#2e7d32" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="86.0" y="957.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">DIR</text>
-<polyline points="255.0,952.0 291.0,952.0" fill="none" stroke="#6d4c41" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="301.0" y="957.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">DIAG</text>
+<polyline points="255.0,952.0 291.0,952.0" fill="none" stroke="#546e7a" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="301.0" y="957.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">RST to SLP link</text>
 <polyline points="470.0,952.0 506.0,952.0" fill="none" stroke="#5c6ac4" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="516.0" y="957.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">Break-beam signal (GP6)</text>
 <polyline points="40.0,976.0 76.0,976.0" fill="none" stroke="#9e9d24" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
@@ -814,10 +815,10 @@
 <text x="40.0" y="1172.0" font-size="15" text-anchor="start" font-weight="700" fill="#1f2933">Build notes</text>
 <text x="40.0" y="1196.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Proposal, not built or tested. Check it against your parts before soldering.</text>
 <text x="40.0" y="1217.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Board: Adafruit Perma-Proto Half-Size as drawn, or GeeekPi Half-Size. The carrier has posts for both. GeeekPi: drill its 4 corner holes to 3.2 mm for the M3 screws, and check that its rows and rails match this drawing.</text>
-<text x="40.0" y="1238.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Breakout: one 10-pin header in F16–F25. The terminal pins line up with holes A18–A23. Solder them if they reach, for support. Leave A18–E23 empty.</text>
+<text x="40.0" y="1238.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Adafruit A4988: one 10-pin header in F16–F25. The terminal pins line up with holes A18–A23. Solder them if they reach, for support. Leave A18–E23 empty.</text>
 <text x="40.0" y="1259.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Put a spacer under the terminal edge if those pins do not reach. The terminal screws press on an otherwise one-sided mount.</text>
 <text x="40.0" y="1280.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Fit the jumpers, R1 to R3 and D1 first. Column G is half under the breakout. The ground link crosses row 14 on top of the board, so use insulated wire.</text>
-<text x="40.0" y="1301.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  INDEX and UART stay unconnected. Bend the C1 leads to fit the rail spacing.</text>
+<text x="40.0" y="1301.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  MS3 goes to 3V3 like MS1 and MS2. RST and SLP are linked by the short wire in column H. Bend the C1 leads to fit the rail spacing.</text>
 <text x="40.0" y="1322.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Converter shown as a 3-pin in-line module, 11.5 × 7.5 mm (example: R-78E5.0-0.5). Check its pin order. It sits flipped: IN in row 30.</text>
 <text x="40.0" y="1343.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  Light barrier: R2 feeds the IR LED from 3V3 (about 20 mA), R3 pulls GP6 up. The long leg of the LED is the anode. Check the collector leg in the phototransistor's datasheet.</text>
 <text x="40.0" y="1364.0" font-size="13" text-anchor="start" font-weight="400" fill="#1f2933">•  The 12 V feed runs round the rear corner of the board, clear of the M3 screw in row 30.</text>
