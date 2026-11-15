@@ -6,8 +6,8 @@ PROTO_VERSION = 1
 # Pins des Pico, siehe PLAN.md
 PIN_STEP = 2
 PIN_DIR = 3
-PIN_EN = 4        # TMC2209 EN, low = Treiber an, 10 kOhm nach 3V3 haelt ihn beim Booten aus
-PIN_DIAG = 5
+PIN_EN = 4        # EN von TMC2209 oder A4988, low = Treiber an, 10 kOhm nach 3V3 haelt ihn beim Booten aus
+PIN_DIAG = 5     # nur TMC2209, die Firmware liest ihn nicht, beim A4988 offen lassen
 PIN_BEAM = 6      # Lichtschranke im Auslauf
 
 # Motor: 0,9 Grad NEMA 17 mit 1/16 Mikroschritt

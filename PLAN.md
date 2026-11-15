@@ -6,8 +6,10 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 
 
 - **Controller:** Raspberry Pi Pico W or Pico 2 W. Same form factor as the Pico, so the carrier and USB cutout stay as they are.
-- **Driver:** Adafruit TMC2209 Breakout (ADA6121). Motor 5–29 V, logic 3–5 V, up to 2 A, screw terminals, 22 µF electrolytic capacitor on the board.
-- **Power:** 12 V from the power supply to the breakout, 12 V to 5 V converter through a Schottky diode to `VSYS` on the Pico. See [wiring.svg](wiring.svg).
+- **Driver:** Adafruit TMC2209 Breakout (ADA6121) or Adafruit A4988 Breakout, both supported by the same firmware and pins.
+  - TMC2209: motor 5–29 V, logic 3–5 V, up to 2 A, screw terminals, 22 µF electrolytic capacitor on the board.
+  - A4988: motor 8–35 V, logic 3–5 V, up to 2 A with a heatsink, 22 µF 50 V capacitor on the board. Louder than the TMC2209.
+- **Power:** 12 V from the power supply to the breakout, 12 V to 5 V converter through a Schottky diode to `VSYS` on the Pico. See [wiring_tmc2209.svg](wiring_tmc2209.svg) and [wiring_a4988.svg](wiring_a4988.svg).
 
 ### Wiring (proposal)
 
@@ -16,10 +18,10 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 | GP2 | `STEP` |
 | GP3 | `DIR` |
 | GP4 | `EN`, plus 10 kΩ to 3V3 |
-| GP5 | `DIAG` |
+| GP5 | `DIAG` (TMC2209 only, not used by the firmware, leave open on the A4988) |
 | GP6 | Light barrier: collector of the phototransistor, plus 10 kΩ to 3V3 |
 | VSYS | 5 V from the converter through Schottky diode 1N5819 |
-| 3V3 | `VDD`, `MS1`, `MS2` (high = 1/16 microstep, the default would be 1/8) |
+| 3V3 | `VDD`, `MS1`, `MS2` (high = 1/16 microstep, the default would be 1/8). A4988: `VDD`, `MS1`, `MS2`, `MS3`, and link `RST` to `SLP` |
 | GND | Common ground with power supply, converter and breakout |
 
 ### Rules for a reliable build
@@ -27,9 +29,9 @@ Notes for the next steps. Dimensions, printing and assembly are in the [README](
 - Add an electrolytic capacitor of 100–470 µF, at least 25 V, directly on the breakout's 12 V terminals.
 - Never connect or disconnect the motor while powered.
 - The 10 kΩ pull-up keeps the motor unpowered while the Pico boots.
-- Set the motor current on the potentiometer before any longer test. Exact motor model is not chosen yet, placeholder 1.0 A.
+- Set the motor current on the potentiometer before any longer test (the A4988 formula depends on its sense resistor, check the board). Exact motor model is not chosen yet, placeholder 1.0 A.
 - Short, secure wires, no jumper wires.
-- Prototyping board, half size, lengthwise (along Y) on the carrier, left of the motor and in front of the Pico. Layout in [wiring_layout.svg](wiring_layout.svg), drawn for the Adafruit board.
+- Prototyping board, half size, lengthwise (along Y) on the carrier, left of the motor and in front of the Pico. Layout in [wiring_layout.svg](wiring_layout.svg), drawn for the Adafruit Perma-Proto board and the TMC2209. No layout for the A4988 yet: the Adafruit page gives no pin positions or outline, measure the board first.
   - Adafruit Perma-Proto Half-Size (81 × 51 mm, ADA1609): 2 mounting holes 73.7 mm apart on the long axis, in the middle of the short sides.
   - GeeekPi Half-Size: 4 corner holes Ø3 mm, 55 × 85 mm apart (centre to centre). Drill them to 3.2 mm for the M3×8 screws. Its outline is not known yet, the model assumes 62 × 92 mm (`DUMMY_Perfboard`).
   - The carrier has posts for both boards (`PERF_HOLE_DY`, `GEEK_HOLES`). The two Adafruit posts end up under the GeeekPi board. If they touch a solder joint there, file them down.
@@ -52,7 +54,7 @@ The firmware stays as it is for now. Only a Pico W is available, so nothing with
 
 **Needs the hardware**
 
-1. Wire the TMC2209, motor, light barrier and the 10 kΩ pull-up on `EN`, as in [wiring.svg](wiring.svg). Check that `EN` reads high at boot, so the driver stays off.
+1. Wire the driver, motor, light barrier and the 10 kΩ pull-up on `EN`, as in [wiring_tmc2209.svg](wiring_tmc2209.svg) or [wiring_a4988.svg](wiring_a4988.svg). Check that `EN` reads high at boot, so the driver stays off.
 2. Check the motor: send `JOG 20` and `JOG -20`, flip `DIR_FORWARD` in `firmware/config.py` if it turns the wrong way, then set the motor current on the driver.
 3. Check `BEAM_BROKEN_LEVEL` against the real sensor. If it is wrong, every portion reports `no_portion`.
 4. Tune `STEP_RATE_MIN`, `STEP_RATE_MAX` and the ramp with the real disc. The disc is heavy, so the values are guesses. Look for lost steps.

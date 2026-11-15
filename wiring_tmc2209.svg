@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" width="1440" height="900" font-family="Helvetica, Arial, sans-serif">
-<title>rondOfeed wiring</title>
+<title>rondOfeed wiring, TMC2209</title>
 <rect width="1440" height="900" fill="#ffffff"/>
-<text x="30" y="38" font-size="26" text-anchor="start" font-weight="700" fill="#1f2933">rondOfeed wiring</text>
+<text x="30" y="38" font-size="26" text-anchor="start" font-weight="700" fill="#1f2933">rondOfeed wiring, TMC2209 variant</text>
 <text x="30" y="60" font-size="13" text-anchor="start" font-weight="400" fill="#52606d">Schematic only: pins are grouped for clarity and are not in their physical order. Check the labels on your boards.</text>
 <polyline points="190,130 270,130" fill="none" stroke="#8b5a2b" stroke-width="3" stroke-linejoin="round"/>
 <polyline points="190,170 270,170" fill="none" stroke="#1f6fd1" stroke-width="3" stroke-linejoin="round"/>

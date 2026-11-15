@@ -68,8 +68,8 @@ The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt of
 | NEMA 17 motor, 0.9° (400 steps/turn), 5 mm D-shaft, up to 48 mm long | 1 | Shaft about 24 mm, about 1 A is enough |
 | Raspberry Pi Pico W or Pico 2 W | 1 | Same size and pins, both work with the firmware. Bluetooth is used, Wi-Fi is not used yet |
 | Mean Well LRS-35-12 or LRS-50-12 | 1 | Same case (Case 239A) |
-| Adafruit TMC2209 Breakout (ADA6121) | 1 | No heatsink included, add one if needed |
-| Electrolytic capacitor, 100–470 µF, at least 25 V | 1 | Directly on the breakout's 12 V terminals |
+| Motor driver, one of: Adafruit TMC2209 Breakout (ADA6121) or Adafruit A4988 Breakout | 1 | Both work with the same firmware and the same Pico pins, see Wiring. Neither includes a heatsink, add one if needed (the A4988 needs one above about 1 A) |
+| Electrolytic capacitor, 100–470 µF, at least 25 V | 1 | Directly on the driver's 12 V terminals |
 | 10 kΩ resistor | 2 | Pull-ups from `EN` and from GP6 (light barrier) to 3V3 |
 | Schottky diode 1N5819 | 1 | Between the converter and `VSYS`, see Wiring |
 | 12 V to 5 V converter | 1 | On the prototyping board, supplies `VSYS` on the Pico |
@@ -93,15 +93,32 @@ MicroPython for the Pico W or Pico 2 W, in [firmware/](firmware/README.md). Comm
 
 ## Wiring
 
-![rondOfeed wiring diagram](wiring.svg)
+The firmware drives the motor through `STEP`, `DIR` and `EN` only, so both drivers use the same Pico pins (GP2, GP3, GP4). Build with either one.
 
-This is a proposal and has not been built or tested yet. Pins are grouped for clarity, so check the labels on your boards. See [PLAN.md](PLAN.md) for the rules for a reliable build.
+**TMC2209** ([wiring_tmc2209.svg](wiring_tmc2209.svg)):
 
-### Layout in the machine
+![rondOfeed wiring diagram, TMC2209](wiring_tmc2209.svg)
+
+**A4988** ([wiring_a4988.svg](wiring_a4988.svg)):
+
+![rondOfeed wiring diagram, A4988](wiring_a4988.svg)
+
+These are proposals and have not been built or tested yet. Pins are grouped for clarity, so check the labels on your boards. See [PLAN.md](PLAN.md) for the rules for a reliable build.
+
+| | TMC2209 | A4988 |
+|---|---|---|
+| Microstep pins | `MS1`, `MS2` to 3V3 | `MS1`, `MS2`, `MS3` to 3V3 (1/16, also the default) |
+| `RST` / `SLP` | none | Tie them together. Adafruit's own examples leave them open, so the board seems to pull them up, but a link is harmless |
+| `DIAG` (GP5) | wired, not used by the firmware | none, leave GP5 unconnected |
+| Motor supply | 5–29 V | 8–35 V |
+| Current | up to 2 A | up to 2 A, add a heatsink above about 1 A |
+| Noise | quiet | audible |
+
+### Layout in the machine (TMC2209)
 
 ![rondOfeed wiring layout: position of the parts in the housing and on the Perma-Proto board](wiring_layout.svg)
 
-This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board lies lengthwise on the left of the motor, and the Pico sits behind it at the rear wall, see the picture above. The board drawing shows the Adafruit Perma-Proto Half-Size. The GeeekPi Half-Size fits the same carrier, check that its rows and rails match before soldering. The schematic only shows the board and the wiring, not the exact position in the housing.
+This shows where each part sits on the Perma-Proto board and how the wires run in the housing. It is also a proposal and has not been built yet. The board lies lengthwise on the left of the motor, and the Pico sits behind it at the rear wall, see the picture above. The drawing is for the TMC2209. For the A4988 follow the schematic above, a layout drawing is not made yet. The board drawing shows the Adafruit Perma-Proto Half-Size. The GeeekPi Half-Size fits the same carrier, check that its rows and rails match before soldering. The schematic only shows the board and the wiring, not the exact position in the housing.
 
 ## Discs
 

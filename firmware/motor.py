@@ -1,4 +1,4 @@
-"""Schrittmotor ueber den TMC2209: Impulse kommen aus der PIO, damit USB und BLE das Timing nicht stoeren."""
+"""Schrittmotor ueber TMC2209 oder A4988: Impulse kommen aus der PIO, damit USB und BLE das Timing nicht stoeren."""
 import asyncio
 
 import rp2
