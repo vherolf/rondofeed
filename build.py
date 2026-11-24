@@ -439,3 +439,51 @@ for hole, n_ring in EXTRA_DISCS:
 cmds.clear()
 chute("Chute_long", SPOUT_Y_LONG)
 (HERE / "chute_long.json").write_text(json.dumps({"commands": cmds}, indent=1))
+
+# ---------- Eigene Box fuer die Loetplatine ----------
+# Steht fuer sich, unabhaengig vom Gehaeuse. Eigener Ursprung: Bodenmitte der Box, lange Seite in X.
+# Posten fuer beide Platinen wie auf dem Traeger, Deckel mit 4 x M3x8 in Gewindeeinsaetzen in den Ecken.
+# Kabel laufen durch eine Kerbe oben in der rechten Stirnwand, der Deckel schliesst sie.
+PB_IN = (110, 80)  # Innenmass, Platz fuer die GeeekPi-Platine (Platzhalter 92 x 62) neben den Eckdomen
+PB_WALL = 2.5
+PB_FLOOR = 2.5
+PB_H = 50          # Gesamthoehe mit Deckel
+PB_LID_T = 2.5
+PB_BASE_H = PB_H - PB_LID_T
+PB_R = 4           # Aussenradius der senkrechten Kanten
+PB_POST_D = 8      # Eckdom fuer den Gewindeeinsatz, in die Ecke gezogen
+PB_POST_IN = 4     # Mitte des Doms ab den Innenwaenden
+PB_PCB_POST_H = 6  # Platinendome ueber dem Boden
+PB_NOTCH = (20, 40)  # Kabelkerbe Breite x Tiefe ab Oberkante
+
+cmds.clear()
+ix_, iy_ = PB_IN[0] / 2, PB_IN[1] / 2
+ox_, oy_ = ix_ + PB_WALL, iy_ + PB_WALL
+box(-ox_, -oy_, 0, ox_, oy_, PB_BASE_H, body="PerfBox", label="pb")
+add("solid.fillet", edges=[[sx * ox_, sy * oy_, PB_BASE_H / 2] for sx in (1, -1) for sy in (1, -1)], radius=PB_R)
+box(-ix_, -iy_, PB_FLOOR, ix_, iy_, PB_BASE_H + 1, op="cut", target="PerfBox", label="pbin")
+pb_lid_holes = [(sx * (ix_ - PB_POST_IN), sy * (iy_ - PB_POST_IN)) for sx in (1, -1) for sy in (1, -1)]
+for x, y in pb_lid_holes:
+    cyl(PB_POST_D, (x, y, PB_FLOOR - 0.5), PB_BASE_H - PB_FLOOR + 0.5, "join", "PerfBox", label="pbpost")
+    box(x - PB_POST_D / 2 if x < 0 else x, y - PB_POST_D / 2 if y < 0 else y, PB_FLOOR - 0.5,
+        x if x < 0 else x + PB_POST_D / 2, y if y < 0 else y + PB_POST_D / 2, PB_BASE_H,
+        op="join", target="PerfBox", label="pbpostfill")  # Dom ohne Spalt in die Ecke
+    cyl(INSERT_D, (x, y, PB_BASE_H - INSERT_HOLE_DEPTH), INSERT_HOLE_DEPTH + 1, "cut", "PerfBox", label="pbins")
+pb_top = PB_FLOOR + PB_PCB_POST_H
+for x, y in [(sx * PERF_HOLE_DY / 2, 0) for sx in (1, -1)] + \
+            [(a * GEEK_HOLES[1] / 2, b_ * GEEK_HOLES[0] / 2) for a in (1, -1) for b_ in (1, -1)]:
+    cyl(6, (x, y, PB_FLOOR - 0.5), PB_PCB_POST_H + 0.5, "join", "PerfBox", label="pbpcb")
+    cyl(2.5, (x, y, 1.5), pb_top - 1.5 + 0.5, "cut", "PerfBox", label="pbpilot")  # M3x8 selbstschneidend
+nw, nd = PB_NOTCH  # nur in der rechten Stirnwand (+X)
+box(ix_ - 1, -nw / 2, PB_BASE_H - nd, ox_ + 1, nw / 2, PB_BASE_H + 1, op="cut", target="PerfBox", label="pbnotch")
+
+box(-ox_, -oy_, PB_BASE_H, ox_, oy_, PB_H, body="PerfBoxLid", label="pbl")
+add("solid.fillet", edges=[[sx * ox_, sy * oy_, PB_BASE_H + PB_LID_T / 2] for sx in (1, -1) for sy in (1, -1)],
+    radius=PB_R)
+for x, y in pb_lid_holes:
+    cyl(M3_CLEAR, (x, y, PB_BASE_H - 1), PB_LID_T + 2, "cut", "PerfBoxLid", label="pblhole")
+
+box(-PERF_L / 2, -PERF_W / 2, pb_top, PERF_L / 2, PERF_W / 2, pb_top + 20, body="DUMMY_Perfboard", label="pbdummy")
+add("appearance.assign", bodies=["PerfBoxLid"], color="#5aa9c9")
+add("appearance.assign", bodies=["DUMMY_Perfboard"], color="#c0504d")
+(HERE / "perfbox.json").write_text(json.dumps({"commands": cmds}, indent=1))

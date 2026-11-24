@@ -56,10 +56,22 @@ The STLs are in assembly orientation. Use "Place on face" in the slicer to orien
 | `Chute_long.stl` (optional) | 68 × 66 × 55 | Same as `Chute.stl` |
 | `TerminalCover.stl` | 99.5 × 26 × 40 | Back |
 | `Carrier.stl` | 90 × 160.5 × 7 | Bottom |
+| `PerfBox.stl` (optional) | 115 × 85 × 47.5 | Bottom |
+| `PerfBoxLid.stl` (optional) | 115 × 85 × 2.5 | Either side |
 
 `Chute.stl` ends flush with the outer wall of the housing, so nothing sticks out. The portions leave the housing about 58 mm above the table, so the bowl can be up to about 58 mm high, but it has to stand right against the wall. `Chute_long.stl` is a longer version that sticks out 19 mm and puts the outlet lower, so a bowl of up to about 45 mm fits under it and it does not have to touch the wall. It fits the same opening and the same screws, and the light barrier holes are in the same place. Use one of the two, not both.
 
 The housing, plate and lid use 206 of the 210 mm bed depth, so turn the skirt off. The lid has the same hexagon as the housing and sits flush on it. It is held by magnets, so there are no screws on top, and 6 small pins on the underside fit into holes in the plate so the lid cannot slide.
+
+## Separate box for the prototyping board
+
+`PerfBox.stl` and `PerfBoxLid.stl` are a stand-alone box for the prototyping board, if you want it outside the housing. It is 115 × 85 × 50 mm with the lid (inside 110 × 80 mm) and has the same posts as the carrier, so either board fits: Adafruit Perma-Proto Half-Size (2 holes) or GeeekPi Half-Size (4 holes). The board sits 6 mm above the floor and fastens with M3×8 self-tapping screws, which leaves about 36 mm for parts above it. The lid is closed and held by 4 M3×8 in M3 threaded inserts in the corner posts. Cables run through a 20 × 40 mm notch at the top of one end wall, and the lid closes it.
+
+Design: `perfbox.sc`, from the end of `build.py` (`PB_*` dimensions). To regenerate:
+
+```sh
+python3 build.py && solidcraft-cli run perfbox.json --save perfbox.sc
+```
 
 ## Parts
 
